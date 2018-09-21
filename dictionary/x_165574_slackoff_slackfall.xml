@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="SlackFall" max_length="40" name="x_165574_slackoff_slackfall" type="collection">
+        <element label="Active" max_length="40" name="active" type="boolean"/>
+        <element label="Channel" max_length="40" name="channel" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Participants" max_length="4000" name="participants" reference="x_165574_slackoff_slack_user" type="glide_list"/>
+        <element label="Participant TS" max_length="40" name="participant_ts" type="string"/>
+        <element label="Quiet Mode" max_length="40" name="quiet_mode" type="boolean"/>
+    </element>
+</database>

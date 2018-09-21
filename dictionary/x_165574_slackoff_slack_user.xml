@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Slack User" max_length="40" name="x_165574_slackoff_slack_user" type="collection">
+        <element label="Score" max_length="40" name="score" type="integer"/>
+        <element display="true" label="User ID" max_length="40" name="user_id" type="string"/>
+    </element>
+</database>

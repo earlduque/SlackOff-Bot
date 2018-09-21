@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slackoff_payloads</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Processor</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null whhttps://dev56148.service-now.com/images/icons/js_validate.gifxen async*/) {
+
+	var payload = JSON.parse(current.payload);
+	var userSysID = '';
+	var include_participants = false;
+
+	var slackoff_user = new GlideRecord('x_165574_slackoff_slack_user');
+	slackoff_user.addQuery('user_id', payload.event.user);
+	slackoff_user.query();
+	if (slackoff_user.next()){
+		userSysID = slackoff_user.sys_id;
+	} else {
+		if (payload.event.user){
+			slackoff_user.initialize();
+			slackoff_user.setValue('user_id', payload.event.user);
+			userSysID = slackoff_user.insert();
+		}
+	}
+
+	var rm = new sn_ws.RESTMessageV2();
+	rm.setHttpMethod('POST');
+	rm.setLogLevel('all');
+	rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+	var bodyString = '';
+	bodyString += 'token=' + gs.urlEncode('xoxp-14078448372-268567862081-440176670837-c5a628124c703fbdb6dc25e7a502c04b');
+	bodyString += '&channel=' + gs.urlEncode(payload.event.channel);
+
+	var slackfall_round = new GlideRecord('x_165574_slackoff_slackfall');
+	slackfall_round.addQuery('active', true);
+	slackfall_round.addQuery('channel', payload.event.channel);
+	slackfall_round.query();
+	if (slackfall_round.next()){
+		if (slackfall_round.getValue('quiet_mode', true)) {
+			if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1){
+				//add participant
+			}
+			rm.setEndpoint('https://slack.com/api/chat.delete');
+			bodyString += '&ts=' + gs.urlEncode(payload.event.ts);
+		}
+	} else if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 && payload.event.text.indexOf('start')){
+		slackfall_round.initialize();
+		slackfall_round.setValue('channel', payload.event.channel);
+		slackfall_round.setValue('active', true);
+		slackfall_round.participants = userSysID;
+		slackfall_round.setValue('quiet_mode', true);
+		slackfall_round.insert();
+		rm.setEndpoint('https://slack.com/api/chat.postMessage');
+		bodyString += '&text=' + gs.urlEncode('Starting a game of SlackFall (' + slackfall_round.number + '), please @ me to join this round. <@' + payload.event.user + '> can start the round by saying "Start".');
+
+		include_participants = true;		
+
+	} else {
+		rm.setEndpoint('https://slack.com/api/chat.postMessage');
+		bodyString += '&text=' + gs.urlEncode('You said: ' + payload.event.text);
+	}
+
+	rm.setRequestBody(bodyString);
+	var response = rm.execute();
+
+	if (include_participants){
+		var rm2 = new sn_ws.RESTMessageV2();
+		rm2.setHttpMethod('POST');
+		rm2.setLogLevel('all');
+		rm2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		rm2.setEndpoint('https://slack.com/api/chat.postMessage');
+		bodyString = '';
+		bodyString += 'token=' + gs.urlEncode('xoxp-14078448372-268567862081-440176670837-c5a628124c703fbdb6dc25e7a502c04b');
+		bodyString += '&channel=' + gs.urlEncode(payload.event.channel);
+		bodyString += '&text=' + gs.urlEncode('Participants: <@' + slackfall_round.participants.getDisplayValue() + '>');
+		rm2.setRequestBody(bodyString);
+		var response2 = rm2.execute();
+		var response2_body = JSON.parse(response2.getBody());
+		
+		slackfall_round.participant_ts = response2_body.ts;
+		slackfall_round.update();
+		
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-09-20 22:23:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>602c46ab4f6467000d952b8ca310c7b5</sys_id>
+        <sys_mod_count>54</sys_mod_count>
+        <sys_name>Processor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_602c46ab4f6467000d952b8ca310c7b5</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-09-21 00:45:40</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=602c46ab4f6467000d952b8ca310c7b5"/>
+</record_update>

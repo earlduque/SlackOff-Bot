@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>SlackOff Payloads</name>
+        <order>100</order>
+        <roles>x_165574_slackoff.slackoff_payloads_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-09-20 22:13:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>090bc26b4f6467000d952b8ca310c7ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SlackOff</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_app_application_090bc26b4f6467000d952b8ca310c7ae</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-09-20 22:23:57</sys_updated_on>
+        <title>SlackOff</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>
