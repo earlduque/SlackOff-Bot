@@ -35,8 +35,9 @@
 	var channel = payload.event.channel;
 	var userSlackID = payload.event.user;
 	var userSysID = new SlackFall().establish_user(userSlackID);
+	var regex = /^\!(?:job|recruiter|recruitment|recruit)/gmi;
 
-	if (payload.event.text.indexOf('<@UCXC9BTMX>') == -1 || (payload.event.text.toUpperCase().indexOf('JOB') == -1 && payload.event.text.toUpperCase().indexOf('RECRUIT') == -1 && payload.event.text.toUpperCase().indexOf('RECRUITMENT') == -1 && payload.event.text.toUpperCase().indexOf('RECRUITER') == -1)) return;
+	if (!regex.test(payload.event.text)) return;
 
 	function pick_text(value){
 		var thisArray = [];
@@ -97,7 +98,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>56dbe38e4fbcab000d952b8ca310c7fb</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>Processor SlackOff Jobs</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -105,7 +106,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_56dbe38e4fbcab000d952b8ca310c7fb</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-29 05:36:19</sys_updated_on>
+        <sys_updated_on>2018-10-05 04:46:33</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

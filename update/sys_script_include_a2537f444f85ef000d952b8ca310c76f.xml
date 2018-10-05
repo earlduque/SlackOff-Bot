@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_165574_slackoff.YouSlack</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>YouSlack</name>
+        <script><![CDATA[var YouSlack = Class.create();
+YouSlack.prototype = {
+    initialize: function() {
+    },
+	get_video: function(term){
+		var rm = new sn_ws.RESTMessageV2();
+		rm.setHttpMethod('GET');
+		rm.setLogLevel('all');
+		//rm.setRequestHeader('Content-Type', 'application/json');
+		rm.setEndpoint('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q='+escape(term)+'&type=video&key=' + gs.getProperty('youtube.token'));
+		var response = rm.execute();
+		//gs.info('slackoff error: ' + response_body.error);
+		var response_body = JSON.parse(response.getBody());
+		return response_body.items[0].id.videoId;
+	},
+
+    type: 'YouSlack'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-05 05:29:36</sys_created_on>
+        <sys_id>a2537f444f85ef000d952b8ca310c76f</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>YouSlack</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_include_a2537f444f85ef000d952b8ca310c76f</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-05 06:17:30</sys_updated_on>
+    </sys_script_include>
+</record_update>
