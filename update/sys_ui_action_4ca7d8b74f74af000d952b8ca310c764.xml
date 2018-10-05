@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Get Identity</action_name>
+        <active>true</active>
+        <client>true</client>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <form_style/>
+        <hint/>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Get Identity</name>
+        <onclick>getIdentity()</onclick>
+        <order>100</order>
+        <script><![CDATA[function getIdentity(){
+	var slack_id = g_form.getValue('user_id');
+	var record_id = g_form.getUniqueValue();
+	var ga = new GlideAjax('SlackerClient');
+	ga.addParam('sysparm_name', 'get_user_info');
+	ga.addParam('sysparm_slack_id', slack_id);
+	ga.addParam('sysparm_record_id', record_id);
+	ga.getXML(update_name);
+}
+
+function update_name(response){
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	//if (answer) alert('Status: ' + answer);
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-03 18:49:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4ca7d8b74f74af000d952b8ca310c764</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get Identity</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_ui_action_4ca7d8b74f74af000d952b8ca310c764</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-03 19:15:17</sys_updated_on>
+        <table>x_165574_slackoff_slack_user</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

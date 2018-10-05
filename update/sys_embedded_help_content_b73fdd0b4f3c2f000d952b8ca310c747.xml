@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_embedded_help_content">
+    <sys_embedded_help_content action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>performance-analytics</category>
+        <content><![CDATA[ <h1 class="title topictitle1">Detailed scorecard</h1>   <div class="body conbody"><p class="shortdesc">  </p><ul class="ul" id="zz_pa_detailed-normal__ul_ej5_wnv_fw"><li class="li"><span class="ph" id="zz_pa_detailed-normal__d42341e79">To view aggregate data, such as the monthly sum of scores, apply a      time series such as <span class="ph uicontrol">By week SUM</span>. The menu shows only the timeframes      that are meaningful for the indicator frequency.</span> For more information, see <a class="xref" href="../../../use/performance-analytics/concept/../reference/time-series-in-scorecards-widgets.html#time-series-aggregations-in-scorecards-and-widgets" title="In scorecards and some widgets, you can apply a time series aggregation to the scores, such as a monthly average. The frequency with which scores are collected for the indicator determines which time series are applicable. Some time series include data from partial collection periods.">Time series aggregations in scorecards and widgets</a>.</li><li class="li" id="zz_pa_detailed-normal__d42341e88"><span class="ph" id="zz_pa_detailed-normal__d42341e89">To view the score at a certain date, click that      date. After you select a date, you can add a comment, target, or threshold at that     date.</span></li><li class="li" id="zz_pa_detailed-normal__d42341e92"><span class="ph" id="zz_pa_detailed-normal__d42341e93">To change the period for which the chart is      drawn, select one of the fixed time frames, specify specific <span class="ph uicontrol">from</span> and       <span class="ph uicontrol">to</span> dates, or use the date selector at the bottom of the     chart.</span></li><li class="li" id="zz_pa_detailed-normal__d42341e102"><span class="ph" id="zz_pa_detailed-normal__d42341e103">To export the scorecard to a PNG, JPG, PDF, or      CSV file, click the show functions icon      and      select the format you want to export to.</span></li><li class="li" id="zz_pa_detailed-normal__d42341e108"><span class="ph" id="zz_pa_detailed-normal__d42341e109">To access the indicator record, or to modify the      scores manually, click the show functions icon      and      select <span class="ph uicontrol">Edit indicator</span> or <span class="ph uicontrol">Edit scores</span>.</span></li><li class="li" id="zz_pa_detailed-normal__d42341e121"><span class="ph" id="zz_pa_detailed-normal__d42341e122">To control which elements appear on the chart,      such as to show a trendline or confidence band, click the chart settings      icon.</span></li></ul> </div>]]></content>
+        <last_sync>2018-10-01 16:01:09</last_sync>
+        <modifier>normal</modifier>
+        <name>$pa_detailed-normal</name>
+        <page>$pa_detailed</page>
+        <product>1</product>
+        <qualifier/>
+        <role/>
+        <role_order>1000</role_order>
+        <snc_created>true</snc_created>
+        <sys_class_name>sys_embedded_help_content</sys_class_name>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2018-10-01 16:01:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b73fdd0b4f3c2f000d952b8ca310c747</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>$pa_detailed-normal</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_embedded_help_content_b73fdd0b4f3c2f000d952b8ca310c747</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-10-01 16:01:09</sys_updated_on>
+        <version>k</version>
+    </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=b73fdd0b4f3c2f000d952b8ca310c747"/>
+</record_update>

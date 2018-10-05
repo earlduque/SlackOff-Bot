@@ -5,125 +5,251 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>8e12622b4fa467000d952b8ca310c7f2</sys_id>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>5d3287a44fb8e7000d952b8ca310c7b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>participants</element>
-            <position>1</position>
-            <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>0612622b4fa467000d952b8ca310c7f3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
-            <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.begin_split</element>
-            <position>2</position>
-            <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>8612622b4fa467000d952b8ca310c7f3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
-            <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
-            <sys_user/>
-            <type>.begin_split</type>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>active</element>
-            <position>3</position>
-            <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>0a12622b4fa467000d952b8ca310c7f3</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
-            <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>channel</element>
-            <position>4</position>
+            <position>1</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>8a12622b4fa467000d952b8ca310c7f3</sys_id>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d13287a44fb8e7000d952b8ca310c7b4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>host</element>
+            <position>2</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>553287a44fb8e7000d952b8ca310c7b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>participants</element>
+            <position>3</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d53287a44fb8e7000d952b8ca310c7b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>phase</element>
+            <position>4</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>593287a44fb8e7000d952b8ca310c7b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>voting</element>
+            <position>5</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d93287a44fb8e7000d952b8ca310c7b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>accused</element>
+            <position>6</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>5d3287a44fb8e7000d952b8ca310c7b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>yes</element>
+            <position>7</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>dd3287a44fb8e7000d952b8ca310c7b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>no</element>
+            <position>8</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>513287a44fb8e7000d952b8ca310c7b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cannot_accuse</element>
+            <position>9</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d13287a44fb8e7000d952b8ca310c7b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>5</position>
+            <position>10</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>0e12622b4fa467000d952b8ca310c7f3</sys_id>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>553287a44fb8e7000d952b8ca310c7b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>quiet_mode</element>
-            <position>6</position>
+            <element>active</element>
+            <position>11</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>8e12622b4fa467000d952b8ca310c7f3</sys_id>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d53287a44fb8e7000d952b8ca310c7b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>7</position>
+            <element>participant_ts</element>
+            <position>12</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:54:28</sys_created_on>
-            <sys_id>0212622b4fa467000d952b8ca310c7f4</sys_id>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>593287a44fb8e7000d952b8ca310c7b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:54:28</sys_updated_on>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
             <sys_user/>
-            <type>.end_split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>participant_ts</element>
-            <position>8</position>
+            <element>location</element>
+            <position>13</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-21 00:09:29</sys_created_on>
-            <sys_id>8285a6ab4fa467000d952b8ca310c701</sys_id>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d93287a44fb8e7000d952b8ca310c7b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-21 00:09:29</sys_updated_on>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>spy</element>
+            <position>14</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>5d3287a44fb8e7000d952b8ca310c7b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>round_duration</element>
+            <position>15</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>dd3287a44fb8e7000d952b8ca310c7b5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active_player</element>
+            <position>16</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>513287a44fb8e7000d952b8ca310c7b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>found_spy</element>
+            <position>17</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-09-24 04:48:42</sys_created_on>
+            <sys_id>d13287a44fb8e7000d952b8ca310c7b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slackfall" sys_domain="global" view="Default view">b512ae674fa467000d952b8ca310c737</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-09-24 04:48:42</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

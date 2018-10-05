@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	console.log('Lol what are you doing here?');
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>slacker-job-choices</id>
+        <internal>false</internal>
+        <link/>
+        <name>Slacker Job Choices</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	data.choices = [];
+	var gr = new GlideRecord('x_165574_slackoff_slackoff_job');
+	gr.orderBy('type');
+	gr.orderBy('output');
+	gr.query();
+	while(gr.next()){
+		var option = {
+			'type': gr.type.getDisplayValue().toString(),
+			'output': gr.output.toString()
+		};
+		data.choices.push(option);
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-03 15:07:41</sys_created_on>
+        <sys_id>07162fa74ff0af000d952b8ca310c720</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Slacker Job Choices</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sp_widget_07162fa74ff0af000d952b8ca310c720</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-03 15:46:23</sys_updated_on>
+        <template><![CDATA[<p>To use, say @slacker job, @slacker recruit, or @slacker recruitment in any channel that @slacker is invited to on the sndevs workspace</p>
+<p>Based on <a href="https://duberste.in/linkedin_generator/" target="_new">this linkedin generator</a> but changed to be more servicenowish</p>
+
+<div ng-repeat="item in data.choices">
+  {{item.type}} - {{item.output}}
+</div>
+<br><br>
+<p>And here's the code that constructs it all</p>
+
+<pre><code>(function executeRule(current, previous /*null whhttps://dev56148.service-now.com/images/icons/js_validate.gifxen async*/) {
+
+	var payload = JSON.parse(current.payload);
+	var message = '';
+	var channel = payload.event.channel;
+	var userSlackID = payload.event.user;
+	var userSysID = new SlackFall().establish_user(userSlackID);
+
+	if (payload.event.text.indexOf('<@UCXC9BTMX>') == -1 || (payload.event.text.toUpperCase().indexOf('JOB') == -1 && payload.event.text.toUpperCase().indexOf('RECRUIT') == -1 && payload.event.text.toUpperCase().indexOf('RECRUITMENT') == -1 && payload.event.text.toUpperCase().indexOf('RECRUITER') == -1)) return;
+
+	function pick_text(value){
+		var thisArray = [];
+		var text_options = new GlideRecord('x_165574_slackoff_slackoff_job');
+		text_options.addQuery('type', value);
+		text_options.query();
+		while (text_options.next()){
+			thisArray.push(text_options.getValue('output'));
+		}
+		var random_choice = Math.floor(Math.random() * thisArray.length);
+		return thisArray[random_choice];
+	}
+
+	var t1 = pick_text('1');
+	var t2 = pick_text('2');
+	var t3 = pick_text('3');
+	var t4 = pick_text('4');
+	var t5 = pick_text('5');
+	var t6 = pick_text('6');
+	var t7 = pick_text('7');
+	var t8 = pick_text('8');
+	var t9 = pick_text('9');
+	var t10 = pick_text('10');
+	var t11 = pick_text('11');
+	var t12 = pick_text('12');
+	var t13 = pick_text('13');
+	var t14 = pick_text('14');
+	var t15 = pick_text('15');
+	var t16 = pick_text('16');
+	var t17 = pick_text('17');
+	var t18 = pick_text('18');
+	var t19 = pick_text('19');
+	var t20 = pick_text('20');
+	var t21 = pick_text('21');
+	var t22 = pick_text('22');
+	var t23 = pick_text('23');
+
+	var message_array = [];
+	
+	if (Math.random() > 0.5) {
+		message_array.push('Hope you\'re having');
+		message_array.push(t1);
+		message_array.push(t2);
+	}
+	message_array.push(t3);
+	message_array.push('My ' + t4 + ' ' + t5+t6 + ', a ' + t7 + ' ' + t8 + ', has just raised ' + t9 + ' ' + t11 + ' ' + t10 + '.\n\n');
+	message_array.push(t12 + ' ' + t13 + ' and ' + t14 + ', ' + t16 + ' ' + t15 + '.');
+	message_array.push(t17 + ' ' + t18 + ' ' + t19 + '—' + t21 + ' ' + t20 + '?\n\n');
+	message_array.push(t22+'\n'+t23);
+
+	message = message_array.join(' ');
+	var messagetest = new SlackFall().send_chat(channel, message, false, '', payload.event.thread_ts);
+
+  })(current, previous);</code></pre>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="SlackOff Job" max_length="40" name="x_165574_slackoff_slackoff_job" type="collection">
+        <element display="true" label="Output" max_length="1000" name="output" type="string"/>
+        <element choice="1" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Greet adjective" sequence="0" value="1"/>
+                <element label="Greet day" sequence="1" value="2"/>
+                <element label="Greet end" sequence="2" value="3"/>
+                <element label="Intro company" sequence="3" value="4"/>
+                <element label="Intro company flare" sequence="4" value="5"/>
+                <element label="Intro company suffix" sequence="5" value="6"/>
+                <element label="Intro adjective" sequence="6" value="7"/>
+                <element label="Intro example" sequence="7" value="8"/>
+                <element label="Intro funds" sequence="8" value="9"/>
+                <element label="Intro impact" sequence="9" value="10"/>
+                <element label="Intro change" sequence="10" value="11"/>
+                <element label="Flatter start" sequence="11" value="12"/>
+                <element label="Flatter skill one" sequence="12" value="13"/>
+                <element label="Flatter skill two" sequence="13" value="14"/>
+                <element label="Flatter role" sequence="14" value="15"/>
+                <element label="Flatter suggest" sequence="15" value="16"/>
+                <element label="Dip suggest" sequence="16" value="17"/>
+                <element label="Dip way" sequence="17" value="18"/>
+                <element label="Dip to chat" sequence="18" value="19"/>
+                <element label="Dip day" sequence="19" value="21"/>
+                <element label="Dip time" sequence="20" value="20"/>
+                <element label="Clown signature" sequence="21" value="22"/>
+                <element label="Clown name" sequence="22" value="23"/>
+            </choice>
+        </element>
+    </element>
+</database>

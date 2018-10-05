@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-01 15:48:10</sys_created_on>
+        <sys_id>b14cd9474f3c2f000d952b8ca310c7a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_165574_slackoff_slacker_text_tracker.x_165574_slackoff.slacker_text_tracker_user</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_security_acl display_value="x_165574_slackoff_slacker_text_tracker">b94cd9474f3c2f000d952b8ca310c79d</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b14cd9474f3c2f000d952b8ca310c7a0</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-01 15:48:10</sys_updated_on>
+        <sys_user_role display_value="x_165574_slackoff.slacker_text_tracker_user" name="x_165574_slackoff.slacker_text_tracker_user">294c19474f3c2f000d952b8ca310c7d0</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

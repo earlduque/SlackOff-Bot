@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update node_type="sys_grid_canvas" unload_date="2018-10-05 00:10:07">
+    <sys_grid_canvas action="INSERT_OR_UPDATE">
+        <legacy_page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</legacy_page>
+        <name>PA New Tab</name>
+        <sys_class_name>sys_grid_canvas</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-02 17:22:49</sys_created_on>
+        <sys_id>828bfe534f786f000d952b8ca310c7a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PA New Tab</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_grid_canvas_828bfe534f786f000d952b8ca310c7a0</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-02 17:22:49</sys_updated_on>
+        <related_items_node>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_widget>
+                <posx>6</posx>
+                <posy>10</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                <sys_id>2b332f2b4fb0af000d952b8ca310c7a4</sys_id>
+                <sys_mod_count>13</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_2b332f2b4fb0af000d952b8ca310c7a4</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:29</sys_updated_on>
+                <width>6</width>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Chat Trend by Hour</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                        <sys_id>67332f2b4fb0af000d952b8ca310c7a1</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-03 14:56:35</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_widget>
+                                <posx>6</posx>
+                                <posy>10</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                                <sys_id>2b332f2b4fb0af000d952b8ca310c7a4</sys_id>
+                                <sys_mod_count>13</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_2b332f2b4fb0af000d952b8ca310c7a4</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:29</sys_updated_on>
+                                <width>6</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                                <sys_id>2f332f2b4fb0af000d952b8ca310c7a2</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 14:54:48</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                                <sys_id>6b332f2b4fb0af000d952b8ca310c7a2</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 14:54:48</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                                <sys_id>a3332f2b4fb0af000d952b8ca310c7a3</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 14:56:35</sys_updated_on>
+                                <value>Chat Trend by Hour</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                                <sys_id>af332f2b4fb0af000d952b8ca310c7a1</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 14:56:35</sys_updated_on>
+                                <value>25a367e34ff0af000d952b8ca310c796</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 14:54:48</sys_created_on>
+                                <sys_id>ef332f2b4fb0af000d952b8ca310c7a2</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 14:54:48</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Earl Duque: 2018-10-03 12:33:53</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                        <sys_id>a402ac7f4f74af000d952b8ca310c715</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-03 19:33:53</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_widget>
+                                <posx>0</posx>
+                                <posy>20</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                                <sys_id>640224bf4f74af000d952b8ca310c7c0</sys_id>
+                                <sys_mod_count>10</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_640224bf4f74af000d952b8ca310c7c0</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:36</sys_updated_on>
+                                <width>6</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                                <sys_id>240224bf4f74af000d952b8ca310c7bf</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:29:02</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                                <sys_id>600224bf4f74af000d952b8ca310c7bf</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:29:02</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                                <sys_id>a002ac7f4f74af000d952b8ca310c716</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:33:53</sys_updated_on>
+                                <value>af1368bf4f74af000d952b8ca310c77d</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                                <sys_id>ac0224bf4f74af000d952b8ca310c7be</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:29:02</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                                <sys_id>e40224bf4f74af000d952b8ca310c7bf</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:33:53</sys_updated_on>
+                                <value>Earl Duque: 2018-10-03 12:33:53</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Earl Duque: 2018-10-03 10:51:37</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                        <sys_id>ab5b043f4ff0af000d952b8ca310c707</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-03 17:51:37</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_widget>
+                                <posx>8</posx>
+                                <posy>0</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                                <sys_id>6f5b043f4ff0af000d952b8ca310c70a</sys_id>
+                                <sys_mod_count>11</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_6f5b043f4ff0af000d952b8ca310c70a</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:24</sys_updated_on>
+                                <width>4</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                                <sys_id>275b043f4ff0af000d952b8ca310c709</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 17:50:07</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                                <sys_id>635b043f4ff0af000d952b8ca310c709</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 17:50:07</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                                <sys_id>af5b043f4ff0af000d952b8ca310c708</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 17:50:07</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                                <sys_id>e35b043f4ff0af000d952b8ca310c708</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 17:51:37</sys_updated_on>
+                                <value>2dbb88bf4f34af000d952b8ca310c70e</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                                <sys_id>e75b043f4ff0af000d952b8ca310c709</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 17:51:37</sys_updated_on>
+                                <value>Earl Duque: 2018-10-03 10:51:37</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Poofer Activity Last 7 Days</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                        <sys_id>599624734fb4af000d952b8ca310c7ed</sys_id>
+                        <sys_mod_count>1</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_widget>
+                                <posx>6</posx>
+                                <posy>20</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>959624734fb4af000d952b8ca310c7ef</sys_id>
+                                <sys_mod_count>10</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_959624734fb4af000d952b8ca310c7ef</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:43</sys_updated_on>
+                                <width>6</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>199624734fb4af000d952b8ca310c7ee</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>559624734fb4af000d952b8ca310c7ee</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>5d9624734fb4af000d952b8ca310c7ed</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                                <value>f0956c334fb4af000d952b8ca310c7c0</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>919624734fb4af000d952b8ca310c7ee</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>9d9624734fb4af000d952b8ca310c7ee</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                                <value>Poofer Activity Last 7 Days</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>report_type</name>
+                                <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                                <sys_id>d99624734fb4af000d952b8ca310c7ee</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
+                                <value>spline</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Points given</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                        <sys_id>df8b7e534f786f000d952b8ca310c736</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-02 17:23:49</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_widget>
+                                <posx>0</posx>
+                                <posy>0</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                                <sys_id>9f8b7e534f786f000d952b8ca310c739</sys_id>
+                                <sys_mod_count>16</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_9f8b7e534f786f000d952b8ca310c739</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:12</sys_updated_on>
+                                <width>4</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                                <sys_id>138b7e534f786f000d952b8ca310c739</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:23:49</sys_updated_on>
+                                <value>Points given</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                                <sys_id>5f8b7e534f786f000d952b8ca310c738</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:22:55</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                                <sys_id>9b8b7e534f786f000d952b8ca310c737</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:23:49</sys_updated_on>
+                                <value>e0cb7e534f786f000d952b8ca310c7af</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                                <sys_id>9b8b7e534f786f000d952b8ca310c738</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:22:55</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                                <sys_id>d78b7e534f786f000d952b8ca310c738</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:22:55</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Potty Mouth</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                        <sys_id>39fbfe534f786f000d952b8ca310c7fc</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-02 17:27:14</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_widget>
+                                <posx>4</posx>
+                                <posy>0</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                                <sys_id>f1fbfe534f786f000d952b8ca310c7fe</sys_id>
+                                <sys_mod_count>20</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_f1fbfe534f786f000d952b8ca310c7fe</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:23</sys_updated_on>
+                                <width>4</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                                <sys_id>39fbfe534f786f000d952b8ca310c7fd</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:24:43</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                                <sys_id>3dfbfe534f786f000d952b8ca310c7fc</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:27:14</sys_updated_on>
+                                <value>268cb6934f786f000d952b8ca310c71a</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                                <sys_id>75fbfe534f786f000d952b8ca310c7fd</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:24:43</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                                <sys_id>b1fbfe534f786f000d952b8ca310c7fd</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:24:43</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                                <sys_id>f9fbfe534f786f000d952b8ca310c7fd</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:27:14</sys_updated_on>
+                                <value>Potty Mouth</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+                <related_items_node>
+                    <sys_portal action="INSERT_OR_UPDATE">
+                        <dropzone/>
+                        <offset/>
+                        <page display_value="PA New Tab">c68b7e534f786f000d952b8ca310c731</page>
+                        <summary>Points Trend by hour</summary>
+                        <sys_created_by>admin-eduque</sys_created_by>
+                        <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                        <sys_id>35ac32934f786f000d952b8ca310c701</sys_id>
+                        <sys_mod_count>2</sys_mod_count>
+                        <sys_updated_by>admin-eduque</sys_updated_by>
+                        <sys_updated_on>2018-10-02 17:28:31</sys_updated_on>
+                        <related_items_node>
+                            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                                <height>10</height>
+                                <portal_widget display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_widget>
+                                <posx>0</posx>
+                                <posy>10</posy>
+                                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                                <sys_id>fdac32934f786f000d952b8ca310c702</sys_id>
+                                <sys_mod_count>17</sys_mod_count>
+                                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                                <sys_policy/>
+                                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                                <sys_update_name>sys_grid_canvas_pane_fdac32934f786f000d952b8ca310c702</sys_update_name>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-03 19:50:29</sys_updated_on>
+                                <width>6</width>
+                            </sys_grid_canvas_pane>
+                        </related_items_node>
+                        <related_items_node>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>can_subscribe</name>
+                                <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                                <sys_id>35ac32934f786f000d952b8ca310c702</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:27:43</sys_updated_on>
+                                <value>true</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>sys_id</name>
+                                <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                                <sys_id>39ac32934f786f000d952b8ca310c701</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:28:31</sys_updated_on>
+                                <value>eddc3e934f786f000d952b8ca310c771</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>help_text_window</name>
+                                <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                                <sys_id>71ac32934f786f000d952b8ca310c702</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:27:43</sys_updated_on>
+                                <value>report_widget_description</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>renderer</name>
+                                <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                                <sys_id>bdac32934f786f000d952b8ca310c701</sys_id>
+                                <sys_mod_count>0</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:27:43</sys_updated_on>
+                                <value>com.glide.ui.portal.RenderReport</value>
+                            </sys_portal_preferences>
+                            <sys_portal_preferences action="INSERT_OR_UPDATE">
+                                <name>title</name>
+                                <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
+                                <sys_created_by>admin-eduque</sys_created_by>
+                                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                                <sys_id>f5ac32934f786f000d952b8ca310c702</sys_id>
+                                <sys_mod_count>1</sys_mod_count>
+                                <sys_updated_by>admin-eduque</sys_updated_by>
+                                <sys_updated_on>2018-10-02 17:28:31</sys_updated_on>
+                                <value>Points Trend by hour</value>
+                            </sys_portal_preferences>
+                        </related_items_node>
+                    </sys_portal>
+                </related_items_node>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_widget>
+                <posx>0</posx>
+                <posy>20</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-03 19:29:02</sys_created_on>
+                <sys_id>640224bf4f74af000d952b8ca310c7c0</sys_id>
+                <sys_mod_count>10</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_640224bf4f74af000d952b8ca310c7c0</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:36</sys_updated_on>
+                <width>6</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_widget>
+                <posx>8</posx>
+                <posy>0</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-03 17:50:07</sys_created_on>
+                <sys_id>6f5b043f4ff0af000d952b8ca310c70a</sys_id>
+                <sys_mod_count>11</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_6f5b043f4ff0af000d952b8ca310c70a</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:24</sys_updated_on>
+                <width>4</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_widget>
+                <posx>6</posx>
+                <posy>20</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-03 19:49:01</sys_created_on>
+                <sys_id>959624734fb4af000d952b8ca310c7ef</sys_id>
+                <sys_mod_count>10</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_959624734fb4af000d952b8ca310c7ef</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:43</sys_updated_on>
+                <width>6</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_widget>
+                <posx>0</posx>
+                <posy>0</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-02 17:22:55</sys_created_on>
+                <sys_id>9f8b7e534f786f000d952b8ca310c739</sys_id>
+                <sys_mod_count>16</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_9f8b7e534f786f000d952b8ca310c739</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:12</sys_updated_on>
+                <width>4</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_widget>
+                <posx>4</posx>
+                <posy>0</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-02 17:24:43</sys_created_on>
+                <sys_id>f1fbfe534f786f000d952b8ca310c7fe</sys_id>
+                <sys_mod_count>20</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_f1fbfe534f786f000d952b8ca310c7fe</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:23</sys_updated_on>
+                <width>4</width>
+            </sys_grid_canvas_pane>
+            <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
+                <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
+                <height>10</height>
+                <portal_widget display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_widget>
+                <posx>0</posx>
+                <posy>10</posy>
+                <sys_class_name>sys_grid_canvas_pane</sys_class_name>
+                <sys_created_by>admin-eduque</sys_created_by>
+                <sys_created_on>2018-10-02 17:27:43</sys_created_on>
+                <sys_id>fdac32934f786f000d952b8ca310c702</sys_id>
+                <sys_mod_count>17</sys_mod_count>
+                <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
+                <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+                <sys_policy/>
+                <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+                <sys_update_name>sys_grid_canvas_pane_fdac32934f786f000d952b8ca310c702</sys_update_name>
+                <sys_updated_by>admin-eduque</sys_updated_by>
+                <sys_updated_on>2018-10-03 19:50:29</sys_updated_on>
+                <width>6</width>
+            </sys_grid_canvas_pane>
+        </related_items_node>
+    </sys_grid_canvas>
+</record_update>

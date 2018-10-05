@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_documentation element="quiet_mode" label="Quiet Mode" language="en" table="x_165574_slackoff_slackfall">
+    <sys_documentation element="" label="Slacker Text Tracker" language="en" table="x_165574_slackoff_slacker_text_tracker">
         <sys_documentation action="INSERT_OR_UPDATE">
-            <element>quiet_mode</element>
+            <element/>
             <help/>
             <hint/>
-            <label>Quiet Mode</label>
+            <label>Slacker Text Tracker</label>
             <language>en</language>
-            <name>x_165574_slackoff_slackfall</name>
-            <plural>Quiet Modes</plural>
+            <name>x_165574_slackoff_slacker_text_tracker</name>
+            <plural>Slacker Text Trackers</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-09-20 23:53:31</sys_created_on>
-            <sys_id>cce1eee74fa467000d952b8ca310c72d</sys_id>
+            <sys_created_on>2018-10-01 15:48:10</sys_created_on>
+            <sys_id>714cd9474f3c2f000d952b8ca310c7b3</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>Quiet Mode</sys_name>
+            <sys_name>Slacker Text Tracker</sys_name>
             <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
             <sys_policy/>
             <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-            <sys_update_name>sys_documentation_x_165574_slackoff_slackfall_quiet_mode_en</sys_update_name>
+            <sys_update_name>sys_documentation_x_165574_slackoff_slacker_text_tracker__en</sys_update_name>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-09-20 23:53:31</sys_updated_on>
+            <sys_updated_on>2018-10-01 15:48:10</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

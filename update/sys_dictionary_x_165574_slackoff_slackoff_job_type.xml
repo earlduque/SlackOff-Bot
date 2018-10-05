@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="quiet_mode" table="x_165574_slackoff_slackfall">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="type" table="x_165574_slackoff_slackoff_job">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -12,10 +12,10 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice/>
+        <choice>1</choice>
         <choice_field/>
         <choice_table/>
-        <column_label>Quiet Mode</column_label>
+        <column_label>Type</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -28,15 +28,15 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>quiet_mode</element>
+        <element>type</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="">boolean</internal_type>
+        <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <name>x_165574_slackoff_slackfall</name>
+        <name>x_165574_slackoff_slackoff_job</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -53,16 +53,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2018-09-20 23:53:31</sys_created_on>
-        <sys_id>90d1ae674fa467000d952b8ca310c783</sys_id>
+        <sys_created_on>2018-09-28 23:13:26</sys_created_on>
+        <sys_id>9545eb0a4fbcab000d952b8ca310c7fe</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Quiet Mode</sys_name>
+        <sys_name>Type</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>sys_dictionary_x_165574_slackoff_slackfall_quiet_mode</sys_update_name>
+        <sys_update_name>sys_dictionary_x_165574_slackoff_slackoff_job_type</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-20 23:53:31</sys_updated_on>
+        <sys_updated_on>2018-09-28 23:13:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

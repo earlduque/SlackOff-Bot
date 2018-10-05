@@ -19,7 +19,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Processor</name>
+        <name>Processor SlackFall</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,80 +31,171 @@
         <script><![CDATA[(function executeRule(current, previous /*null whhttps://dev56148.service-now.com/images/icons/js_validate.gifxen async*/) {
 
 	var payload = JSON.parse(current.payload);
-	var userSysID = '';
-	var include_participants = false;
+	var message = '';
+	var channel = payload.event.channel;
+	var userSlackID = payload.event.user;
+	
+	if (payload.event.channel != 'CCXPGB78U') return;
 
-	var slackoff_user = new GlideRecord('x_165574_slackoff_slack_user');
-	slackoff_user.addQuery('user_id', payload.event.user);
-	slackoff_user.query();
-	if (slackoff_user.next()){
-		userSysID = slackoff_user.sys_id;
-	} else {
-		if (payload.event.user){
-			slackoff_user.initialize();
-			slackoff_user.setValue('user_id', payload.event.user);
-			userSysID = slackoff_user.insert();
-		}
-	}
-
-	var rm = new sn_ws.RESTMessageV2();
-	rm.setHttpMethod('POST');
-	rm.setLogLevel('all');
-	rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-	var bodyString = '';
-	bodyString += 'token=' + gs.urlEncode('xoxp-14078448372-268567862081-440176670837-c5a628124c703fbdb6dc25e7a502c04b');
-	bodyString += '&channel=' + gs.urlEncode(payload.event.channel);
+	var userSysID = new SlackFall().establish_user(userSlackID);
 
 	var slackfall_round = new GlideRecord('x_165574_slackoff_slackfall');
 	slackfall_round.addQuery('active', true);
-	slackfall_round.addQuery('channel', payload.event.channel);
+	slackfall_round.addQuery('channel', channel);
 	slackfall_round.query();
+
 	if (slackfall_round.next()){
-		if (slackfall_round.getValue('quiet_mode', true)) {
-			if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1){
-				//add participant
+		if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1
+			&& slackfall_round.phase == 1 
+			&& slackfall_round.participants.indexOf(userSysID) == -1){
+
+			var new_participants = slackfall_round.participants + ',' + userSysID;
+			slackfall_round.participants = new_participants;
+			slackfall_round.update();
+
+			wipe_participants();
+			include_participants();
+		} else if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 
+				   && payload.event.text.toUpperCase().indexOf('QUIT') > -1 
+				   || payload.event.text.toUpperCase().indexOf('CANCEL') > -1){
+
+			slackfall_round.setValue('phase', 5);
+			slackfall_round.update();
+			var send_quit = new SlackFall().send_chat(channel, 'Round canceled', false);
+		} else if (userSlackID == slackfall_round.host.getDisplayValue()
+				   && payload.event.text.toUpperCase().indexOf('START') > -1
+				   && slackfall_round.phase == 1 ) {
+			slackfall_round.setValue('phase', 2);
+			slackfall_round.update();
+			var send_start = new SlackFall().send_chat(channel, 'Starting round.', false);
+		} else if (slackfall_round.phase == 2) {
+			if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 && payload.event.text.toUpperCase().indexOf('ROLE') > -1){
+				if (slackfall_round.spy == userSysID) {
+					var send_eph_spy = new SlackFall().send_chat(channel,'*You are the spy!* Figure out where you are before other people figure out that you don\'t know!\nIf you think you know where we are, say "@SlackFall guess `location`" into the chat to end the game.', true, userSlackID);
+				} else {
+					var send_eph_location = new SlackFall().send_chat(channel,'Welcome! You are currently at the following location: *' + slackfall_round.location.getDisplayValue() + '*.', true, userSlackID);
+				}
 			}
-			rm.setEndpoint('https://slack.com/api/chat.delete');
-			bodyString += '&ts=' + gs.urlEncode(payload.event.ts);
+			if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 && payload.event.text.toUpperCase().indexOf('LOCATION') > -1){
+				var send_list = new SlackFall().send_chat(channel,'Beach, Broadway Theater, Casino, Circus Tent, Bank, Day Spa, Hotel, Restaurant, Supermarket, Service Station, Hospital, Embassy, Military Base, Police Station, School, University, Airplane, Ocean Liner, Passenger Train, Submarine, Cathedral, Corporate Party, Movie Studio, Knowledge Conference, Pirate Ship, Polar Station, Space Station', false);
+			}
+			//accusation handlers
+			if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 
+				&& userSlackID == slackfall_round.spy.getDisplayValue()
+				&& payload.event.text.toUpperCase().indexOf('GUESS') > -1){
+				slackfall_round.setValue('phase', 4);
+				slackfall_round.update();
+				if (payload.event.text.toUpperCase().indexOf(slackfall_round.location.getDisplayValue().toUpperCase()) > -1){
+					var round_end_spy = new SlackFall();
+					var send_score_spy = round_end_spy.send_score(slackfall_round.participants.toString(), slackfall_round.spy.toString(), true, channel);
+					var send_spy_win = round_end_spy.send_chat(channel,'```THE SPY HAS GUESSED THE CORRECT LOCATION. The spy has won!```', false);
+				} else {
+					var round_end_others = new SlackFall();
+					var send_score_others = round_end_others.send_score(slackfall_round.participants.toString(), slackfall_round.spy.toString(), false, channel);
+					var send_spy_lose = round_end_others.send_chat(channel, '```THE SPY EMERGED! But didn\'t figure out the location. Everyone else wins!```', false);
+				}
+			} else if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 
+					   && payload.event.text.toUpperCase().indexOf('ACCUSE') > -1
+					   && userSlackID != slackfall_round.spy.getDisplayValue()){
+				/*if (slackfall_round.cannot_accuse &&slackfall_round.cannot_accuse.indexOf(userSysID) > -1) {
+					var send_denial = new SlackFall().send_chat(channel, '<@' + userSlackID + '> attempted to accuse again and is not allowed to.', false);
+				} else {*/
+				var i_suck_at_regex = payload.event.text.split(/[<>]+/);
+				for (var prop in i_suck_at_regex){
+					if (i_suck_at_regex[prop].charAt(0) == '@' && i_suck_at_regex[prop].substring(1) != 'UCXC9BTMX'){
+						/*if (!slackfall_round.cannot_accuse){
+							slackfall_round.cannot_accuse = userSysID+'';
+						} else {
+							var bad_accusers = slackfall_round.cannot_accuse + ',' + userSysID;
+							slackfall_round.cannot_accuse = bad_accusers;								
+						}*/
+						/*var accused = new GlideRecord('x_165574_slackoff_slack_user');
+						accused.addQuery('user_id', i_suck_at_regex[prop].substring(1));
+						accused.query();
+						if (accused.next()){
+							slackfall_round.accused = accused.sys_id;
+							slackfall_round.voting = true;
+
+						}*/
+						accused_slack_id = i_suck_at_regex[prop].substring(1);
+						if (slackfall_round.found_spy == ''){
+							if (accused_slack_id == slackfall_round.spy.getDisplayValue()){
+								slackfall_round.found_spy = userSysID;
+								slackfall_round.update();
+							}
+						} else {
+							var found_spy_list = slackfall_round.found_spy.split(',');
+							if (accused_slack_id == slackfall_round.spy.getDisplayValue()){
+								found_spy_list.push(userSysID);
+								var arrayUtil = new ArrayUtil();
+								found_spy_list = arrayUtil.unique(found_spy_list);
+								slackfall_round.found_spy = found_spy_list.join(',');
+								slackfall_round.update();
+							} else {
+								if (found_spy_list.indexOf(userSysID) > -1 || found_spy_list.toString() == userSysID){
+									found_spy_list.splice(found_spy_list.indexOf(userSysID),1);
+									slackfall_round.found_spy = found_spy_list.join(',');
+									slackfall_round.update();
+								}
+							}
+						}
+
+
+						/*var send_accusation = new SlackFall().send_chat(channel, '<@' + userSlackID + '> has accused <' + i_suck_at_regex[prop] + '> of being a spy!', false);
+						var get_votes = new SlackFall().get_votes(channel, i_suck_at_regex[prop].substring(1), slackfall_round.participants);*/
+						break;
+					}
+				}
+				//}
+			}
+			/*
+		} else if (slackfall_round.voting == true && slackfall_round.accused != userSysID && slackfall_round.yes.indexOf(userSysID) == -1 && slackfall_round.no.indexOf(userSysID) == -1 && (payload.event.text.toUpperCase().indexOf('YES') > -1 || payload.event.text.toUpperCase().indexOf('NO') > -1)){
+			if (payload.event.text.toUpperCase().indexOf('YES') > -1){
+				slackfall_round.yes = userSysID;
+			} else {
+				slackfall_round.no = userSysID;
+			}
+			slackfall_round.update();*/
+		} else {
+			return;
 		}
-	} else if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 && payload.event.text.indexOf('start')){
+	} else if (payload.event.text.indexOf('<@UCXC9BTMX>') > -1 
+			   && payload.event.text.indexOf('start') > -1){
+
 		slackfall_round.initialize();
 		slackfall_round.setValue('channel', payload.event.channel);
-		slackfall_round.setValue('active', true);
+		slackfall_round.setValue('host', userSysID);
 		slackfall_round.participants = userSysID;
-		slackfall_round.setValue('quiet_mode', true);
+		slackfall_round.setValue('round_duration','1970-01-01 00:08:00');
 		slackfall_round.insert();
-		rm.setEndpoint('https://slack.com/api/chat.postMessage');
-		bodyString += '&text=' + gs.urlEncode('Starting a game of SlackFall (' + slackfall_round.number + '), please @ me to join this round. <@' + payload.event.user + '> can start the round by saying "Start".');
 
-		include_participants = true;		
+		message = 'Starting a game of SlackFall (' + slackfall_round.number + '), please @ me to join this round. <@' + payload.event.user + '> can start the round by saying "Start".';
 
+		var game_start = new SlackFall().send_chat(channel, message, false);
+		include_participants();		
 	} else {
-		rm.setEndpoint('https://slack.com/api/chat.postMessage');
-		bodyString += '&text=' + gs.urlEncode('You said: ' + payload.event.text);
+		/*message = 'You said: ' + payload.event.text;
+		var send_eph = new SlackFall().send_chat(channel, message, true, payload.event.user);*/
 	}
 
-	rm.setRequestBody(bodyString);
-	var response = rm.execute();
+	function include_participants(){
+		var participant_list = slackfall_round.participants.split(',');
+		for (var i=0;i<participant_list.length;i++){
+			var grUserID = new GlideRecord('x_165574_slackoff_slack_user');
+			grUserID.get(participant_list[i]);
+			participant_list[i] = grUserID.user_id;
+		}
+		message = 'Participants: <@' + participant_list.join('> <@') + '>';
 
-	if (include_participants){
-		var rm2 = new sn_ws.RESTMessageV2();
-		rm2.setHttpMethod('POST');
-		rm2.setLogLevel('all');
-		rm2.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-		rm2.setEndpoint('https://slack.com/api/chat.postMessage');
-		bodyString = '';
-		bodyString += 'token=' + gs.urlEncode('xoxp-14078448372-268567862081-440176670837-c5a628124c703fbdb6dc25e7a502c04b');
-		bodyString += '&channel=' + gs.urlEncode(payload.event.channel);
-		bodyString += '&text=' + gs.urlEncode('Participants: <@' + slackfall_round.participants.getDisplayValue() + '>');
-		rm2.setRequestBody(bodyString);
-		var response2 = rm2.execute();
-		var response2_body = JSON.parse(response2.getBody());
-		
-		slackfall_round.participant_ts = response2_body.ts;
+		var send_participants = new SlackFall().send_chat(channel, message, false);
+		var response_body = JSON.parse(send_participants.getBody());
+		slackfall_round.participant_ts = response_body.ts;
 		slackfall_round.update();
-		
+	}
+
+	function wipe_participants(){
+		var ts_to_delete = slackfall_round.getValue('participant_ts');
+		var send_wipe = new SlackFall().send_delete(channel, ts_to_delete);
 	}
 
 })(current, previous);]]></script>
@@ -114,15 +205,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>602c46ab4f6467000d952b8ca310c7b5</sys_id>
-        <sys_mod_count>54</sys_mod_count>
-        <sys_name>Processor</sys_name>
+        <sys_mod_count>176</sys_mod_count>
+        <sys_name>Processor SlackFall</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_602c46ab4f6467000d952b8ca310c7b5</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-21 00:45:40</sys_updated_on>
+        <sys_updated_on>2018-09-28 23:40:31</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

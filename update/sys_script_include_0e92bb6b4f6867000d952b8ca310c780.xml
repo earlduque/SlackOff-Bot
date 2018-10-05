@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_165574_slackoff.SlackFall</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>SlackFall</name>
+        <script><![CDATA[var SlackFall = Class.create();
+SlackFall.prototype = {
+	initialize: function() {
+	},
+
+	establish_user: function(payload_user){
+		var userSysID = '';
+		var slackoff_user = new GlideRecord('x_165574_slackoff_slack_user');
+		slackoff_user.addQuery('user_id', payload_user);
+		slackoff_user.query();
+		if (slackoff_user.next()){
+			userSysID = slackoff_user.sys_id;
+		} else {
+			if (payload_user){
+				slackoff_user.initialize();
+				slackoff_user.setValue('user_id', payload_user);
+				slackoff_user.setValue('score', 0);
+				userSysID = slackoff_user.insert();
+			}
+		}
+		return userSysID;
+	},
+
+	send_chat: function (channel, message, eph, user, thread){
+		//channel = payload.event.channel
+		var rm = new sn_ws.RESTMessageV2();
+		rm.setHttpMethod('POST');
+		rm.setLogLevel('all');
+		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+		var bodyString = '';
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += '&channel=' + gs.urlEncode(channel);
+
+		if (eph == true) {
+			rm.setEndpoint('https://slack.com/api/chat.postEphemeral');
+			bodyString += '&user=' + gs.urlEncode(user);
+		} else {
+			if (thread){
+				bodyString += '&thread_ts='+gs.urlEncode(thread);
+			}
+			rm.setEndpoint('https://slack.com/api/chat.postMessage');
+		}
+		bodyString += '&text=' + gs.urlEncode(message);
+		rm.setRequestBody(bodyString);
+		return rm.execute();
+	},
+
+	send_delete: function(channel, ts){
+		var rm = new sn_ws.RESTMessageV2();
+		rm.setHttpMethod('POST');
+		rm.setLogLevel('all');
+		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+		var bodyString = '';
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += '&channel=' + gs.urlEncode(channel);
+		rm.setEndpoint('https://slack.com/api/chat.delete');
+		bodyString += '&ts=' + gs.urlEncode(ts);
+		rm.setRequestBody(bodyString);
+		return rm.execute();
+	},
+
+	send_score: function(participants, spy, spy_win, channel){
+		var current_score = 0;
+		if (spy_win == true){
+			var gr = new GlideRecord('x_165574_slackoff_slack_user');
+			gr.addQuery('sys_id', spy);
+			gr.query();
+			if (gr.next()){
+				current_score = gr.score;
+				var total_players = participants.split(',');
+				gr.score = current_score + total_players.length - 1;
+				gr.update();
+				var send_score_to_chat = new SlackFall().send_chat(channel,'<@'+gr.user_id+'> now has ' + gr.score + ' points in SlackFall');
+			}
+		} else {
+			var participant_list = participants.split(',');
+			var e_query = 'sys_id=' + participant_list.join('^ORsys_id=');
+			var gr2 = new GlideRecord('x_165574_slackoff_slack_user');
+			gr2.addEncodedQuery(e_query);
+			gr2.query();
+			while(gr2.next()){
+				if (gr2.sys_id != spy){
+					current_score = gr2.score;
+					gr2.score = current_score + 1;
+					gr2.update();
+					var send_score_to_chat2 = new SlackFall().send_chat(channel,'<@'+gr2.user_id+'> now has ' + gr2.score + ' points in SlackFall');
+				}
+			}
+		}
+	},
+
+	get_votes: function(channel, accused, participants){
+		var participant_list = participants.split(',');
+		for (var i=0;i<participant_list.length;i++){
+			var grUserID = new GlideRecord('x_165574_slackoff_slack_user');
+			grUserID.get(participant_list[i]);
+			participant_list[i] = grUserID.user_id;
+		}
+		
+		var index = participant_list.indexOf(accused);
+		participant_list.splice(index, 1);
+		var message = 'Please vote now by saying Yes or No into the chat! <@' + participant_list.join('> <@') + '>';
+		var send_vote_request = new SlackFall().send_chat(channel, message, false);
+	},
+	
+	get_user_info: function(slack_id, record_id) {
+		var rm = new sn_ws.RESTMessageV2();
+		rm.setHttpMethod('GET');
+		rm.setLogLevel('all');
+		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		var bodyString = '';
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += '&user=' + gs.urlEncode(slack_id);
+		rm.setEndpoint('https://slack.com/api/users.info'+'?'+bodyString);
+		//rm.setRequestBody(bodyString);
+		var response = rm.execute();
+		var response_body = JSON.parse(response.getBody());
+		//gs.info('slackoff error: ' + response_body.error);
+
+		if (response_body.user.name){
+			var grupdate = new GlideRecord('x_165574_slackoff_slack_user');
+			grupdate.get(record_id);
+			grupdate.setValue('name', response_body.user.real_name);
+			grupdate.update();
+			return true;
+		} else {
+			return false;
+		}
+	},
+
+	type: 'SlackFall'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-09-21 06:01:23</sys_created_on>
+        <sys_id>0e92bb6b4f6867000d952b8ca310c780</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_name>SlackFall</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_include_0e92bb6b4f6867000d952b8ca310c780</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-03 19:35:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

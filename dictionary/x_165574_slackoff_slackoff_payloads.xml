@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="SlackOff Payloads" max_length="40" name="x_165574_slackoff_slackoff_payloads" type="collection">
+    <element label="SlackOff Payloads" max_length="40" name="x_165574_slackoff_slackoff_payloads" sizeclass="5033" type="collection">
         <element label="Payload" max_length="4000" name="payload" type="string"/>
     </element>
 </database>
