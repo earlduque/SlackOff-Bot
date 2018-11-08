@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>fcc8dee04f156b400d952b8ca310c767</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_165574_slackoff_slacker_test_scripts">
+    <x_165574_slackoff_slacker_test_scripts action="INSERT_OR_UPDATE">
+        <chance>0.17</chance>
+        <order>500</order>
+        <step>In a comment, try to break functionality by putting bad html code in [code] blocks. That'll teach those developers.</step>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-18 22:19:01</sys_created_on>
+        <sys_id>fcc8dee04f156b400d952b8ca310c767</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-18 23:04:11</sys_updated_on>
+    </x_165574_slackoff_slacker_test_scripts>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-11-08 17:21:12</sys_created_on>
+        <sys_id>83fd5d9b4f2123000d952b8ca310c7fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>In a comment, try to break functionality by putting bad html code in [code] blocks. That'll teach those developers.</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_metadata_link_83fd5d9b4f2123000d952b8ca310c7fb</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-11-08 17:21:12</sys_updated_on>
+        <tablename>x_165574_slackoff_slacker_test_scripts</tablename>
+    </sys_metadata_link>
+</record_update>

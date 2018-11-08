@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>6b25b2644f556b400d952b8ca310c77c</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_165574_slackoff_slacker_test_scripts">
+    <x_165574_slackoff_slacker_test_scripts action="INSERT_OR_UPDATE">
+        <chance>0.1</chance>
+        <order>510</order>
+        <step>Type your social security number in the work notes</step>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-19 00:24:10</sys_created_on>
+        <sys_id>6b25b2644f556b400d952b8ca310c77c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-19 00:24:10</sys_updated_on>
+    </x_165574_slackoff_slacker_test_scripts>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-11-08 17:21:10</sys_created_on>
+        <sys_id>e2fd5d9b4f2123000d952b8ca310c7c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Type your social security number in the work notes</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_metadata_link_e2fd5d9b4f2123000d952b8ca310c7c1</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-11-08 17:21:10</sys_updated_on>
+        <tablename>x_165574_slackoff_slacker_test_scripts</tablename>
+    </sys_metadata_link>
+</record_update>

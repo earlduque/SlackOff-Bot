@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>37679ee04f156b400d952b8ca310c7cc</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="x_165574_slackoff_slacker_test_scripts">
+    <x_165574_slackoff_slacker_test_scripts action="INSERT_OR_UPDATE">
+        <chance>0.05</chance>
+        <order>0</order>
+        <step>If you wish to start from scratch, you must first invent the universe</step>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-18 22:13:33</sys_created_on>
+        <sys_id>37679ee04f156b400d952b8ca310c7cc</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-19 00:54:39</sys_updated_on>
+    </x_165574_slackoff_slacker_test_scripts>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-11-08 17:21:09</sys_created_on>
+        <sys_id>9efd5d9b4f2123000d952b8ca310c7a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>If you wish to start from scratch, you must first invent the universe</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_metadata_link_9efd5d9b4f2123000d952b8ca310c7a2</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-11-08 17:21:09</sys_updated_on>
+        <tablename>x_165574_slackoff_slacker_test_scripts</tablename>
+    </sys_metadata_link>
+</record_update>
