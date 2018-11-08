@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="9d1be38e4fbcab000d952b8ca310c744" sys_domain="global" table="u_imp_tmpl_x_165574_slackoff_slackoff_job" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>

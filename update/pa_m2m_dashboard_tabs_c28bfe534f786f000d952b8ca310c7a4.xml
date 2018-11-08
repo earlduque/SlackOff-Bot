@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
     <pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE">
         <dashboard display_value="Slacker Stats">c18b3e534f786f000d952b8ca310c739</dashboard>
         <home>false</home>

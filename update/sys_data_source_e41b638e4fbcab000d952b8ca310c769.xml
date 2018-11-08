@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_data_source">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_source">
     <sys_data_source action="INSERT_OR_UPDATE">
         <category/>
         <connection_timeout>0</connection_timeout>

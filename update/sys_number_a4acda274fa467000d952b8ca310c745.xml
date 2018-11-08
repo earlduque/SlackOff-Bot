@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_number">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
     <sys_number action="INSERT_OR_UPDATE">
         <category display_value="" name="x_165574_slackoff_slackfall">x_165574_slackoff_slackfall</category>
         <maximum_digits>7</maximum_digits>

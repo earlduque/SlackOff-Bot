@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update node_type="sys_portal_page" unload_date="2018-11-08 17:25:24">
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2018-11-08 18:13:15">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout/>
         <order/>
@@ -36,28 +35,6 @@
                 <sys_mod_count>2</sys_mod_count>
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-02 17:28:31</sys_updated_on>
-                <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_widget>
-                        <posx>0</posx>
-                        <posy>10</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-02 17:27:43</sys_created_on>
-                        <sys_id>fdac32934f786f000d952b8ca310c702</sys_id>
-                        <sys_mod_count>17</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_fdac32934f786f000d952b8ca310c702</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:29</sys_updated_on>
-                        <width>6</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
@@ -128,28 +105,6 @@
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-02 17:27:14</sys_updated_on>
                 <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_widget>
-                        <posx>4</posx>
-                        <posy>0</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-02 17:24:43</sys_created_on>
-                        <sys_id>f1fbfe534f786f000d952b8ca310c7fe</sys_id>
-                        <sys_mod_count>20</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_f1fbfe534f786f000d952b8ca310c7fe</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:23</sys_updated_on>
-                        <width>4</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
-                <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
                         <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
@@ -218,28 +173,6 @@
                 <sys_mod_count>1</sys_mod_count>
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-03 19:49:01</sys_updated_on>
-                <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_widget>
-                        <posx>6</posx>
-                        <posy>20</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-03 19:49:01</sys_created_on>
-                        <sys_id>959624734fb4af000d952b8ca310c7ef</sys_id>
-                        <sys_mod_count>10</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_959624734fb4af000d952b8ca310c7ef</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:43</sys_updated_on>
-                        <width>6</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
@@ -321,28 +254,6 @@
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-03 14:56:35</sys_updated_on>
                 <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_widget>
-                        <posx>6</posx>
-                        <posy>10</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-03 14:54:48</sys_created_on>
-                        <sys_id>2b332f2b4fb0af000d952b8ca310c7a4</sys_id>
-                        <sys_mod_count>13</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_2b332f2b4fb0af000d952b8ca310c7a4</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:29</sys_updated_on>
-                        <width>6</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
-                <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
                         <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
@@ -411,28 +322,6 @@
                 <sys_mod_count>2</sys_mod_count>
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-03 19:33:53</sys_updated_on>
-                <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_widget>
-                        <posx>0</posx>
-                        <posy>20</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-03 19:29:02</sys_created_on>
-                        <sys_id>640224bf4f74af000d952b8ca310c7c0</sys_id>
-                        <sys_mod_count>10</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_640224bf4f74af000d952b8ca310c7c0</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:36</sys_updated_on>
-                        <width>6</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
@@ -503,28 +392,6 @@
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-03 17:51:37</sys_updated_on>
                 <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_widget>
-                        <posx>8</posx>
-                        <posy>0</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-03 17:50:07</sys_created_on>
-                        <sys_id>6f5b043f4ff0af000d952b8ca310c70a</sys_id>
-                        <sys_mod_count>11</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_6f5b043f4ff0af000d952b8ca310c70a</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:24</sys_updated_on>
-                        <width>4</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
-                <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
                         <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
@@ -593,28 +460,6 @@
                 <sys_mod_count>2</sys_mod_count>
                 <sys_updated_by>admin-eduque</sys_updated_by>
                 <sys_updated_on>2018-10-02 17:23:49</sys_updated_on>
-                <related_items_node>
-                    <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
-                        <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
-                        <height>10</height>
-                        <portal_widget display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_widget>
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <sys_class_name>sys_grid_canvas_pane</sys_class_name>
-                        <sys_created_by>admin-eduque</sys_created_by>
-                        <sys_created_on>2018-10-02 17:22:55</sys_created_on>
-                        <sys_id>9f8b7e534f786f000d952b8ca310c739</sys_id>
-                        <sys_mod_count>16</sys_mod_count>
-                        <sys_name>828bfe534f786f000d952b8ca310c7a0</sys_name>
-                        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
-                        <sys_policy/>
-                        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-                        <sys_update_name>sys_grid_canvas_pane_9f8b7e534f786f000d952b8ca310c739</sys_update_name>
-                        <sys_updated_by>admin-eduque</sys_updated_by>
-                        <sys_updated_on>2018-10-03 19:50:12</sys_updated_on>
-                        <width>4</width>
-                    </sys_grid_canvas_pane>
-                </related_items_node>
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="pa_text_index_configurations">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_text_index_configurations">
     <pa_text_index_configurations action="INSERT_OR_UPDATE">
         <cube display_value="Slacker Text">380e15c74f3c2f000d952b8ca310c772</cube>
         <fields>text</fields>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element label="SlackFall" max_length="40" name="x_165574_slackoff_slackfall" type="collection">
         <element label="Accused" max_length="32" name="accused" reference="x_165574_slackoff_slack_user" type="reference"/>
         <element label="Active" max_length="40" name="active" type="boolean"/>
@@ -10,33 +9,33 @@
         <element label="Host" max_length="32" name="host" reference="x_165574_slackoff_slack_user" type="reference"/>
         <element choice="3" default="1" label="Location" max_length="40" name="location" type="integer">
             <choice>
-                <element label="Beach" sequence="0" value="1"/>
-                <element label="Broadway Theater" sequence="1" value="2"/>
-                <element label="Casino" sequence="2" value="3"/>
-                <element label="Circus Tent" sequence="3" value="4"/>
-                <element label="Bank" sequence="4" value="5"/>
-                <element label="Day Spa" sequence="5" value="6"/>
-                <element label="Hotel" sequence="6" value="7"/>
-                <element label="Restaurant" sequence="7" value="8"/>
-                <element label="Supermarket" sequence="8" value="9"/>
-                <element label="Service Station" sequence="9" value="10"/>
-                <element label="Hospital" sequence="10" value="11"/>
-                <element label="Embassy" sequence="11" value="12"/>
-                <element label="Military Base" sequence="12" value="13"/>
-                <element label="Police Station" sequence="13" value="14"/>
-                <element label="School" sequence="14" value="15"/>
-                <element label="University" sequence="15" value="16"/>
-                <element label="Airplane" sequence="16" value="17"/>
-                <element label="Ocean Liner" sequence="17" value="18"/>
-                <element label="Passenger Train" sequence="18" value="19"/>
-                <element label="Submarine" sequence="19" value="20"/>
-                <element label="Cathedral" sequence="20" value="21"/>
-                <element label="Corporate Party" sequence="21" value="22"/>
-                <element label="Movie Studio" sequence="22" value="23"/>
-                <element label="Knowledge Conference" sequence="23" value="24"/>
-                <element label="Pirate Ship" sequence="24" value="25"/>
-                <element label="Polar Station" sequence="25" value="26"/>
-                <element label="Space Station" sequence="26" value="27"/>
+                <element inactive_on_update="false" label="Beach" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Broadway Theater" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Casino" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Circus Tent" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Bank" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="Day Spa" sequence="5" value="6"/>
+                <element inactive_on_update="false" label="Hotel" sequence="6" value="7"/>
+                <element inactive_on_update="false" label="Restaurant" sequence="7" value="8"/>
+                <element inactive_on_update="false" label="Supermarket" sequence="8" value="9"/>
+                <element inactive_on_update="false" label="Service Station" sequence="9" value="10"/>
+                <element inactive_on_update="false" label="Hospital" sequence="10" value="11"/>
+                <element inactive_on_update="false" label="Embassy" sequence="11" value="12"/>
+                <element inactive_on_update="false" label="Military Base" sequence="12" value="13"/>
+                <element inactive_on_update="false" label="Police Station" sequence="13" value="14"/>
+                <element inactive_on_update="false" label="School" sequence="14" value="15"/>
+                <element inactive_on_update="false" label="University" sequence="15" value="16"/>
+                <element inactive_on_update="false" label="Airplane" sequence="16" value="17"/>
+                <element inactive_on_update="false" label="Ocean Liner" sequence="17" value="18"/>
+                <element inactive_on_update="false" label="Passenger Train" sequence="18" value="19"/>
+                <element inactive_on_update="false" label="Submarine" sequence="19" value="20"/>
+                <element inactive_on_update="false" label="Cathedral" sequence="20" value="21"/>
+                <element inactive_on_update="false" label="Corporate Party" sequence="21" value="22"/>
+                <element inactive_on_update="false" label="Movie Studio" sequence="22" value="23"/>
+                <element inactive_on_update="false" label="Knowledge Conference" sequence="23" value="24"/>
+                <element inactive_on_update="false" label="Pirate Ship" sequence="24" value="25"/>
+                <element inactive_on_update="false" label="Polar Station" sequence="25" value="26"/>
+                <element inactive_on_update="false" label="Space Station" sequence="26" value="27"/>
             </choice>
         </element>
         <element label="No Votes" max_length="40" name="no" reference="x_165574_slackoff_slack_user" type="glide_list"/>
@@ -45,11 +44,11 @@
         <element label="Participant TS" max_length="40" name="participant_ts" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="1" label="Phase" max_length="40" name="phase" type="integer">
             <choice>
-                <element label="Participants Enter" sequence="0" value="1"/>
-                <element label="Questioning" sequence="1" value="2"/>
-                <element label="Final Accusations" sequence="2" value="3"/>
-                <element label="Conclusion" sequence="3" value="4"/>
-                <element label="Cancelled" sequence="4" value="5"/>
+                <element inactive_on_update="false" label="Participants Enter" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Questioning" sequence="1" value="2"/>
+                <element inactive_on_update="false" label="Final Accusations" sequence="2" value="3"/>
+                <element inactive_on_update="false" label="Conclusion" sequence="3" value="4"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="5"/>
             </choice>
         </element>
         <element default="1970-01-01 00:08:00" label="Round Duration" max_length="40" name="round_duration" type="glide_duration"/>

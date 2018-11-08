@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
+<?xml version="1.0" encoding="UTF-8"?><database>
     <element extends="sys_import_set_row" label="Imp Tmpl X 165574 Slackoff Slackoff Job" max_length="40" name="u_imp_tmpl_x_165574_slackoff_slackoff_job" type="collection">
         <element attributes="import_attribute_name=Output,edge_encryption_enabled=true" label="Output" max_length="40" name="u_output" type="string"/>
         <element attributes="import_attribute_name=Type,edge_encryption_enabled=true" label="Type" max_length="40" name="u_type" type="string"/>

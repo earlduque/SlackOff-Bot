@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update>
+<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_dictionary action="INSERT_OR_UPDATE" element="spy" table="x_165574_slackoff_slackfall">
         <active>true</active>
         <array>false</array>
@@ -49,15 +48,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-21 06:46:51</sys_created_on>
-        <sys_id>76700c734fa867000d952b8ca310c789</sys_id>
+        <sys_id>684f51d34f25a700c8b501b18110c7c8</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Spy</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_dictionary_x_165574_slackoff_slackfall_spy</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-21 06:46:51</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2018-11-08 17:26:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

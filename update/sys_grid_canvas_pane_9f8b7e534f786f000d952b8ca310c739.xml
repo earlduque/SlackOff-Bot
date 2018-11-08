@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_grid_canvas_pane">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_grid_canvas_pane">
     <sys_grid_canvas_pane action="INSERT_OR_UPDATE">
         <grid_canvas display_value="PA New Tab">828bfe534f786f000d952b8ca310c7a0</grid_canvas>
         <height>10</height>

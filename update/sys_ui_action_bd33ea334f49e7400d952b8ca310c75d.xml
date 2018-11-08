@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="sys_ui_action">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>Send Wave</action_name>
         <active>true</active>
         <client>false</client>
+        <client_script_v2/>
         <comments/>
         <condition/>
         <form_action>true</form_action>
         <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
         <form_context_menu>true</form_context_menu>
         <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
         <hint/>
+        <isolate_script>false</isolate_script>
         <list_action>true</list_action>
         <list_banner_button>false</list_banner_button>
         <list_button>false</list_button>

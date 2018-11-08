@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sysauto_script">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
     <sysauto_script action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition/>
         <conditional>false</conditional>
         <name>Delete old slack messages</name>
-        <run_as display_value="Earl Duque">a90275264f3213000d952b8ca310c742</run_as>
+        <run_as display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>

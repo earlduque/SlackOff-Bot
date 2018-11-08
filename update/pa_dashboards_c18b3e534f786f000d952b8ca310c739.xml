@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="pa_dashboards">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_dashboards">
     <pa_dashboards action="INSERT_OR_UPDATE">
         <active>true</active>
         <breakdown_source/>
+        <color/>
         <group/>
         <groups/>
         <is_breakdown>false</is_breakdown>
@@ -11,7 +11,7 @@
         <name>Slacker Stats</name>
         <no_tabs>false</no_tabs>
         <order/>
-        <owner display_value="Earl Duque">a90275264f3213000d952b8ca310c742</owner>
+        <owner display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</owner>
         <restrict_to_roles/>
         <role_override>true</role_override>
         <roles/>

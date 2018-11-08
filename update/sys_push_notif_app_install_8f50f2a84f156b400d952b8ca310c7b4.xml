@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update table="sys_push_notif_app_install">
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_app_install">
     <sys_push_notif_app_install action="INSERT_OR_UPDATE">
         <active>true</active>
         <last_registered_on>2018-10-29 03:30:55</last_registered_on>
@@ -17,7 +16,7 @@
         <sys_update_name>sys_push_notif_app_install_8f50f2a84f156b400d952b8ca310c7b4</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
         <sys_updated_on>2018-10-29 03:30:55</sys_updated_on>
-        <sys_user_id display_value="Earl Duque">a90275264f3213000d952b8ca310c742</sys_user_id>
+        <sys_user_id display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</sys_user_id>
         <token>6fce22a06cf6756d6eb5c37decf21b8dfbe1c85b518c92aab7ac113bcd5a21f2</token>
     </sys_push_notif_app_install>
 </record_update>

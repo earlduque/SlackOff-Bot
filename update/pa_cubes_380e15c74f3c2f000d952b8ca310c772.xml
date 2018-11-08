@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<record_update sys_domain="global" table="pa_cubes">
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_cubes">
     <pa_cubes action="INSERT_OR_UPDATE">
         <benchmarking>false</benchmarking>
         <conditions table="x_165574_slackoff_slacker_text_tracker">channel=G9LAJG7G8<item endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="G9LAJG7G8"/>
