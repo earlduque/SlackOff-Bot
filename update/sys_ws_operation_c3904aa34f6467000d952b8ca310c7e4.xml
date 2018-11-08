@@ -16,7 +16,7 @@
 		response.getStreamWriter().writeString(request.body.data.challenge);
 	} else {
 		if (request.body.data.event.bot_id) return;
-		//gs.info('slackoff: ' + JSON.stringify(request.body.data, null, 2));
+		//gs.info('slackoff: ' + (request.body.dataString));
 		var gr = new GlideRecord('x_165574_slackoff_slackoff_payloads');
 		gr.initialize();
 		gr.setValue('payload', JSON.stringify(request.body.data, null, 2));
@@ -36,14 +36,14 @@
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-20 21:28:31</sys_created_on>
         <sys_id>c3904aa34f6467000d952b8ca310c7e4</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>55</sys_mod_count>
         <sys_name>Event</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_ws_operation_c3904aa34f6467000d952b8ca310c7e4</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-29 05:34:29</sys_updated_on>
+        <sys_updated_on>2018-10-15 19:50:11</sys_updated_on>
         <web_service_definition display_value="SlackOff Events Handler">7180c6a34f6467000d952b8ca310c7e3</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

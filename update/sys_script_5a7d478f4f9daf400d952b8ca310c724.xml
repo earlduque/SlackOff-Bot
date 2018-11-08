@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textSTARTSWITH!madlib^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="false" value="!madlib"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Madlibs Processor</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// 0 NOUN // 1 PLACE // 2 ADJECTIVE // 3 VERB // 4 NOUN 
+	
+	var text = [
+		['The other day, I was in ServiceNow and I was trying to integrate ','0',
+		 ' into our instance. I got to work and started to ','3',
+		 ' as much as I could, but the server was proving to be ', '2',
+		 '. I modeled the integration off of our ','4',
+		 ' integration, but when I finially tested it, the entirety of ','1',
+		 ' completely shut down!'],
+
+		['Back when I was employed by ','1',
+		 ', I was told that I had to make a new ','4',
+		 ' application that would automatically ','3',
+		 ' when a user was ','2',
+		 '. Well it was a complete success, and our quarterly projections of ','0',
+		 ' immediately increased by 200%!'
+		],
+
+		['The other day, Chuck Tomasi, me, and the CEO of ','1',
+		 ' were discussing the usefulness of ','0',
+		 ' in ServiceNow. It was a heated argument on whether we should be able to ','3',
+		 ' without the need to create another ','2',
+		 ' scoped application. "It\'s fine," I said. "I\'m sure I will be able to create a ','4',
+		 ' to automate it.'
+		],
+		
+		['Four days into my latest consulting gig, I was approached by an offensive ','0',
+		 ' with a surprising alternate job offer. I immediately made plans to ', '3',
+		 ' my previous manager later that night. But it didn\'t happen, as I got stuck with 11 hours of ','2',
+		 ' online training, and fell asleep on my keyboard. Around 3:00am I was startled awake in the spooky dark office by the sound of a corporate-logo-covered ','4',
+		 '! Apparently guarding the offices at night! I probably should never have taken the job at ','1',
+		 '.'
+		]
+
+	];
+
+	var term = '';
+	term = current.text.substr(8).trim();
+	if (term == '') {
+		var send_instructions = new SlackFall().send_chat(current.channel, 'Instructions: say *!madlib `a noun`, `a place`, `an adjective`, `a verb`, `a noun`*', false, '', current.thread_ts);
+		return;
+	}
+
+	var answers = term.split(',').filter(function(e){return e;});
+	
+	if (answers.length != 5) {
+		var send_error = new SlackFall().send_chat(current.channel, 'I was expecting 5 inputs but I receieved ' + answers.length + ' instead, please try again.', false, '', current.thread_ts);
+		return;
+	}
+
+	var madlib = '';
+	var choose_text = getRandomInt(text.length);
+	for (var i = 0; i < text[choose_text].length; i++){
+		if (isEven(i)){
+			madlib += text[choose_text][i];
+		} else {
+			madlib += answers[text[choose_text][i]].trim();
+		}
+	}
+
+	var send_chat = new SlackFall().send_chat(current.channel, madlib, false, '', current.thread_ts);
+
+	function isEven(n) {
+		return n % 2 == 0;
+	}
+
+	function isOdd(n) {
+		return Math.abs(n % 2) == 1;
+	}
+
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-26 20:34:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5a7d478f4f9daf400d952b8ca310c724</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Madlibs Processor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_5a7d478f4f9daf400d952b8ca310c724</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-29 19:01:06</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=5a7d478f4f9daf400d952b8ca310c724"/>
+</record_update>

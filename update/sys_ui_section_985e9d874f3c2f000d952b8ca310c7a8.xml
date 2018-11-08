@@ -5,13 +5,13 @@
             <element>channel</element>
             <position>0</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-04 20:57:36</sys_created_on>
-            <sys_id>fbdfbd804f81ef000d952b8ca310c704</sys_id>
+            <sys_created_on>2018-10-08 15:55:51</sys_created_on>
+            <sys_id>a221e9d14f4d63400d952b8ca310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-04 20:57:36</sys_updated_on>
+            <sys_updated_on>2018-10-08 15:55:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -19,13 +19,13 @@
             <element>text</element>
             <position>1</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-04 20:57:36</sys_created_on>
-            <sys_id>f3dfbd804f81ef000d952b8ca310c705</sys_id>
+            <sys_created_on>2018-10-08 15:55:51</sys_created_on>
+            <sys_id>ea21e9d14f4d63400d952b8ca310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-04 20:57:36</sys_updated_on>
+            <sys_updated_on>2018-10-08 15:55:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -33,13 +33,13 @@
             <element>user</element>
             <position>2</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-04 20:57:36</sys_created_on>
-            <sys_id>77dfbd804f81ef000d952b8ca310c705</sys_id>
+            <sys_created_on>2018-10-08 15:55:51</sys_created_on>
+            <sys_id>6e21e9d14f4d63400d952b8ca310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-04 20:57:36</sys_updated_on>
+            <sys_updated_on>2018-10-08 15:55:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -47,13 +47,27 @@
             <element>thread_ts</element>
             <position>3</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-04 20:57:36</sys_created_on>
-            <sys_id>f7dfbd804f81ef000d952b8ca310c705</sys_id>
+            <sys_created_on>2018-10-08 15:55:51</sys_created_on>
+            <sys_id>ee21e9d14f4d63400d952b8ca310c7c2</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-04 20:57:36</sys_updated_on>
+            <sys_updated_on>2018-10-08 15:55:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ts</element>
+            <position>4</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2018-10-08 15:55:51</sys_created_on>
+            <sys_id>6221e9d14f4d63400d952b8ca310c7c3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2018-10-08 15:55:51</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

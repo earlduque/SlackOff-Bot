@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textSTARTSWITH!giphy^user!=b685d37f4f60a7000d952b8ca310c749^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="false" value="!giphy"/>
+            <item display_table="x_165574_slackoff_slack_user" display_value="Robbie Medved" endquery="false" field="user" goto="false" newquery="false" operator="!=" or="false" value="b685d37f4f60a7000d952b8ca310c749"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Giphy Processor</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var where = 0;
+	if (current.text.indexOf('!giphy') > -1) {
+		where = current.text.indexOf('!giphy') + 7;
+	} else {
+		return;
+	}
+
+	var term = current.text.substr(where).trim();
+	if (term == '') {
+		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !giphy *something*', false, '', current.thread_ts);
+		return;
+	}
+	var get_gif = new GiphySlack().get_gif(term);
+	gs.info('slackoff gif: ' + get_gif);
+	var send_gif = new SlackFall().send_attachment(current.channel, term, get_gif, current.thread_ts);
+
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-11-06 16:50:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2cc38bea4f2123000d952b8ca310c76e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Giphy Processor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_2cc38bea4f2123000d952b8ca310c76e</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-11-07 21:51:31</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=2cc38bea4f2123000d952b8ca310c76e"/>
+</record_update>

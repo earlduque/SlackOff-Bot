@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_165574_slackoff.GiphySlack</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GiphySlack</name>
+        <script><![CDATA[var GiphySlack = Class.create();
+GiphySlack.prototype = {
+    initialize: function() {
+    },
+	get_gif: function(term){
+		var rm = new sn_ws.RESTMessageV2();
+		rm.setHttpMethod('GET');
+		rm.setLogLevel('all');
+		//rm.setRequestHeader('Content-Type', 'application/json');
+		rm.setEndpoint('https://api.giphy.com/v1/gifs/search');
+		/*
+		rm.setStringParameter('api_key',gs.getProperty('giphy.token'));
+		rm.setStringParameter('q', term);
+		rm.setStringParameter('limit', 1);
+		rm.setStringParameter('rating', 'pg');
+		*/
+		var bodyString = '';
+		bodyString += 'api_key=' + gs.urlEncode(gs.getProperty('giphy.token'));
+		bodyString += '&q=' + gs.urlEncode(term);
+		bodyString += '&limit=' + gs.urlEncode(5);
+		//bodyString += '&rating=' + gs.urlEncode("pg");
+		rm.setQueryParameter(bodyString);
+		
+		var response = rm.execute();
+		//gs.info('slackoff error: ' + response_body.error);
+		gs.info('slackoff json: ' + response.getBody());
+		var response_body = JSON.parse(response.getBody());
+		var randomInt = Math.floor(Math.random() * 5);
+		return response_body.data[randomInt].images.downsized.url;
+		//return response.data.bitly_url;
+	},
+
+    type: 'GiphySlack'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-11-06 16:46:09</sys_created_on>
+        <sys_id>0ec2cbaa4f2123000d952b8ca310c712</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>GiphySlack</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_include_0ec2cbaa4f2123000d952b8ca310c712</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-11-06 18:48:01</sys_updated_on>
+    </sys_script_include>
+</record_update>

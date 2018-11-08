@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	console.log('Lol what are you doing here?');
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.example{&#13;
+  width: 75%;&#13;
+  border-style: solid;&#13;
+  border-width: 1px;&#13;
+  padding: 5px;&#13;
+  white-space: pre-wrap;&#13;
+}&#13;
+&#13;
+.footer {&#13;
+  position: absolute;&#13;
+  right: 0;&#13;
+  bottom: 0;&#13;
+  left: 0;&#13;
+  padding: 1rem;&#13;
+  background-color: #efefef;&#13;
+  text-align: center;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>servicenow-test-script-generator</id>
+        <internal>false</internal>
+        <link/>
+        <name>ServiceNow Test Script Generator</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	data.choices = [];
+	var gr = new GlideRecord('x_165574_slackoff_slacker_test_scripts');
+	gr.addEncodedQuery('stepNOT LIKEprofessor');
+	gr.orderBy('order');
+	gr.query();
+	while(gr.next()){
+		var option = {
+			'step': gr.step.toString(),
+			'order': gr.order.toString(),
+			'chance': gr.chance*100+'%'
+		};
+		data.choices.push(option);
+	}
+	
+	var message = 'Testing Script:\n';
+	var step_number = 1;
+	
+	var current_step = [];
+	var gr2 = new GlideRecord('x_165574_slackoff_slacker_test_scripts');
+	gr2.orderBy('order');
+	gr2.query();
+	while (gr2.next()){
+		if (Math.random() < gr2.chance){
+			message += step_number + '. ' + gr2.step + '\n';
+			step_number++;
+		}
+	}
+
+	data.message = message;
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-19 15:04:31</sys_created_on>
+        <sys_id>3dee71f04f1d6b400d952b8ca310c72a</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>ServiceNow Test Script Generator</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sp_widget_3dee71f04f1d6b400d952b8ca310c72a</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-29 18:47:48</sys_updated_on>
+        <template><![CDATA[<p><b>Intro</b></p>
+<p>To use, say !testscript (or just !test) in any channel that @slacker is invited to on the sndevs workspace</p>
+
+<p><b>Here is an example of output:</b></p>
+<div class="example">
+  <button ng-click="c.server.update();">
+    Refresh
+  </button>
+  <br>
+  {{data.message}}
+</div>
+<br>
+
+<div class="container">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Options</button>
+  <div id="demo" class="collapse">
+    <div ng-repeat="item in data.choices">
+      • {{item.step}} (Order: {{item.order}}, Chance to appear: {{item.chance}})
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Code</button>
+  <div id="demo2" class="collapse">
+    <pre><code>(function executeRule(current, previous /*null when async*/) {
+
+	var message = 'Testing Script:\n';
+	var step_number = 1;
+
+	var current_step = [];
+	var gr = new GlideRecord('x_165574_slackoff_slacker_test_scripts');
+	gr.orderBy('order');
+	gr.query();
+	while (gr.next()){
+		if (Math.random() < gr.chance){
+			message += step_number + '. ' + gr.step + '\n';
+			step_number++;
+		}
+	}
+
+	var send_chat = new SlackFall().send_chat(current.channel, message, false, '', current.thread_ts);
+
+
+})(current, previous);</code></pre>
+</div>
+  </div>
+  <div class="footer">
+    See more at <a href="http://www.earlduque.com" target="_self">earlduque.com</a>
+  </div>]]></template>
+    </sp_widget>
+</record_update>

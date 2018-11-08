@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+  /* widget controller */
+  var c = this;
+	console.log('Lol what are you doing here?');
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.example{&#13;
+  width: 75%;&#13;
+  border-style: solid;&#13;
+  border-width: 1px;&#13;
+  padding: 5px;&#13;
+  white-space: pre-wrap;&#13;
+}&#13;
+&#13;
+.footer {&#13;
+  position: absolute;&#13;
+  right: 0;&#13;
+  bottom: 0;&#13;
+  left: 0;&#13;
+  padding: 1rem;&#13;
+  background-color: #efefef;&#13;
+  text-align: center;&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>servicenow-madlibs</id>
+        <internal>false</internal>
+        <link/>
+        <name>ServiceNow Madlibs</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+
+	data.options1 = 'The other day, I was in ServiceNow and I was trying to integrate [a noun] into our instance. I got to work and started to [a verb] as much as I could, but the server was proving to be [an adjective]. I modeled the integration off of our [a noun] integration, but when I finially tested it, the entirety of [a place] completely shut down!';
+	data.options2 = 'Back when I was employed by [a place], I was told that I had to make a new [a noun] application that would automatically [a verb] when a user was [an adjective]. Well it was a complete success, and our quarterly projections of [a noun] immediately increased by 200%!';
+	data.options3 = 'The other day, Chuck Tomasi, me, and the CEO of [a place] were discussing the usefulness of [a noun] in ServiceNow. It was a heated argument on whether we should be able to [a verb] without the need to create another [an adjective] scoped application. "It\'s fine," I said. "I\'m sure I will be able to create a [a noun] to automate it.';
+	data.options4 = 'Four days into my latest consulting gig, I was approached by an offensive [a noun] with a surprising alternate job offer. I immediately made plans to [a verb] my previous manager later that night. But it didn\'t happen, as I got stuck with 11 hours of [an adjective] online training, and fell asleep on my keyboard. Around 3:00am I was startled awake in the spooky dark office by the sound of a corporate-logo-covered [a noun]! Apparently guarding the offices at night! I probably should never have taken the job at [a place]. Contributed by @mhz.';
+
+	data.message = 'Awaiting input.';
+
+	if (input && (!input.inlineFormInput0 || !input.inlineFormInput1 || !input.inlineFormInput2 || !input.inlineFormInput3 || !input.inlineFormInput4)){
+		data.message = 'Missing input(s).';
+	}
+
+	if (input && input.inlineFormInput0 && input.inlineFormInput1 && input.inlineFormInput2 && input.inlineFormInput3 && input.inlineFormInput4){
+		var text = [
+		['The other day, I was in ServiceNow and I was trying to integrate ','0',
+		 ' into our instance. I got to work and started to ','3',
+		 ' as much as I could, but the server was proving to be ', '2',
+		 '. I modeled the integration off of our ','4',
+		 ' integration, but when I finially tested it, the entirety of ','1',
+		 ' completely shut down!'],
+
+		['Back when I was employed by ','1',
+		 ', I was told that I had to make a new ','4',
+		 ' application that would automatically ','3',
+		 ' when a user was ','2',
+		 '. Well it was a complete success, and our quarterly projections of ','0',
+		 ' immediately increased by 200%!'
+		],
+
+		['The other day, Chuck Tomasi, me, and the CEO of ','1',
+		 ' were discussing the usefulness of ','0',
+		 ' in ServiceNow. It was a heated argument on whether we should be able to ','3',
+		 ' without the need to create another ','2',
+		 ' scoped application. "It\'s fine," I said. "I\'m sure I will be able to create a ','4',
+		 ' to automate it.'
+		],
+		
+		['Four days into my latest consulting gig, I was approached by an offensive ','0',
+		 ' with a surprising alternate job offer. I immediately made plans to ', '3',
+		 ' my previous manager later that night. But it didn\'t happen, as I got stuck with 11 hours of ','2',
+		 ' online training, and fell asleep on my keyboard. Around 3:00am I was startled awake in the spooky dark office by the sound of a corporate-logo-covered ','4',
+		 '! Apparently guarding the offices at night! I probably should never have taken the job at ','1',
+		 '.'
+		]
+
+	];
+
+		var term = input.inlineFormInput0 + ',' + input.inlineFormInput1 + ',' + input.inlineFormInput2 + ',' + input.inlineFormInput3 + ',' +input.inlineFormInput4;
+		var answers = term.split(',').filter(function(e){return e;});
+
+		var madlib = '';
+		var choose_text = getRandomInt(text.length);
+		for (var i = 0; i < text[choose_text].length; i++){
+			if (isEven(i)){
+				madlib += text[choose_text][i];
+			} else {
+				madlib += answers[text[choose_text][i]].trim();
+			}
+		}
+
+		data.message = madlib;
+	}
+	
+	function isEven(n) {
+			return n % 2 == 0;
+		}
+
+		function isOdd(n) {
+			return Math.abs(n % 2) == 1;
+		}
+
+		function getRandomInt(max) {
+			return Math.floor(Math.random() * Math.floor(max));
+		}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-10-26 21:48:15</sys_created_on>
+        <sys_id>8c7e53c74fddaf400d952b8ca310c77c</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_name>ServiceNow Madlibs</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sp_widget_8c7e53c74fddaf400d952b8ca310c77c</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-10-29 19:06:48</sys_updated_on>
+        <template><![CDATA[<p><b>Intro</b></p>
+<p>To use, say !madlib in any channel that @slacker is invited to on the sndevs workspace and then follow its instructions</p>
+
+<p><b>Or try it out here:</b></p>
+<form class="form-inline">
+  <label class="sr-only" for="inlineFormInput0">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInput0" placeholder="A Noun" ng-model="data.inlineFormInput0">
+  <label class="sr-only" for="inlineFormInput1">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInput1" placeholder="A Place" ng-model="data.inlineFormInput1">
+  <label class="sr-only" for="inlineFormInput2">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInput2" placeholder="An Adjective" ng-model="data.inlineFormInput2">
+  <label class="sr-only" for="inlineFormInput3">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInput3" placeholder="A Verb" ng-model="data.inlineFormInput3">
+  <label class="sr-only" for="inlineFormInput4">Name</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInput4" placeholder="A Noun" ng-model="data.inlineFormInput4">
+</form><br>
+<div class="example">
+  <button ng-click="c.server.update();">
+    Generate
+  </button>
+  <br>
+  {{data.message}}
+</div>
+<br>
+
+<div class="container">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Options</button>
+  <div id="demo" class="collapse">
+    <P>
+      {{data.options1}}
+    </P>
+    <P>
+      {{data.options2}}
+    </P>
+    <P>
+      {{data.options3}}
+    </P>
+    <P>
+      {{data.options4}}
+    </P>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2">Code</button>
+  <div id="demo2" class="collapse">
+    <pre><code>(function executeRule(current, previous /*null when async*/) {
+
+	// 0 NOUN // 1 PLACE // 2 ADJECTIVE // 3 VERB // 4 NOUN 
+	
+	var text = [
+		['The other day, I was in ServiceNow and I was trying to integrate ','0',
+		 ' into our instance. I got to work and started to ','3',
+		 ' as much as I could, but the server was proving to be ', '2',
+		 '. I modeled the integration off of our ','4',
+		 ' integration, but when I finially tested it, the entirety of ','1',
+		 ' completely shut down!'],
+
+		['Back when I was employed by ','1',
+		 ', I was told that I had to make a new ','4',
+		 ' application that would automatically ','3',
+		 ' when a user was ','2',
+		 '. Well it was a complete success, and our quarterly projections of ','0',
+		 ' immediately increased by 200%!'
+		],
+
+		['The other day, Chuck Tomasi, me, and the CEO of ','1',
+		 ' were discussing the usefulness of ','0',
+		 ' in ServiceNow. It was a heated argument on whether we should be able to ','3',
+		 ' without the need to create another ','2',
+		 ' scoped application. "It\'s fine," I said. "I\'m sure I will be able to create a ','4',
+		 ' to automate it.'
+		],
+		
+		['Four days into my latest consulting gig, I was approached by an offensive ','0',
+		 ' with a surprising alternate job offer. I immediately made plans to ', '3',
+		 ' my previous manager later that night. But it didn\'t happen, as I got stuck with 11 hours of ','2',
+		 ' online training, and fell asleep on my keyboard. Around 3:00am I was startled awake in the spooky dark office by the sound of a corporate-logo-covered ','4',
+		 '! Apparently guarding the offices at night! I probably should never have taken the job at ','1',
+		 '.'
+		]
+
+	];
+
+	var term = '';
+	term = current.text.substr(8).trim();
+	if (term == '') {
+		var send_instructions = new SlackFall().send_chat(current.channel, 'Instructions: say *!madlib `a noun`, `a place`, `an adjective`, `a verb`, `a noun`*', false, '', current.thread_ts);
+		return;
+	}
+
+	var answers = term.split(',').filter(function(e){return e;});
+	
+	if (answers.length != 5) {
+		var send_error = new SlackFall().send_chat(current.channel, 'I was expecting 5 inputs but I receieved ' + answers.length + ' instead, please try again.', false, '', current.thread_ts);
+		return;
+	}
+
+	var madlib = '';
+	var choose_text = getRandomInt(text.length);
+	for (var i = 0; i < text[choose_text].length; i++){
+		if (isEven(i)){
+			madlib += text[choose_text][i];
+		} else {
+			madlib += answers[text[choose_text][i]].trim();
+		}
+	}
+
+	var send_chat = new SlackFall().send_chat(current.channel, madlib, false, '', current.thread_ts);
+
+	function isEven(n) {
+		return n % 2 == 0;
+	}
+
+	function isOdd(n) {
+		return Math.abs(n % 2) == 1;
+	}
+
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+})(current, previous);</code></pre>
+</div>
+  </div>
+  <div class="footer">
+    See more at <a href="http://www.earlduque.com" target="_self">earlduque.com</a>
+  </div>]]></template>
+    </sp_widget>
+</record_update>
