@@ -35,12 +35,24 @@
 	var iss_lat = get_coords.iss_position.latitude;
 	var iss_long = get_coords.iss_position.longitude;
 
+// 	Los Angeles: 34.0522,118.2437
+//  	iss_lat = '34.0522';
+//  	iss_long = '118.2437';
+	
+	
 	var get_location = new MapsSlack().get_location(iss_lat, iss_long);
 	var location = '';
 	if (get_location.status == 'ZERO_RESULTS') location = 'the ocean.';
 	else {
-		var area1 = get_location.results.address_components[6].long_name;
-		var area2 = get_location.results.address_components[7].long_name;
+// 		var area1 = get_location.results.address_components[6].long_name;
+// 		var area2 = get_location.results.address_components[7].long_name;
+// 		gs.info('slacker: ' + get_location.results.address_components);
+		var area1 = ''; var area2 = '';
+		for (var i in get_location.results[0].address_components){
+			if (get_location.results[0].address_components[i].types[0] == 'administrative_area_level_1') area1 = get_location.results[0].address_components[i].long_name;
+			if (get_location.results[0].address_components[i].types[0] == 'administrative_area_level_2') area2 = get_location.results[0].address_components[i].long_name;
+			else if (get_location.results[0].address_components[i].types[0] == 'country') area2 = get_location.results[0].address_components[i].long_name;
+		}
 		location = area1 + ', ' + area2 + '.';
 	}
 	
@@ -52,7 +64,7 @@
 // 	var send_chat = new SlackFall().send_chat(current.channel, 'The International Space Station is currently above latitude: ' + get_coords.iss_position.latitude + ', longitute: ' + get_coords.iss_position.longitude + '\nThose coordinates place the ISS over ' + location, false, '', current.thread_ts);
 	
 // 	send_attachment: function(channel, message, image, thread, pretext)
-	var send_chat = new SlackFall().send_attachment(current.channel, 'The International Space Station is currently above latitude: ' + get_coords.iss_position.latitude + ', longitute: ' + get_coords.iss_position.longitude + '\nThose coordinates place the ISS over ' + location, get_image, current.thread_ts, true);
+	var send_chat = new SlackFall().send_attachment(current.channel, 'The International Space Station is currently above latitude: ' + iss_lat + ', longitude: ' + iss_long + '\nThose coordinates place the ISS over ' + location, get_image, current.thread_ts, true);
 
 
 })(current, previous);]]></script>
@@ -62,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>43bc129b4fa5a700c8b501b18110c72a</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name>ISS processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -70,7 +82,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_43bc129b4fa5a700c8b501b18110c72a</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-09 16:36:53</sys_updated_on>
+        <sys_updated_on>2018-11-09 18:26:20</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

@@ -45,7 +45,7 @@
 		return;
 	}
 	var get_gif = new GiphySlack().get_gif(term);
-	gs.info('slackoff gif: ' + get_gif);
+	//gs.info('slackoff gif: ' + get_gif);
 	var send_gif = new SlackFall().send_attachment(current.channel, term, get_gif, current.thread_ts);
 
 
@@ -57,7 +57,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2cc38bea4f2123000d952b8ca310c76e</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Giphy Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -65,7 +65,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_2cc38bea4f2123000d952b8ca310c76e</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-07 21:51:31</sys_updated_on>
+        <sys_updated_on>2018-11-09 18:00:11</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
