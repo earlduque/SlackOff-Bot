@@ -18,10 +18,23 @@ MapsSlack.prototype = {
 		//rm.setRequestHeader('Content-Type', 'application/json');
 		rm.setEndpoint('https://maps.googleapis.com/maps/api/geocode/json?latlng=' + iss_lat + ',' + iss_long + '&key=' + gs.getProperty('maps.token'));
 		var response = rm.execute();
-		//gs.info('slack test: ' + 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + iss_lat + ',' + iss_long + '&key=' + gs.getProperty('maps.token'));
+// 		gs.info('slack test: ' + 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + iss_lat + ',' + iss_long + '&key=' + gs.getProperty('maps.token'));
 		//gs.info('slacker json: ' + response.getBody());
 		var response_body = JSON.parse(response.getBody());
 		return response_body;
+	},
+	
+	get_image: function(iss_lat,iss_long){
+// 		var rm = new sn_ws.RESTMessageV2();
+// 		rm.setHttpMethod('GET');
+// 		rm.setLogLevel('all');
+// 		//rm.setRequestHeader('Content-Type', 'application/json');
+// 		rm.setEndpoint('https://maps.googleapis.com/maps/api/staticmap?center=' + iss_lat + ',' + iss_long + '&zoom=3&size=200x200&markers=color:blue|' + iss_lat + ',' + iss_long + '&key=' + gs.getProperty('maps.token'));
+// 		var response = rm.execute();
+// 		gs.info('slack test: ' + 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + iss_lat + ',' + iss_long + '&key=' + gs.getProperty('maps.token'));
+// 		gs.info('slacker json: ' + response.getBody());
+// 		var response_body = JSON.parse(response.getBody());
+		return 'https://maps.googleapis.com/maps/api/staticmap?center=' + iss_lat + ',' + iss_long + '&zoom=3&size=200x200&markers=color:blue|' + iss_lat + ',' + iss_long + '&key=' + gs.getProperty('maps.token');
 	},
 
     type: 'MapsSlack'
@@ -30,13 +43,13 @@ MapsSlack.prototype = {
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-11-08 22:40:58</sys_created_on>
         <sys_id>f627e6134fe5a700c8b501b18110c7be</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>MapsSlack</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_include_f627e6134fe5a700c8b501b18110c7be</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-08 23:01:57</sys_updated_on>
+        <sys_updated_on>2018-11-09 16:34:43</sys_updated_on>
     </sys_script_include>
 </record_update>

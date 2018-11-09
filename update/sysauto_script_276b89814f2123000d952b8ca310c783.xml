@@ -3,7 +3,7 @@
         <active>true</active>
         <condition/>
         <conditional>false</conditional>
-        <name>Delete old slack messages</name>
+        <name>Delete old slack messages and payloads</name>
         <run_as display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
@@ -17,19 +17,24 @@ gr.addEncodedQuery('sys_created_on<javascript:gs.beginningOfLast7Days()');
 gr.query();
 gs.info('Slacker: Deleted text trackers = ' + gr.getRowCount());
 gr.deleteMultiple();
-]]></script>
+
+var gr2 = new GlideRecord('x_165574_slackoff_slackoff_payloads');
+gr2.addEncodedQuery('sys_created_on<javascript:gs.beginningOfLast7Days()');
+gr2.query();
+gs.info('Slacker: Deleted text trackers = ' + gr2.getRowCount());
+gr2.deleteMultiple();]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-11-01 16:15:34</sys_created_on>
         <sys_id>276b89814f2123000d952b8ca310c783</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Delete old slack messages</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Delete old slack messages and payloads</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sysauto_script_276b89814f2123000d952b8ca310c783</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-01 16:15:34</sys_updated_on>
+        <sys_updated_on>2018-11-09 16:44:04</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>
