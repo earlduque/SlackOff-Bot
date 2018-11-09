@@ -155,7 +155,7 @@ SlackFall.prototype = {
 		return rm.execute();
 	},
 
-	send_attachment: function(channel, message, image, thread){
+	send_attachment: function(channel, message, image, thread, pretext){
 		//channel = payload.event.channel
 		var rm = new sn_ws.RESTMessageV2();
 		rm.setHttpMethod('POST');
@@ -172,7 +172,8 @@ SlackFall.prototype = {
 		rm.setEndpoint('https://slack.com/api/chat.postMessage');
 		//bodyString += '&text=' + gs.urlEncode(message);
 		//bodyString += '&attachments=' + gs.urlEncode('[{"text": ' + message + ', "image_url": ' + image + '"}]');
-		bodyString += '&attachments=' + gs.urlEncode('[{"text": "' + message + '", "image_url": "' + image + '"}]');
+		if (pretext == true) bodyString += '&attachments=' + gs.urlEncode('[{"pretext": "' + message + '", "image_url": "' + image + '"}]');
+		else bodyString += '&attachments=' + gs.urlEncode('[{"text": "' + message + '", "image_url": "' + image + '"}]');
 		rm.setRequestBody(bodyString);
 		return rm.execute();		
 	},
@@ -183,13 +184,13 @@ SlackFall.prototype = {
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-21 06:01:23</sys_created_on>
         <sys_id>0e92bb6b4f6867000d952b8ca310c780</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>63</sys_mod_count>
         <sys_name>SlackFall</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_include_0e92bb6b4f6867000d952b8ca310c780</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-06 18:26:53</sys_updated_on>
+        <sys_updated_on>2018-11-09 00:08:11</sys_updated_on>
     </sys_script_include>
 </record_update>
