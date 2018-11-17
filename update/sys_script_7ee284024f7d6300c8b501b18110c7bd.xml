@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textSTARTSWITH!roll^ORtextSTARTSWITH!Roll^ORtextSTARTSWITH!ROLL^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="false" value="!roll"/>
+            <item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="true" value="!Roll"/>
+            <item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="true" value="!ROLL"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Roll Processor</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var sentence = current.text.substr(5).trim();
+	if (sentence == '') {
+		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: Say `number` `d` `number`!', false, '', current.thread_ts);
+		return;
+	}
+	var numbers = sentence.split('d');
+	for(var k=0; k<numbers.length; k++) { numbers[k] = parseInt(numbers[k], 10); } 
+// 	var what = new SlackFall().send_chat(current.channel, isNaN(numbers[0]) + ' ' + isNaN(numbers[1]),false); return;
+	if (isNaN(numbers[0]) || isNaN(numbers[1])) {
+		var send_more_confusion = new SlackFall().send_chat(current.channel, 'One of those is not a number!', false, '', current.thread_ts);
+		return;
+	}
+	if (numbers[0]>100 || numbers[1]>1000000){
+		var send_ridiculous = new SlackFall().send_chat(current.channel, 'You rolled: a lot', false, '', current.thread_ts);
+		return;
+	}
+	if (numbers[0]<1 || numbers[1]<1){
+		var send_err = new SlackFall().send_chat(current.channel, 'Stop that', false, '', current.thread_ts);
+		return;
+	}
+	var total_dice = numbers[0];
+	var sides = numbers[1];
+	var message = 'You rolled: ';
+	var current_roll = 0;
+	var all_rolls = [];
+	for (var i = 1; i <= total_dice; i++){
+		current_roll = Math.floor(Math.random() * sides) + 1;
+		all_rolls.push(current_roll);
+	}
+	var sum = 0;
+	for( var j = 0; j < all_rolls.length; j++ ){
+		sum += parseInt( all_rolls[j], 10 ); //don't forget to add the base
+	}
+
+	var avg = sum/all_rolls.length;
+	message += all_rolls.join(', ')+'. `Average of ' + avg + '` `Sum of ' + sum + '`';
+
+	var send_lmgtfy = new SlackFall().send_chat(current.channel, message, false, '', current.thread_ts);
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-11-16 23:46:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7ee284024f7d6300c8b501b18110c7bd</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name>Roll Processor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_7ee284024f7d6300c8b501b18110c7bd</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-11-17 00:20:25</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=7ee284024f7d6300c8b501b18110c7bd"/>
+</record_update>
