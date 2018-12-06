@@ -34,12 +34,13 @@
 		'`!bang @person` Supportive text for an overworked employee.',
 		'`!clap some sentence` Caps lock and clap backs.',
 		'`!docs string` Searchs the ServiceNow docs for the string provided.',
+		'`!flip string` Or !invert, flips the string upside down.',
 		'`!giphy string` Regular old giphy search but works in threads.',
-		'`!insult` *Deactivated and moved to SlackBot instead*. Says an SN-related insult.',
-		'`!job` Creates a random LinkedIn message that an SN Dev is likely to receive from a recruiter.',
 		'`!google string` Provides a link to a google search for the provided string.',
-		'`!lmgtfy string` A more sassy version of !google.',
+		'`!insult` *Deactivated and moved to SlackBot instead*. Says an SN-related insult.',
 		'`!iss` Let\'s you know where the International Space Station is right now.',
+		'`!job` Creates a random LinkedIn message that an SN Dev is likely to receive from a recruiter.',
+		'`!lmgtfy string` A more sassy version of !google.',
 		'`!madlib` Provides instructions on how to create a SN-related madlib.',
 		'`!parrot wave` Adds excitement to your message.',
 		'`!report string` Reports on how often the provided string has appeared in the last 7 days on this workspace.',
@@ -48,10 +49,11 @@
 		'`!test` Creates a randomly generated SN-related testing script.',
 		'`!trout @person` or `!slap @person` IRC-like slap to whoever you @.',
 		'`!youtube string` Links the first found video on youtube according to your search string',
+		'`!zalgo string` or !curse will eff yo text up',
 		'`!earl` Let\'s you know more about the creator of this bot.',
 		'`!help` ¯\\_(ツ)_/¯'
 	];
-	var send_chat = new SlackFall().send_chat(current.channel, message.join('\n'), false, '', current.thread_ts);
+	var send_chat = new SlackFall().send_chat(current.channel, message.join('\n'), false, '', current.ts);
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
@@ -59,7 +61,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bcd055034fe123000d952b8ca310c7f2</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Help Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -67,7 +69,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_bcd055034fe123000d952b8ca310c7f2</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-17 00:15:09</sys_updated_on>
+        <sys_updated_on>2018-12-05 23:26:28</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

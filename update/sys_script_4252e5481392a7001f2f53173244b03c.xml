@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textLIKE!flip^ORtextLIKE!invert^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="false" value="!flip"/>
+            <item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="true" value="!invert"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Flip Processor</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var where = 0;
+	var which = '';
+	if (current.text.indexOf('!flip') > -1) {
+		where = current.text.indexOf('!flip') + 6;
+		which = 'flip';
+	} else if (current.text.indexOf('!invert') > -1){
+		where = current.text.indexOf('!invert') + 8;
+		which = 'invert';
+	} else {
+		return;
+	}
+
+	var flipTable = {
+		'a' : '\u0250',
+		'b' : 'q',
+		'c' : '\u0254', //open o -- from pne
+		'd' : 'p',
+		'e' : '\u01DD',
+		'f' : '\u025F', //from pne
+		'g' : '\u0183',
+		'h' : '\u0265',
+		'i' : '\u0131', //from pne
+		'j' : '\u027E',
+		'k' : '\u029E',
+		//l : '\u0283',
+		'm' : '\u026F',
+		'n' : 'u',
+		'p' : 'd',
+		'q' : 'b',
+		'r' : '\u0279',
+		't' : '\u0287',
+		'u' : 'n',
+		'v' : '\u028C',
+		'w' : '\u028D',
+		'y' : '\u028E',
+		'.' : '\u02D9',
+		'[' : ']',
+		'(' : ')',
+		'{' : '}',
+		'?' : '\u00BF', //from pne
+		'!' : '\u00A1',
+		"\'" : ',',
+		'<' : '>',
+		'_' : '\u203E',
+		';' : '\u061B',
+		'\u203F' : '\u2040',
+		'\u2045' : '\u2046',
+		'\u2234' : '\u2235',
+		'\r' : '\n' 
+	};
+
+	var term = current.text.substr(where).trim();
+	if (term == '') {
+		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !flip or !invert *something*', false, '', current.thread_ts);
+		return;
+	}
+	var end = flipString(term.toLowerCase());
+	// 	gs.info(end);
+	var send_flip = new SlackFall().send_chat(current.channel, end, false, '', current.thread_ts);
+
+
+	function flipString(aString) {
+		var last = aString.length - 1;
+
+		var result = new Array(aString.length);
+		for (var i = last; i >= 0; --i) {
+			var c = aString.charAt(i);
+			var r = flipTable[c];
+			result[last - i] = r != undefined ? r : c;
+		}
+		return result.join('');
+
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2018-12-05 22:07:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>4252e5481392a7001f2f53173244b03c</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Flip Processor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_4252e5481392a7001f2f53173244b03c</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2018-12-05 22:36:59</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=4252e5481392a7001f2f53173244b03c"/>
+</record_update>
