@@ -106,7 +106,7 @@
 
 	var term = current.text.substr(where).trim();
 	if (term == '') {
-		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !zalgo or !curse *something*', false, '', current.thread_ts);
+		var send_confusion = new SlackFall().send_chat(current.channel, zalgo_textarea('yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. yoU HaVe MIsused tHe ZalGo CompilER and noW i, tHe BeaST of SErvICENoW HaS BeEN SumMoneD TO Do your bIdding. ') + '\njust kidding, you need to include something after !zalgo or !curse for it to work', false, '', current.thread_ts);
 		return;
 	}
 	var end = zalgo_textarea(term);
@@ -134,7 +134,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b05f6d0013d2a7001f2f53173244b053</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Zalgo Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -142,7 +142,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_b05f6d0013d2a7001f2f53173244b053</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-12-05 23:19:38</sys_updated_on>
+        <sys_updated_on>2018-12-06 00:27:02</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
