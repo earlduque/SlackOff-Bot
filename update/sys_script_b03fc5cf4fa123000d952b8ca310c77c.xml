@@ -15,8 +15,8 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textSTARTSWITH!giphy^user=b685d37f4f60a7000d952b8ca310c749^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="false" value="!giphy"/>
-            <item endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="b685d37f4f60a7000d952b8ca310c749"/>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textSTARTSWITH!giphy^user=59ffdd174f25a700c8b501b18110c7d8^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="STARTSWITH" or="false" value="!giphy"/>
+            <item display_table="x_165574_slackoff_slack_user" display_value="Robbie Medved" endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="59ffdd174f25a700c8b501b18110c7d8"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -43,7 +43,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b03fc5cf4fa123000d952b8ca310c77c</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Rob Giphy Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -51,7 +51,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_b03fc5cf4fa123000d952b8ca310c77c</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-07 21:38:37</sys_updated_on>
+        <sys_updated_on>2018-12-06 23:13:08</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

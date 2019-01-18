@@ -29,7 +29,7 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 	var random = Math.floor(Math.random() * 10000);
-	var regex = /^\!parrot wave/gmi;
+	var regex = /(parrot wave)|(parrotwave)|(wave parrot)|(waveparrot)/gmi;
 	if (random == 1 || regex.test(current.text)) {
 		var send_reaction1 = new SlackFall().send_reaction(current.channel,'parrotwave1',current.ts);
 		var send_reaction2 = new SlackFall().send_reaction(current.channel,'parrotwave2',current.ts);
@@ -38,7 +38,7 @@
 		var send_reaction5 = new SlackFall().send_reaction(current.channel,'parrotwave5',current.ts);
 		var send_reaction6 = new SlackFall().send_reaction(current.channel,'parrotwave6',current.ts);
 		var send_reaction7 = new SlackFall().send_reaction(current.channel,'parrotwave7',current.ts);
-		if (random == 1) var send_chat = new SlackFall().send_chat('CD0PHCZ4N', 'The rare parrot wave appeared! <#'+current.channel+'> https://sndevs.slack.com/archives/'+current.channel+'/'+current.ts, false);
+		if (random == 1) var send_chat = new SlackFall().send_chat('slackoff-dev-p', 'The rare parrot wave appeared! <#'+current.channel+'> https://sndevs.slack.com/archives/'+current.channel+'/'+current.ts, false);
 	}
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -47,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0f3c265e4f0527400d952b8ca310c761</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Rare Parrot Wave Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -55,7 +55,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_0f3c265e4f0527400d952b8ca310c761</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-10-18 00:00:09</sys_updated_on>
+        <sys_updated_on>2018-12-28 18:52:03</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
