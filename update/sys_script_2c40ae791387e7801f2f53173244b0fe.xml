@@ -39,7 +39,7 @@
 	k19.setDisplayValue('2019-05-05');
 	var duration= GlideDate.subtract(today, k19); 
 
-	if (today < k19) var send_chat = new SlackFall().send_chat('CAQ2W3EE4', 'Knowledge \'19 is ' + duration.getDisplayValue() + ' away!', false, '', current.thread_ts);
+	if (today < k19) var send_chat = new SlackFall().send_chat(current.channel, 'Knowledge \'19 is ' + duration.getDisplayValue() + ' away!', false, '', current.thread_ts);
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -48,7 +48,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2c40ae791387e7801f2f53173244b0fe</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>K19 Countdown</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -56,7 +56,7 @@
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_2c40ae791387e7801f2f53173244b0fe</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-01-17 19:57:27</sys_updated_on>
+        <sys_updated_on>2019-01-18 17:43:59</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
