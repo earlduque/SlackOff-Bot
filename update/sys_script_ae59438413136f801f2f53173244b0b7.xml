@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Degrees Converter</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var regextest = /(\d{1,}\.?\d{0,}\s?c(elcius)?)|(\d{1,}\.?\d{0,}\sdegrees\sc(elcius)?)/gmi;
+	var match = regextest.exec(current.text);
+	if (match != null){
+		var numbertest = /\d{1,}\.?\d{0,}/;
+		var numbermatch = numbertest.exec(match[0]);
+		var ctof = (parseFloat(numbermatch[0]) * 9/5) + 32;
+		var send_chat = new SlackFall().send_chat(current.channel, numbermatch[0] + 'C is ' + ctof + ' degrees in freedom units (Fahrenheit).', false, '', current.thread_ts);
+	}
+	
+	var regextest2 = /(\d{1,}\.?\d{0,}\s?f(ahrenheit)?)|(\d{1,}\.?\d{0,}\sdegrees\sf(ahrenheit)?)/gmi;
+	var match2 = regextest2.exec(current.text);
+	if (match2 != null){
+		var numbertest2 = /\d{1,}\.?\d{0,}/;
+		var numbermatch2 = numbertest2.exec(match2[0]);
+		var ftoc = (parseFloat(numbermatch2[0]) - 32) * 5/9;
+		var send_chat2 = new SlackFall().send_chat(current.channel, numbermatch2[0] + 'F is ' + ftoc + ' degrees in sane units (Celcius).', false, '', current.thread_ts);
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-01-24 22:47:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ae59438413136f801f2f53173244b0b7</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Degrees Converter</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_ae59438413136f801f2f53173244b0b7</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-01-24 23:35:53</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=ae59438413136f801f2f53173244b0b7"/>
+</record_update>
