@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Get Emojis</name>
+        <run_as display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2019-02-15 22:26:52</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>weekly</run_type>
+        <script><![CDATA[var rm = new sn_ws.RESTMessageV2();
+rm.setHttpMethod('GET');
+rm.setLogLevel('all');
+rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+rm.setEndpoint('https://slack.com/api/emoji.list?token='+gs.urlEncode(gs.getProperty('slackbot.reg.token')));
+var response = rm.execute();
+var response_body = JSON.parse(response.getBody());
+//gs.info ('emoji list: ' + response_body.emoji.bowtie);
+var log = 'emoji list: ';
+
+for (var i in response_body.emoji){
+	var emoji = new GlideRecord('x_165574_slackoff_emojis');
+	emoji.addQuery('emoji', i);
+	emoji.query();
+	if (emoji.next()){
+		if (emoji.getValue('value').toString() != response_body.emoji[i]){
+			log += '\nemoji found, original: ' + emoji.getValue('value').toString() + ' - New: ' + response_body.emoji[i] + ' - Compare: ' + (emoji.getValue('value').toString() != response_body.emoji[i]);
+			emoji.setValue('value', response_body.emoji[i]);
+			emoji.update();
+		}
+	} else {
+		emoji.initialize();
+		emoji.setValue('emoji', i);
+		emoji.setValue('value', response_body.emoji[i]);
+		emoji.insert();
+	}
+}
+
+gs.info(log);]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-02-15 22:29:29</sys_created_on>
+        <sys_id>2959109313af67001f2f53173244b0fd</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Get Emojis</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sysauto_script_2959109313af67001f2f53173244b0fd</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-02-16 00:03:10</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

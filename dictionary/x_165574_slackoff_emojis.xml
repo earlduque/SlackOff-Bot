@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Emojis" max_length="40" name="x_165574_slackoff_emojis" type="collection">
+        <element display="true" label="Emoji" max_length="400" name="emoji" type="string"/>
+        <element label="Value" max_length="400" name="value" type="string"/>
+    </element>
+</database>

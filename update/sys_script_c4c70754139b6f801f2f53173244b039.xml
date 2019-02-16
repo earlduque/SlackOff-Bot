@@ -15,13 +15,12 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_165574_slackoff_slacker_text_tracker">user=3982662b4fa467000d952b8ca310c748^channel=G9LAJG7G8^EQ<item endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="3982662b4fa467000d952b8ca310c748"/>
-            <item endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="G9LAJG7G8"/>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textLIKE&lt;@U7XK0E90C&gt;^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="false" value="&lt;@U7XK0E90C&gt;"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Earl Processor</name>
+        <name>Sebastian Converter</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,28 +30,27 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	var random = Math.floor(Math.random() * 100);
-	if (random == 1) {
-		var send_annoy = new SlackFall().send_chat(current.channel,'Earl is an idiot',false,'',current.ts);
-	}
+
+		var send_chat = new SlackFall().send_chat(current.channel, 'Yo, did ya\'ll know that 90 degrees celcius is 194 degrees in fahrenheit?', false, '', current.thread_ts);
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2018-10-09 15:07:43</sys_created_on>
+        <sys_created_on>2019-01-25 17:11:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>cbbf5ead4f09a3400d952b8ca310c7d0</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_name>Earl Processor</sys_name>
+        <sys_id>c4c70754139b6f801f2f53173244b039</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Sebastian Converter</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>sys_script_cbbf5ead4f09a3400d952b8ca310c7d0</sys_update_name>
+        <sys_update_name>sys_script_c4c70754139b6f801f2f53173244b039</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-02-07 15:24:26</sys_updated_on>
+        <sys_updated_on>2019-02-15 16:01:03</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=cbbf5ead4f09a3400d952b8ca310c7d0"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c4c70754139b6f801f2f53173244b039"/>
 </record_update>

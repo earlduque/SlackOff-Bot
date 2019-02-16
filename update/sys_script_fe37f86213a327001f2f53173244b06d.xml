@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -15,13 +15,10 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_165574_slackoff_slacker_text_tracker">user=3982662b4fa467000d952b8ca310c748^channel=G9LAJG7G8^EQ<item endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="3982662b4fa467000d952b8ca310c748"/>
-            <item endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="G9LAJG7G8"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </filter_condition>
+        <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Earl Processor</name>
+        <name>Send as Slacker</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,28 +28,37 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	var random = Math.floor(Math.random() * 100);
-	if (random == 1) {
-		var send_annoy = new SlackFall().send_chat(current.channel,'Earl is an idiot',false,'',current.ts);
+
+	var regex = /!send !.+!.+/gi;
+	if (regex.test(current.text)) {
+		var parsing = current.text.split('!');
+		var channel = parsing[2].trim();
+		var build_message = parsing;
+		build_message.shift();
+		build_message.shift();
+		build_message.shift();
+		var message = build_message.join('!');
+		var send_chat = new SlackFall().send_chat(channel, message,false);
 	}
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2018-10-09 15:07:43</sys_created_on>
+        <sys_created_on>2019-02-13 16:48:34</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>cbbf5ead4f09a3400d952b8ca310c7d0</sys_id>
-        <sys_mod_count>19</sys_mod_count>
-        <sys_name>Earl Processor</sys_name>
+        <sys_id>fe37f86213a327001f2f53173244b06d</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Send as Slacker</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>sys_script_cbbf5ead4f09a3400d952b8ca310c7d0</sys_update_name>
+        <sys_update_name>sys_script_fe37f86213a327001f2f53173244b06d</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-02-07 15:24:26</sys_updated_on>
+        <sys_updated_on>2019-02-13 17:08:22</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=cbbf5ead4f09a3400d952b8ca310c7d0"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=fe37f86213a327001f2f53173244b06d"/>
 </record_update>
