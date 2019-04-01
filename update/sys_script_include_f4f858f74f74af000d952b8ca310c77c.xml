@@ -28,6 +28,7 @@ SlackerClient.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 			var grupdate = new GlideRecord('x_165574_slackoff_slack_user');
 			grupdate.get(record_id);
 			grupdate.setValue('name', response_body.user.real_name);
+			grupdate.setValue('payload', JSON.stringify(response_body));
 			grupdate.update();
 			return true;
 		} else {
@@ -40,13 +41,13 @@ SlackerClient.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-03 18:56:17</sys_created_on>
         <sys_id>f4f858f74f74af000d952b8ca310c77c</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>SlackerClient</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_include_f4f858f74f74af000d952b8ca310c77c</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-10-03 19:35:17</sys_updated_on>
+        <sys_updated_on>2019-03-14 18:00:43</sys_updated_on>
     </sys_script_include>
 </record_update>

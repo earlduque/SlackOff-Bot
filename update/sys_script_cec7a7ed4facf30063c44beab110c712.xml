@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -15,13 +15,13 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_165574_slackoff_slacker_text_tracker">user=6e5e75d74f65a700c8b501b18110c79b^channel=G9LAJG7G8^EQ<item display_table="x_165574_slackoff_slack_user" display_value="Maria Gabriela Ochoa Perez" endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="6e5e75d74f65a700c8b501b18110c79b"/>
-            <item endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="G9LAJG7G8"/>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">channel=C0E2G2681^thread_tsISEMPTY^EQ<item endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="C0E2G2681"/>
+            <item endquery="false" field="thread_ts" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>MGOP Processor</name>
+        <name>General Threading Processor</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -31,27 +31,49 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	//var random = Math.floor(Math.random() * 1000);
-	var random = Math.floor(Math.random() * 2);
-	if (random == 1) var send_annoy = new SlackFall().send_chat(current.channel,'*bingo* bango',false,'',current.ts);
+
+	var text_gr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+	text_gr.addEncodedQuery('thread_tsISEMPTY^channel=' + current.channel);
+	text_gr.orderByDesc('sys_created_on');
+	text_gr.setLimit(3);
+	text_gr.query();
+	var user1; var user2; var user3;
+	if (text_gr.getRowCount() == 2 || text_gr.getRowCount() == 3){
+		text_gr.next();
+		user1 = text_gr.getValue('user').toString();
+		text_gr.next();
+		user2 = text_gr.getValue('user').toString();
+	}
+	if (text_gr.getRowCount() == 3){
+		text_gr.next();
+		user3 = text_gr.getValue('user').toString();
+	}
+	if (user1 == user2){
+		var send_reaction1 = new SlackFall().send_reaction(current.channel,'thread',current.ts);
+	}
+	if (user1 == user2 && user1 == user3){
+		var send_reaction2 = new SlackFall().send_reaction(current.channel,'please_thread',current.ts);
+	}
+// 	gs.info(user1 +' '+ user2 +' '+ user3);
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2018-10-08 15:56:20</sys_created_on>
+        <sys_created_on>2019-04-01 20:18:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ed416dd14f4d63400d952b8ca310c77e</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>MGOP Processor</sys_name>
+        <sys_id>cec7a7ed4facf30063c44beab110c712</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>General Threading Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>sys_script_ed416dd14f4d63400d952b8ca310c77e</sys_update_name>
+        <sys_update_name>sys_script_cec7a7ed4facf30063c44beab110c712</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-04-01 19:25:17</sys_updated_on>
+        <sys_updated_on>2019-04-01 20:47:24</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=ed416dd14f4d63400d952b8ca310c77e"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=cec7a7ed4facf30063c44beab110c712"/>
 </record_update>

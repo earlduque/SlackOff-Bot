@@ -6,7 +6,7 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -15,12 +15,13 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_165574_slackoff_slacker_text_tracker">user=c59f19d34f25a700c8b501b18110c7fa^EQ<item display_table="x_165574_slackoff_slack_user" display_value="JarodM" endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="c59f19d34f25a700c8b501b18110c7fa"/>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">user=c59f19d34f25a700c8b501b18110c7fa^channel=G9LAJG7G8^EQ<item display_table="x_165574_slackoff_slack_user" display_value="JarodM" endquery="false" field="user" goto="false" newquery="false" operator="=" or="false" value="c59f19d34f25a700c8b501b18110c7fa"/>
+            <item endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="G9LAJG7G8"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Parrot Wave Processor</name>
+        <name>Jarod Processor</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -30,7 +31,7 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	var random = Math.floor(Math.random() * 100);
+	var random = Math.floor(Math.random() * 2);
 	if (random == 1) {
 		var send_reaction1 = new SlackFall().send_reaction(current.channel,'parrotwave1',current.ts);
 		var send_reaction2 = new SlackFall().send_reaction(current.channel,'parrotwave2',current.ts);
@@ -47,15 +48,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>566866da4f0527400d952b8ca310c702</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>Parrot Wave Processor</sys_name>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Jarod Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_566866da4f0527400d952b8ca310c702</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-12-06 23:12:57</sys_updated_on>
+        <sys_updated_on>2019-04-01 19:25:17</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

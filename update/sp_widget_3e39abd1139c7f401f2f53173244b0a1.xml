@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>send_slacker_chat</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>send slacker chat</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	var gr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+	gr.query();
+	data.channels = [];
+	while (gr.next()){
+		if (data.channels.indexOf(gr.channel+'') == -1){
+			data.channels.push(gr.channel+'');
+		}
+	}
+	
+	data.test = JSON.stringify(data);
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-03-19 15:14:24</sys_created_on>
+        <sys_id>3e39abd1139c7f401f2f53173244b0a1</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>send slacker chat</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sp_widget_3e39abd1139c7f401f2f53173244b0a1</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-03-19 15:25:49</sys_updated_on>
+        <template><![CDATA[<div>
+  {{data.test}}
+</div>
+
+<div>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-xs-12 col-md-3">Chat to send</label>
+      <div class="col-xs-12 col-md-9 form-field">
+        <div class="sn-stream-textarea-container">
+          <textarea class="form-control"></textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+   <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-xs-12 col-md-3 control-label">
+        <span class="label-text">Channel</span>
+      </label>
+      <div class="col-xs-12 col-md-9 form-field input_controls">
+        <select class="form-control">
+          <option ng-repeat="item in data.channels">{{item}}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-xs-12 col-md-3 control-label">
+        <span class="label-text">Thread</span>
+      </label>
+      <div class="col-xs-12 col-md-9 form-field input_controls">
+        <select class="form-control">
+          <option>Optional</option>
+          <option>Closed</option>
+        </select>
+      </div>
+    </div>
+  </form>
+  <button class="btn btn-default">Send</button>
+</div>]]></template>
+    </sp_widget>
+</record_update>
