@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {
+	/* widget controller */
+	var c = this;
+
+	c.shoutout = function(){
+		c.data.shoutout = true;
+		c.server.update();
+		animateCSS('.showshoutout', 'rubberBand');
+	}
+
+	c.shoutout_recent = function(){
+		c.data.shoutout_recent = true;
+		c.server.update();
+		animateCSS('.showshoutout', 'rubberBand');
+	}
+
+	function animateCSS(element, animationName, callback) {
+		var node = document.querySelector(element)
+		node.classList.add('animated', animationName)
+
+		function handleAnimationEnd() {
+			node.classList.remove('animated', animationName)
+			node.removeEventListener('animationend', handleAnimationEnd)
+
+			if (typeof callback === 'function') callback()
+				}
+
+		node.addEventListener('animationend', handleAnimationEnd)
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>div{
+  text-align: center;
+  margin: 4px 0px;
+}
+
+.radio, .checkbox{
+  display: inherit;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>shoutout</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>ShoutOut</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	data.shoutout = false;
+	data.shoutout_recent = false;
+	data.show_shoutout = false;
+	data.show_shoutout_recent = false;
+	data.mode = "test";
+	var channel = '';
+	
+	if (input && input.mode){
+		data.mode = input.mode;
+	}
+	if (data.mode == 'test') channel = 'poof';
+	//if (data.mode == 'test') channel = 'slackoff-dev-p';
+	else if (data.mode == 'live') channel = 'knowledge19';
+	
+	var users = [];
+	var user_names = [];
+	var usersGr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+	usersGr.addQuery('channel', 'CAQ2W3EE4');
+	usersGr.query();
+	while(usersGr.next()){
+		var this_user = usersGr.user.user_id.toString();
+		if (users.indexOf(this_user) == -1 && this_user != ''){
+			users.push(this_user);
+			user_names.push(usersGr.getDisplayValue('user'));
+		}
+	}
+
+	var random = Math.floor(Math.random() * users.length);
+	data.users = users.length;
+	data.selected_user_id = users[random];
+	data.selected_user_name = user_names[random];
+
+	if (input && input.shoutout == true){
+		data.show_shoutout = true;
+		data.show_shoutout_recent = false;
+		var send_shoutout = new SlackFall().send_chat(channel,'The SN Devs want to give a shout out to <@' + users[random] + '>!', false);
+		data.shoutout = false;
+	}
+	
+	var users_recent = [];
+	var user_names_recent = [];
+	var usersGr_recent = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+	usersGr_recent.addEncodedQuery('channel=CAQ2W3EE4^sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()');
+	usersGr_recent.query();
+	while(usersGr_recent.next()){
+		var this_user_recent = usersGr_recent.user.user_id.toString();
+		if (users_recent.indexOf(this_user_recent) == -1 && this_user_recent != ''){
+			users_recent.push(this_user_recent);
+			user_names_recent.push(usersGr_recent.getDisplayValue('user'));
+		}
+	}
+
+	var random_recent = Math.floor(Math.random() * users_recent.length);
+	data.users_recent = users_recent.length;
+	data.selected_user_id_recent = users_recent[random_recent];
+	data.selected_user_name_recent = user_names_recent[random_recent];
+	
+	if (input && input.shoutout_recent == true){
+		data.show_shoutout = false;
+		data.show_shoutout_recent = true;
+		var send_shoutout_recent = new SlackFall().send_chat(channel,'The SN Devs want to give a shout out to <@' + data.selected_user_id_recent + '>!', false);
+		data.shoutout_recent = false;
+	}
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-04-18 22:40:40</sys_created_on>
+        <sys_id>e81f630f4f78ff0063c44beab110c77e</sys_id>
+        <sys_mod_count>64</sys_mod_count>
+        <sys_name>ShoutOut</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sp_widget_e81f630f4f78ff0063c44beab110c77e</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-04-19 00:00:56</sys_updated_on>
+        <template><![CDATA[<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+
+<div>
+  <div class="form-group">
+    <span class="input-group-radio">
+      <input id="radioS" class="radio animated bounce" type="radio" name="radioS" ng-model="data.mode" value="test" ng-change="c.server.update()"><label for="radioS" class="radio-label animated bounce">Test (Sends to "Admin" channel)</label><br>
+      <input id="radioS2" class="radio" type="radio" name="radioS" ng-model="data.mode" value="live" ng-change="c.server.update()"><label for="radioS2" class="radio-label">Live (Sends to Knowledge19 channel)</label>
+    </span> 
+  </div>
+</div>
+<div>
+  Click one of these buttons to make a shoutout in the chosen channel
+</div>
+<div>
+  <button type="button" ng-click="c.shoutout()" class="btn btn-info">Shoutout (Week - {{data.users}})</button>
+</div>
+<div>
+  <button type="button" ng-click="c.shoutout_recent()" class="btn btn-info">Shoutout (Today - {{data.users_recent}})</button>
+</div>
+<div class="showshoutout delay-1s">
+  <div ng-if="data.show_shoutout">
+    <h4>
+      Sent a shoutout to {{data.selected_user_name}}
+    </h4>
+  </div>
+  <div ng-if="data.show_shoutout_recent">
+    <h4>
+      Sent a shoutout to {{data.selected_user_name_recent}}
+    </h4>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

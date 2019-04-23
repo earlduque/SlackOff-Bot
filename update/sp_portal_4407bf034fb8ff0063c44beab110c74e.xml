@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables>$color-accent : #278EFC;&#13;
+$color-accent-light: #BDDCFC;&#13;
+$color-darker: #485563;&#13;
+$color-dark : #81878E;&#13;
+$color-light: #BDC0C4;&#13;
+$color-lighter: #E6E8EA;&#13;
+$color-lightest: #FFFFFF;&#13;
+$color-darkest : #343D47;</css_variables>
+        <default>false</default>
+        <homepage/>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page/>
+        <login_page/>
+        <logo/>
+        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu/>
+        <sqanda_knowledge_base/>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-04-18 23:16:12</sys_created_on>
+        <sys_id>4407bf034fb8ff0063c44beab110c74e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SN Devs</sys_name>
+        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sp_portal_4407bf034fb8ff0063c44beab110c74e</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-04-18 23:16:12</sys_updated_on>
+        <theme/>
+        <title>SN Devs</title>
+        <url_suffix>sndevs</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=4407bf034fb8ff0063c44beab110c74e"/>
+</record_update>

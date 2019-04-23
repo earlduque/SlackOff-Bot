@@ -15,14 +15,14 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textLIKE!emoji^ORtextLIKE!EMOJI^ORtextLIKE!Emoji^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="false" value="!emoji"/>
-            <item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="true" value="!EMOJI"/>
-            <item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="true" value="!Emoji"/>
+        <filter_condition table="x_165574_slackoff_slacker_text_tracker">textLIKE!ajb^ORtextLIKE!AJB^ORtextLIKE!Ajb^EQ<item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="false" value="!ajb"/>
+            <item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="true" value="!AJB"/>
+            <item endquery="false" field="text" goto="false" newquery="false" operator="LIKE" or="true" value="!Ajb"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>Emoji</name>
+        <name>!AJB Processor</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -32,52 +32,49 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
-	
-	var message = current.text.replace('!emoji ','');
-	gs.info('emoji: ' + message);
-	if (message){
-		var rm = new sn_ws.RESTMessageV2();
-		rm.setHttpMethod('GET');
-		rm.setLogLevel('all');
-		rm.setEndpoint('https://server.jace.pro/discord/emoji?text='+gs.urlEncode(message));
-		var response = rm.execute();
-		var response_body = JSON.parse(response.getBody());
-		
-		var message2 = response_body.text.split(' ');
-		for (var i = 0; i < message2.length; i++){
-			var check = new GlideRecord('x_165574_slackoff_emojis');
-			check.addQuery('emoji', message2[i]);
-			check.query();
-			if (check.next()){
-				var found = message2[i];
-				message2[i] = ':'+found+':';
-			}
+	//var random = Math.floor(Math.random() * 1000);
+	var choices = [
+		':ajb:',
+		':partyajb:',
+		':mobilityajb:',
+		':ajbconga:',
+		':ajbgoespoof:',
+		':ajbleftfall:',
+		':ajbdownfall:',
+		':ajbispumped:',
+		':ajbdescends:',
+		':ajbupsidedown:',
+		':ajbheadswillroll:'
+	];
+	var split = parseInt(current.text.split(' ')[1]);
+	var text = choices.join(' ');
+	if (parseInt(split) > 0 && parseInt(split) <= 10){
+		while (split > 1){
+			text += ' ' + choices.join(' ');
+			split--;
 		}
-		
-		var message3 = message2.join(' ');
-		
-		var send_chat = new SlackFall().send_chat(current.channel, message3, false, '', current.thread_ts);
+	} else if (parseInt(split) > 10){
+		text = 'Now that would just be rude. Shame on you';
 	}
-
+	var send_chat = new SlackFall().send_chat(current.channel, text, false, '' , current.thread_ts);
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2019-02-15 21:24:17</sys_created_on>
+        <sys_created_on>2019-04-23 16:03:52</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>02070c57136f67001f2f53173244b0fc</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_name>Emoji</sys_name>
+        <sys_id>e43440bc4fc9b34063c44beab110c73d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>!AJB Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>sys_script_02070c57136f67001f2f53173244b0fc</sys_update_name>
+        <sys_update_name>sys_script_e43440bc4fc9b34063c44beab110c73d</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-04-11 21:58:42</sys_updated_on>
+        <sys_updated_on>2019-04-23 16:17:42</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=02070c57136f67001f2f53173244b0fc"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=e43440bc4fc9b34063c44beab110c73d"/>
 </record_update>
