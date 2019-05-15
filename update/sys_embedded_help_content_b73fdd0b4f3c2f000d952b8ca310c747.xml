@@ -15,19 +15,18 @@
         <sys_class_name>sys_embedded_help_content</sys_class_name>
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2018-10-01 16:01:09</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b73fdd0b4f3c2f000d952b8ca310c747</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_name>$pa_detailed-normal</sys_name>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_embedded_help_content_b73fdd0b4f3c2f000d952b8ca310c747</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2018-10-31 16:02:13</sys_updated_on>
         <version>k</version>
     </sys_embedded_help_content>
+    <sys_translated_text action="delete_multiple" query="documentkey=b73fdd0b4f3c2f000d952b8ca310c747"/>
 </record_update>

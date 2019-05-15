@@ -12,14 +12,12 @@
         <sys_class_name>sys_gauge_counts</sys_class_name>
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2018-09-23 08:00:12</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>3c74ee9c4f30e7000d952b8ca310c7af</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>MaxOrchCoreTransactionLast12Month</sys_name>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_gauge_counts_3c74ee9c4f30e7000d952b8ca310c7af</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2018-09-23 08:00:12</sys_updated_on>

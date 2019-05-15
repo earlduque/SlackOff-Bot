@@ -29,7 +29,7 @@
         <column>channel</column>
         <compute_percent>aggregate</compute_percent>
         <content/>
-        <created_by_user display_value="Earl Duque">c93fddf94ff7b2c006a6650f0310c7ec</created_by_user>
+        <created_by_user display_value="Earl Duque">10b0d0d34f597b004b00cfa18110c71f</created_by_user>
         <custom_chart_size>false</custom_chart_size>
         <custom_chart_title_position>false</custom_chart_title_position>
         <custom_config/>
@@ -50,7 +50,6 @@
         <funnel_neck_percent>30</funnel_neck_percent>
         <gauge_autoscale>true</gauge_autoscale>
         <group/>
-        <groups/>
         <import_table/>
         <interval>hour</interval>
         <is_published>false</is_published>
@@ -72,6 +71,32 @@
         <orderby_list/>
         <other_threshold>-1</other_threshold>
         <others>false</others>
+        <pa_aggregate/>
+        <pa_breakdown/>
+        <pa_breakdown_level2/>
+        <pa_element/>
+        <pa_element_level2/>
+        <pa_indicator/>
+        <pa_lastscore_compare/>
+        <pa_lastscore_periods_back/>
+        <pa_number_of_periods/>
+        <pa_period/>
+        <pa_range_of_periods/>
+        <pa_right_y_axis_from/>
+        <pa_right_y_axis_title/>
+        <pa_right_y_axis_to/>
+        <pa_show_comments>false</pa_show_comments>
+        <pa_show_confidence_bands>false</pa_show_confidence_bands>
+        <pa_show_date_range_selector>false</pa_show_date_range_selector>
+        <pa_show_forecast>false</pa_show_forecast>
+        <pa_show_forecast_range>false</pa_show_forecast_range>
+        <pa_show_previous_period_chart>false</pa_show_previous_period_chart>
+        <pa_show_right_y_axis>false</pa_show_right_y_axis>
+        <pa_show_target>false</pa_show_target>
+        <pa_show_thresholds>false</pa_show_thresholds>
+        <pa_show_trend>false</pa_show_trend>
+        <pa_stack_datasets>false</pa_stack_datasets>
+        <pa_template/>
         <page_hdrftr display_value="Default">0ecdb03fc3613000cef73b251eba8f5e</page_hdrftr>
         <pivot_expanded>true</pivot_expanded>
         <report_drilldown/>
@@ -103,14 +128,12 @@
         <sys_class_name>sys_report</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-02 17:28:31</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_id>eddc3e934f786f000d952b8ca310c771</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Points Trend by hour</sys_name>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_report_eddc3e934f786f000d952b8ca310c771</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
         <sys_updated_on>2018-10-02 17:28:31</sys_updated_on>
@@ -123,10 +146,8 @@
         <type>trend</type>
         <upper_limit/>
         <use_color_heatmap>true</use_color_heatmap>
-        <use_color_palette>false</use_color_palette>
         <use_null_in_trend>false</use_null_in_trend>
         <user>a90275264f3213000d952b8ca310c742</user>
-        <users/>
         <x_axis_allow_decimals>false</x_axis_allow_decimals>
         <x_axis_display_grid>false</x_axis_display_grid>
         <x_axis_grid_color display_value="LightGrey">65b30308a9fe3dba01ebaa03e87e7cd3</x_axis_grid_color>

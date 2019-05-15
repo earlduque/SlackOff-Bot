@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Slacker Text Tracker" max_length="40" name="x_165574_slackoff_slacker_text_tracker" sizeclass="5619" type="collection">
+    <element label="Slacker Text Tracker" max_length="40" name="x_165574_slackoff_slacker_text_tracker" type="collection">
         <element label="Channel" max_length="40" name="channel" type="string"/>
         <element label="Text" max_length="4000" name="text" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="thread timestamp" max_length="40" name="thread_ts" type="string"/>

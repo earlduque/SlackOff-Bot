@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2019-05-15 15:32:05">
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2019-05-15 16:19:20">
     <sys_portal_page action="INSERT_OR_UPDATE">
         <layout/>
         <order/>
@@ -8,16 +8,15 @@
         <sys_class_name>sys_portal_page</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-02 17:22:49</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>c68b7e534f786f000d952b8ca310c731</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>PA New Tab</sys_name>
         <sys_overrides/>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_portal_page_c68b7e534f786f000d952b8ca310c731</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
         <sys_updated_on>2018-10-02 17:22:49</sys_updated_on>
@@ -39,7 +38,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-02 10:27:43 AM">35ac32934f786f000d952b8ca310c701</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:27:43</sys_created_on>
                         <sys_id>35ac32934f786f000d952b8ca310c702</sys_id>
@@ -50,7 +49,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-02 10:27:43 AM">35ac32934f786f000d952b8ca310c701</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:27:43</sys_created_on>
                         <sys_id>39ac32934f786f000d952b8ca310c701</sys_id>
@@ -61,7 +60,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-02 10:27:43 AM">35ac32934f786f000d952b8ca310c701</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:27:43</sys_created_on>
                         <sys_id>71ac32934f786f000d952b8ca310c702</sys_id>
@@ -72,7 +71,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-02 10:27:43 AM">35ac32934f786f000d952b8ca310c701</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:27:43</sys_created_on>
                         <sys_id>bdac32934f786f000d952b8ca310c701</sys_id>
@@ -83,7 +82,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-02 10:27:43 AM">35ac32934f786f000d952b8ca310c701</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:27:43">35ac32934f786f000d952b8ca310c701</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:27:43</sys_created_on>
                         <sys_id>f5ac32934f786f000d952b8ca310c702</sys_id>
@@ -108,7 +107,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-02 10:24:43 AM">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:24:43</sys_created_on>
                         <sys_id>39fbfe534f786f000d952b8ca310c7fd</sys_id>
@@ -119,7 +118,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-02 10:24:43 AM">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:24:43</sys_created_on>
                         <sys_id>3dfbfe534f786f000d952b8ca310c7fc</sys_id>
@@ -130,7 +129,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-02 10:24:43 AM">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:24:43</sys_created_on>
                         <sys_id>75fbfe534f786f000d952b8ca310c7fd</sys_id>
@@ -141,7 +140,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-02 10:24:43 AM">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:24:43</sys_created_on>
                         <sys_id>b1fbfe534f786f000d952b8ca310c7fd</sys_id>
@@ -152,7 +151,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-02 10:24:43 AM">39fbfe534f786f000d952b8ca310c7fc</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:24:43">39fbfe534f786f000d952b8ca310c7fc</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:24:43</sys_created_on>
                         <sys_id>f9fbfe534f786f000d952b8ca310c7fd</sys_id>
@@ -177,7 +176,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-03 12:49:01 PM">599624734fb4af000d952b8ca310c7ed</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:49:01</sys_created_on>
                         <sys_id>199624734fb4af000d952b8ca310c7ee</sys_id>
@@ -188,7 +187,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-03 12:49:01 PM">599624734fb4af000d952b8ca310c7ed</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:49:01</sys_created_on>
                         <sys_id>559624734fb4af000d952b8ca310c7ee</sys_id>
@@ -199,7 +198,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-03 12:49:01 PM">599624734fb4af000d952b8ca310c7ed</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:49:01</sys_created_on>
                         <sys_id>5d9624734fb4af000d952b8ca310c7ed</sys_id>
@@ -210,7 +209,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-03 12:49:01 PM">599624734fb4af000d952b8ca310c7ed</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:49:01</sys_created_on>
                         <sys_id>919624734fb4af000d952b8ca310c7ee</sys_id>
@@ -221,7 +220,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-03 12:49:01 PM">599624734fb4af000d952b8ca310c7ed</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:49:01</sys_created_on>
                         <sys_id>9d9624734fb4af000d952b8ca310c7ee</sys_id>
@@ -232,7 +231,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>report_type</name>
-                        <portal_section display_value="Created 2018-10-03 12:49:01 PM">599624734fb4af000d952b8ca310c7ed</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:49:01">599624734fb4af000d952b8ca310c7ed</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:49:01</sys_created_on>
                         <sys_id>d99624734fb4af000d952b8ca310c7ee</sys_id>
@@ -257,7 +256,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-03 07:54:48 AM">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                        <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 14:54:48</sys_created_on>
                         <sys_id>2f332f2b4fb0af000d952b8ca310c7a2</sys_id>
@@ -268,7 +267,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-03 07:54:48 AM">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                        <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 14:54:48</sys_created_on>
                         <sys_id>6b332f2b4fb0af000d952b8ca310c7a2</sys_id>
@@ -279,7 +278,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-03 07:54:48 AM">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                        <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 14:54:48</sys_created_on>
                         <sys_id>a3332f2b4fb0af000d952b8ca310c7a3</sys_id>
@@ -290,7 +289,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-03 07:54:48 AM">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                        <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 14:54:48</sys_created_on>
                         <sys_id>af332f2b4fb0af000d952b8ca310c7a1</sys_id>
@@ -301,7 +300,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-03 07:54:48 AM">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
+                        <portal_section display_value="Created 2018-10-03 07:54:48">67332f2b4fb0af000d952b8ca310c7a1</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 14:54:48</sys_created_on>
                         <sys_id>ef332f2b4fb0af000d952b8ca310c7a2</sys_id>
@@ -326,7 +325,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-03 12:29:02 PM">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:29:02</sys_created_on>
                         <sys_id>240224bf4f74af000d952b8ca310c7bf</sys_id>
@@ -337,7 +336,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-03 12:29:02 PM">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:29:02</sys_created_on>
                         <sys_id>600224bf4f74af000d952b8ca310c7bf</sys_id>
@@ -348,7 +347,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-03 12:29:02 PM">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:29:02</sys_created_on>
                         <sys_id>a002ac7f4f74af000d952b8ca310c716</sys_id>
@@ -359,7 +358,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-03 12:29:02 PM">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:29:02</sys_created_on>
                         <sys_id>ac0224bf4f74af000d952b8ca310c7be</sys_id>
@@ -370,7 +369,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-03 12:29:02 PM">a402ac7f4f74af000d952b8ca310c715</portal_section>
+                        <portal_section display_value="Created 2018-10-03 12:29:02">a402ac7f4f74af000d952b8ca310c715</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 19:29:02</sys_created_on>
                         <sys_id>e40224bf4f74af000d952b8ca310c7bf</sys_id>
@@ -395,7 +394,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-03 10:50:07 AM">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                        <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 17:50:07</sys_created_on>
                         <sys_id>275b043f4ff0af000d952b8ca310c709</sys_id>
@@ -406,7 +405,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-03 10:50:07 AM">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                        <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 17:50:07</sys_created_on>
                         <sys_id>635b043f4ff0af000d952b8ca310c709</sys_id>
@@ -417,7 +416,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-03 10:50:07 AM">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                        <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 17:50:07</sys_created_on>
                         <sys_id>af5b043f4ff0af000d952b8ca310c708</sys_id>
@@ -428,7 +427,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-03 10:50:07 AM">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                        <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 17:50:07</sys_created_on>
                         <sys_id>e35b043f4ff0af000d952b8ca310c708</sys_id>
@@ -439,7 +438,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-03 10:50:07 AM">ab5b043f4ff0af000d952b8ca310c707</portal_section>
+                        <portal_section display_value="Created 2018-10-03 10:50:07">ab5b043f4ff0af000d952b8ca310c707</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-03 17:50:07</sys_created_on>
                         <sys_id>e75b043f4ff0af000d952b8ca310c709</sys_id>
@@ -464,7 +463,7 @@
                 <related_items_node>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>title</name>
-                        <portal_section display_value="Created 2018-10-02 10:22:55 AM">df8b7e534f786f000d952b8ca310c736</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:22:55</sys_created_on>
                         <sys_id>138b7e534f786f000d952b8ca310c739</sys_id>
@@ -475,7 +474,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>can_subscribe</name>
-                        <portal_section display_value="Created 2018-10-02 10:22:55 AM">df8b7e534f786f000d952b8ca310c736</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:22:55</sys_created_on>
                         <sys_id>5f8b7e534f786f000d952b8ca310c738</sys_id>
@@ -486,7 +485,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>sys_id</name>
-                        <portal_section display_value="Created 2018-10-02 10:22:55 AM">df8b7e534f786f000d952b8ca310c736</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:22:55</sys_created_on>
                         <sys_id>9b8b7e534f786f000d952b8ca310c737</sys_id>
@@ -497,7 +496,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>help_text_window</name>
-                        <portal_section display_value="Created 2018-10-02 10:22:55 AM">df8b7e534f786f000d952b8ca310c736</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:22:55</sys_created_on>
                         <sys_id>9b8b7e534f786f000d952b8ca310c738</sys_id>
@@ -508,7 +507,7 @@
                     </sys_portal_preferences>
                     <sys_portal_preferences action="INSERT_OR_UPDATE">
                         <name>renderer</name>
-                        <portal_section display_value="Created 2018-10-02 10:22:55 AM">df8b7e534f786f000d952b8ca310c736</portal_section>
+                        <portal_section display_value="Created 2018-10-02 10:22:55">df8b7e534f786f000d952b8ca310c736</portal_section>
                         <sys_created_by>admin-eduque</sys_created_by>
                         <sys_created_on>2018-10-02 17:22:55</sys_created_on>
                         <sys_id>d78b7e534f786f000d952b8ca310c738</sys_id>

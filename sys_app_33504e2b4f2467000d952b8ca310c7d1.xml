@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_app">
     <sys_app action="INSERT_OR_UPDATE">
         <active>true</active>
-        <can_edit_in_studio>false</can_edit_in_studio>
         <enforce_license>log</enforce_license>
         <js_level>helsinki_es5</js_level>
         <licensable>true</licensable>
@@ -9,7 +8,7 @@
         <license_model>none</license_model>
         <logo/>
         <menu/>
-        <name>SlackOff</name>
+        <name>Slacker</name>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
@@ -24,9 +23,9 @@
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-20 21:27:08</sys_created_on>
         <sys_id>33504e2b4f2467000d952b8ca310c7d1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-20 21:27:08</sys_updated_on>
+        <sys_updated_on>2019-05-15 16:18:31</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <user_role/>

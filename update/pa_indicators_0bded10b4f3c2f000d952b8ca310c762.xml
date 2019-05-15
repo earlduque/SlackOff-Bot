@@ -33,7 +33,7 @@ Channel = G9LAJG7G8</description>
         <frequency>10</frequency>
         <groups/>
         <has_managed_indicators>false</has_managed_indicators>
-        <id>467</id>
+        <id>113</id>
         <key>false</key>
         <label/>
         <linked_indicator/>
@@ -61,16 +61,15 @@ Channel = G9LAJG7G8</description>
         <sys_class_name>pa_indicators</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-01 16:00:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>0bded10b4f3c2f000d952b8ca310c762</sys_id>
         <sys_mod_count>181</sys_mod_count>
         <sys_name>Slacker Text Indicator</sys_name>
         <sys_overrides/>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>pa_indicators_0bded10b4f3c2f000d952b8ca310c762</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
         <sys_updated_on>2019-05-15 04:00:10</sys_updated_on>
@@ -80,4 +79,5 @@ Channel = G9LAJG7G8</description>
         <value_when_nil/>
         <visible_to>2</visible_to>
     </pa_indicators>
+    <sys_translated_text action="delete_multiple" query="documentkey=0bded10b4f3c2f000d952b8ca310c762"/>
 </record_update>

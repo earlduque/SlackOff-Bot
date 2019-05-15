@@ -4,15 +4,11 @@
         <access>package_private</access>
         <action_delete>false</action_delete>
         <action_insert>true</action_insert>
-        <action_label/>
-        <action_name/>
         <action_query>false</action_query>
-        <action_run_at/>
         <action_update>true</action_update>
         <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
-        <application/>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_165574_slackoff_slack_user</collection>
@@ -25,10 +21,8 @@
         <is_rest>false</is_rest>
         <message/>
         <name>Get Name</name>
-        <onclick/>
         <order>100</order>
         <priority>100</priority>
-        <read_access_action>false</read_access_action>
         <rest_method/>
         <rest_method_text/>
         <rest_service/>
@@ -43,20 +37,20 @@
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-01 17:10:45</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
         <sys_id>141fa9874f7c2f000d952b8ca310c75b</sys_id>
         <sys_mod_count>9</sys_mod_count>
         <sys_name>Get Name</sys_name>
         <sys_overrides/>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_141fa9874f7c2f000d952b8ca310c75b</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
         <sys_updated_on>2018-10-03 19:20:19</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=141fa9874f7c2f000d952b8ca310c75b"/>
 </record_update>

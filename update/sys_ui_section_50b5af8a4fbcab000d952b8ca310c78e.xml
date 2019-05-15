@@ -78,16 +78,15 @@
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>admin-eduque</sys_created_by>
             <sys_created_on>2018-09-28 23:14:37</sys_created_on>
-            <sys_customer_update>false</sys_customer_update>
             <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
             <sys_id>50b5af8a4fbcab000d952b8ca310c78e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_165574_slackoff_slackoff_job</sys_name>
             <sys_overrides/>
-            <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+            <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
             <sys_policy/>
-            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-            <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+            <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
             <sys_update_name>sys_ui_section_50b5af8a4fbcab000d952b8ca310c78e</sys_update_name>
             <sys_updated_by>admin-eduque</sys_updated_by>
             <sys_updated_on>2018-09-28 23:14:37</sys_updated_on>

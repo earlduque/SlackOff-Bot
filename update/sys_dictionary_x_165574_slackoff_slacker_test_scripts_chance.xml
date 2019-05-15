@@ -48,17 +48,15 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-18 22:15:20</sys_created_on>
-        <sys_customer_update>false</sys_customer_update>
-        <sys_id>defac19b13cd33409a2b58222244b0f9</sys_id>
+        <sys_id>a73011bb4fd133003d60b1d18110c732</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Chance</sys_name>
-        <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
-        <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_dictionary_x_165574_slackoff_slacker_test_scripts_chance</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-05-01 15:38:03</sys_updated_on>
+        <sys_updated_on>2019-05-15 15:33:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
