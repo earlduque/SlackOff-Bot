@@ -11,7 +11,7 @@
         <name>Slacker Stats</name>
         <no_tabs>false</no_tabs>
         <order/>
-        <owner display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</owner>
+        <owner display_value="Earl Duque">c93fddf94ff7b2c006a6650f0310c7ec</owner>
         <restrict_to_roles/>
         <role_override>true</role_override>
         <roles/>
@@ -19,14 +19,15 @@
         <sys_class_name>pa_dashboards</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-02 17:22:49</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
         <sys_id>c18b3e534f786f000d952b8ca310c739</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Slacker Stats</sys_name>
         <sys_overrides/>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>pa_dashboards_c18b3e534f786f000d952b8ca310c739</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>

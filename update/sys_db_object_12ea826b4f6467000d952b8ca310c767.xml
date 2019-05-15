@@ -22,11 +22,13 @@
         <sys_class_path/>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-20 22:13:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>12ea826b4f6467000d952b8ca310c767</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>SlackOff Payloads</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_db_object_12ea826b4f6467000d952b8ca310c767</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>

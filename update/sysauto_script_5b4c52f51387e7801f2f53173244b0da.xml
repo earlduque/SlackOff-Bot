@@ -4,7 +4,7 @@
         <condition/>
         <conditional>false</conditional>
         <name>Countdown!</name>
-        <run_as display_value="Earl Duque">d4164bc0134ed3001f2f53173244b0d9</run_as>
+        <run_as display_value="Earl Duque">c93fddf94ff7b2c006a6650f0310c7ec</run_as>
         <run_as_tz/>
         <run_dayofmonth>1</run_dayofmonth>
         <run_dayofweek>1</run_dayofweek>
@@ -14,11 +14,11 @@
         <run_type>daily</run_type>
         <script><![CDATA[var today = new GlideDate();
 today.setDisplayValue(today.getDisplayValue());
-var k19 = new GlideDate();
-k19.setDisplayValue('2019-05-05');
-var duration= GlideDate.subtract(today, k19); 
+var k20 = new GlideDate();
+k20.setDisplayValue('2020-05-03');
+var duration= GlideDate.subtract(today, k20); 
 
-var choices = [
+/*var choices = [
 	'ajb',
 	'partyajb',
 	'mobilityajb',
@@ -32,24 +32,31 @@ var choices = [
 	'ajbupsidedown',
 	'ajbheadswillroll'
 ];
-var random = Math.floor(Math.random() * choices.length);
+var random = Math.floor(Math.random() * choices.length);*/
 
-if (today < k19) var send_chat = new SlackFall().send_chat('CAQ2W3EE4', 'Knowledge \'19 is ' + duration.getDisplayValue() + ' away! :' + choices[random] + ':', false);
+//if (today < k19) var send_chat = new SlackFall().send_chat('CAQ2W3EE4', 'Knowledge \'19 is ' + duration.getDisplayValue() + ' away! :' + choices[random] + ':', false);
+if (today < k20) {
+// 	var send_chat = new SlackFall().send_chat('CAQ2W3EE4', 'Knowledge \'20 is ' + duration.getDisplayValue() + ' away!', false);
+	var send_chat = new SlackFall().send_chat('CJKUWAU0L', 'Knowledge \'20 is ' + duration.getDisplayValue() + ' away!', false);
+}
 //var send_chat = new SlackFall().send_chat('CAQ2W3EE4', 'Knowledge \'19 is 24 Days away!', false);
 //CAQ2W3EE4 k19 channel
-//CD0PHCZ4N dev channel]]></script>
+//CJKUWAU0L k20 channel
+//GD51HTR46 dev channel]]></script>
         <sys_class_name>sysauto_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2019-01-17 19:38:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>5b4c52f51387e7801f2f53173244b0da</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name>Countdown!</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sysauto_script_5b4c52f51387e7801f2f53173244b0da</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-04-09 15:11:04</sys_updated_on>
+        <sys_updated_on>2019-05-15 15:00:20</sys_updated_on>
         <upgrade_safe>false</upgrade_safe>
     </sysauto_script>
 </record_update>

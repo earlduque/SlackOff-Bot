@@ -11,11 +11,13 @@
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-01 15:48:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>714cd9474f3c2f000d952b8ca310c797</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_165574_slackoff_slacker_text_tracker</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_security_acl_714cd9474f3c2f000d952b8ca310c797</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>

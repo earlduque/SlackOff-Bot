@@ -6,11 +6,13 @@
         <sys_class_name>sys_scope_privilege</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-20 21:32:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_id>a0a186a34f6467000d952b8ca310c71f</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>ScriptableServiceResultStreamWriter.writeString</sys_name>
         <sys_package display_value="SlackOff" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="SlackOff">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_scope_privilege_a0a186a34f6467000d952b8ca310c71f</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
