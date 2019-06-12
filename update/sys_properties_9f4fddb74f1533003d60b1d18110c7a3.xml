@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>comma separated list of slack user IDs that can push to twitter immediately.&#13;
+U3K41CUBS (casey)&#13;
+U1V1NGP0S (U1V1NGP0S)&#13;
+U7WGPRC2D (earl)</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_165574_slackoff.slacker.tweet.instant_approvers</name>
+        <read_roles/>
+        <suffix>slacker.tweet.instant_approvers</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-05-15 16:40:32</sys_created_on>
+        <sys_id>9f4fddb74f1533003d60b1d18110c7a3</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>x_165574_slackoff.slacker.tweet.instant_approvers</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_properties_9f4fddb74f1533003d60b1d18110c7a3</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-05-16 05:58:29</sys_updated_on>
+        <type>string</type>
+        <value/>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=9f4fddb74f1533003d60b1d18110c7a3"/>
+</record_update>

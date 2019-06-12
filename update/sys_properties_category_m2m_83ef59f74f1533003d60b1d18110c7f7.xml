@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Slacker">72cfd5f74f1533003d60b1d18110c797</category>
+        <order>600</order>
+        <property display_value="x_165574_slackoff.slacker.tweet.instant_approvers" name="x_165574_slackoff.slacker.tweet.instant_approvers">9f4fddb74f1533003d60b1d18110c7a3</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-05-15 16:42:06</sys_created_on>
+        <sys_id>83ef59f74f1533003d60b1d18110c7f7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_165574_slackoff.slacker.tweet.instant_approvers.Slacker</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_83ef59f74f1533003d60b1d18110c7f7</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-05-15 16:42:33</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

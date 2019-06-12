@@ -3,62 +3,107 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>channel</element>
-            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47cd51c74f3c2f000d952b8ca310c7ee</list_id>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-01 15:54:48</sys_created_on>
-            <sys_id>cbcd51c74f3c2f000d952b8ca310c7ee</sys_id>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>61ced9b74f1533003d60b1d18110c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-01 15:54:48</sys_updated_on>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>text</element>
-            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47cd51c74f3c2f000d952b8ca310c7ee</list_id>
+            <element>user</element>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-01 15:54:48</sys_created_on>
-            <sys_id>4fcd51c74f3c2f000d952b8ca310c7ee</sys_id>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>e1ced9b74f1533003d60b1d18110c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-01 15:54:48</sys_updated_on>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>user</element>
-            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47cd51c74f3c2f000d952b8ca310c7ee</list_id>
+            <element>user.user_id</element>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-01 15:54:48</sys_created_on>
-            <sys_id>cfcd51c74f3c2f000d952b8ca310c7ee</sys_id>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>65ced9b74f1533003d60b1d18110c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-01 15:54:48</sys_updated_on>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>sys_created_on</element>
-            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">47cd51c74f3c2f000d952b8ca310c7ee</list_id>
+            <element>text</element>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-01 15:54:48</sys_created_on>
-            <sys_id>43cd51c74f3c2f000d952b8ca310c7ef</sys_id>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>e5ced9b74f1533003d60b1d18110c796</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-01 15:54:48</sys_updated_on>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>ts</element>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>69ced9b74f1533003d60b1d18110c796</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>thread_ts</element>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>e9ced9b74f1533003d60b1d18110c796</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_165574_slackoff_slacker_text_tracker" element="NULL" name="x_165574_slackoff_slacker_text_tracker" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">29ced9b74f1533003d60b1d18110c795</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
+            <sys_id>6dced9b74f1533003d60b1d18110c796</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -72,10 +117,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2018-10-01 15:54:48</sys_created_on>
+            <sys_created_on>2019-05-15 16:37:05</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>47cd51c74f3c2f000d952b8ca310c7ee</sys_id>
+            <sys_id>29ced9b74f1533003d60b1d18110c795</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_165574_slackoff_slacker_text_tracker</sys_name>
             <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -83,7 +128,7 @@
             <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
             <sys_update_name>sys_ui_list_x_165574_slackoff_slacker_text_tracker_null</sys_update_name>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2018-10-01 15:54:48</sys_updated_on>
+            <sys_updated_on>2019-05-15 16:37:05</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

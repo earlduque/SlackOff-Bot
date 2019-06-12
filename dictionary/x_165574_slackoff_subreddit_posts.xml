@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Subreddit Posts" max_length="40" name="x_165574_slackoff_subreddit_posts" type="collection">
+        <element label="Author" max_length="40" name="author" type="string"/>
+        <element label="Created_utc" max_length="40" name="created_utc" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Created_utc_string" max_length="40" name="created_utc_string" type="string"/>
+        <element display="true" label="Post ID" max_length="40" name="post_id" type="string"/>
+        <element label="Score" max_length="40" name="score" type="integer"/>
+        <element label="Selftext" max_length="40000" name="selftext" type="string"/>
+        <element label="Title" max_length="200" name="title" type="string"/>
+        <element label="URL" max_length="1024" name="url" type="url"/>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_auth_profile_basic">
+    <sys_auth_profile_basic action="INSERT_OR_UPDATE">
+        <name>Twitter</name>
+        <password>jv+Ta0lt3X3ATIIQ3qkryrH/2+4I06bRu4kj2UE94UTbbV5HNm+uFVq3VYe+O5q44kl24kuIO+k=</password>
+        <sys_class_name>sys_auth_profile_basic</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-05-15 19:49:51</sys_created_on>
+        <sys_id>f6ba0e774f9533003d60b1d18110c7d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Twitter</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_auth_profile_basic_f6ba0e774f9533003d60b1d18110c7d4</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-05-15 19:49:51</sys_updated_on>
+        <username>kIaaR06tbcpUxZkt8LeGObaWX</username>
+    </sys_auth_profile_basic>
+</record_update>

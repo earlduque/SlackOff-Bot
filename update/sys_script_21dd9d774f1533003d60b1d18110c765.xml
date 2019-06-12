@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>!tweet</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var thread_reminder = 'This command only works in threads.';
+	var in_review = 'This has been submitted for review.';
+	var tweet_to_review = 'The following tweet has been submitted by <@' + current.user.user_id + '> for review. Say !approve in thread or !reject (with optional comments) to reject or just ignore: ```' + originalPost(1) + '```';
+	var reject_message = 'The request for this message to be sent to twitter has been rejected.';
+	var approval_message = 'This post has been approved and has been posted to the @sndevs twitter account!';
+
+	var tweet_regex = /(!tweet)/gmi;
+	var decision_regex = /(!approve)|(!reject)/gmi;
+	var approve_regex = /(!approve)/gmi;
+	var reject_regex = /(!reject)/gmi;
+	var approvers = gs.getProperty('x_165574_slackoff.slacker.tweet.instant_approvers').split(',');
+	var approval_channel = gs.getProperty('x_165574_slackoff.slacker.tweet.channel');
+	// 	var approval_channel = 'GG5BKNTCG'; //debug
+
+	if (tweet_regex.test(current.text) && !current.thread_ts){
+		var send_thread_reminder = new SlackFall().send_chat(current.channel, thread_reminder, false, '', current.ts);
+		return;
+	}
+
+	if (tweet_regex.test(current.text) && current.thread_ts && approvers.indexOf(current.user.user_id.toString()) != -1){
+		// 		var instant_response = JSON.parse(send_instant_tweet.getBody());
+		// 		if (instant_response.errors){
+		// 			var instant_errors = 'Something went wrong with the posting of this tweet:```';
+		// 			for (var i in instant_response.errors){
+		// 				instant_errors += instant_response.errors[i].code + ': ' + instant_response.errors[i].message+'\n';
+		// 			}
+		// 			instant_errors += '```';
+		// 			var send_instant_erros = new SlackFall().send_chat(current.channel, instant_errors, false, '', current.thread_ts);
+		// 		} else var send_instant_approval = new SlackFall().send_chat(current.channel, 'Approved! \nLink: https://twitter.com/'+instant_response.user.screen_name+'/status/' + instant_response.id_str, false, '', current.thread_ts);
+	}
+	else if (tweet_regex.test(current.text) && current.thread_ts && approvers.indexOf(current.user.user_id.toString()) == -1) {
+		var send_pending_review = new SlackFall().send_chat(current.channel, in_review, false, '', current.thread_ts);
+		var tweet_to_reviewers = new SlackFall().send_chat(approval_channel, tweet_to_review, false);
+		var review_ts = JSON.parse(tweet_to_reviewers.getBody());
+		updateOP(review_ts.ts);	
+	}
+	else if (decision_regex.test(current.text) && current.thread_ts && current.channel == approval_channel){
+		var original = findOriginal();
+		if (approve_regex.test(current.text)) {
+			var send_tweet = new SlackerTweet().send_tweet(originalPost(2));
+			var response = JSON.parse(send_tweet.getBody());
+			if (response.errors){
+				var errors = 'Something went wrong with the posting of this tweet:```';
+				for (var j in response.errors){
+					errors += response.errors[j].code + ': ' + response.errors[j].message+'\n';
+				}
+				errors += '```';
+				var send_erros = new SlackFall().send_chat(current.channel, errors, false, '', current.thread_ts);
+			} else {
+				var send_approval = new SlackFall().send_chat(original.channel, approval_message+'\nLink: https://twitter.com/'+response.user.screen_name+'/status/' + response.id_str, false, '', original.thread_ts);
+				var send_approval_confirmation = new SlackFall().send_chat(current.channel, approval_message, false, '', current.thread_ts);
+			}
+		} else if (reject_regex.test(current.text)){
+			var reject_note = current.text.replace('!reject', '').trim();
+			if (reject_note) reject_message += ' Reason: ```' + reject_note + '```';
+			var send_rejection = new SlackFall().send_chat(original.channel, reject_message, false, '', original.thread_ts);
+			var send_rejection_confirmation = new SlackFall().send_chat(current.channel, reject_message, false, '', current.thread_ts);
+		}
+	}
+
+	function originalPost(sequence){
+		if (!current.thread_ts) return 'No original timestamp provided';
+		var op_gr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+		if (sequence == 1) {
+			op_gr.addQuery('ts', current.thread_ts);
+			op_gr.addQuery('channel', current.channel);
+		}
+		if (sequence == 2) {
+			op_gr.addQuery('tweet_ts', current.thread_ts);
+		}
+		op_gr.query();
+		if (op_gr.next()){
+			return op_gr.getDisplayValue('user') + ': ' + op_gr.getValue('text');
+		} else {
+			return 'Could not find original post in SN';
+		}
+	}
+
+	function updateOP(tweet_ts){
+		var op_gr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+		op_gr.addQuery('ts', current.thread_ts);
+		op_gr.addQuery('channel', current.channel);
+		op_gr.query();
+		if (op_gr.next()){
+			op_gr.setValue('tweet_ts', tweet_ts);
+			op_gr.update();
+		}
+	}
+
+	function findOriginal(){
+		var original = {};
+		var original_gr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+		if (original_gr.get('tweet_ts', current.thread_ts)){
+			original.channel = original_gr.getValue('channel');
+			original.thread_ts = original_gr.getValue('ts');
+		} else {
+			original.channel = approval_channel;
+			original.thread_ts = '';
+		}
+		return original;
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-05-15 16:37:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>21dd9d774f1533003d60b1d18110c765</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>!tweet</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_21dd9d774f1533003d60b1d18110c765</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-05-16 05:58:50</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=21dd9d774f1533003d60b1d18110c765"/>
+</record_update>

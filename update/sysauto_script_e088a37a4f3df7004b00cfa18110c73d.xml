@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Save new subreddit posts</name>
+        <run_as display_value="Earl Duque">10b0d0d34f597b004b00cfa18110c71f</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period>1970-01-01 01:00:00</run_period>
+        <run_start>2019-06-06 20:00:00</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>periodically</run_type>
+        <script><![CDATA[var rm = new sn_ws.RESTMessageV2();
+rm.setHttpMethod('GET');
+rm.setEndpoint('https://www.reddit.com/r/servicenow/new.json');
+var request = rm.execute();
+var response = JSON.parse(request.getBody());
+var posts = response.data.children;
+
+for (var i in posts){
+	var gr = new GlideRecord('x_165574_slackoff_subreddit_posts');
+	if (gr.get('post_id', posts[i].data.id)) {
+		gr.setValue('score',parseInt(posts[i].data.score));
+		gr.update();
+		continue;
+	}
+	gr.initialize();
+	gr.setValue('author', posts[i].data.author);
+	gr.setValue('post_id', posts[i].data.id);
+	gr.setValue('title', posts[i].data.title);
+	gr.setValue('selftext', posts[i].data.selftext);
+	var gdt = new GlideDateTime();
+	gdt.add(parseInt(posts[i].data.created_utc));// The milliseconds you want to get in the date
+	gr.setValue('created_utc_string', gdt.getDisplayValue());
+	gr.setValue('url', posts[i].data.url);
+	gr.setValue('score',posts[i].data.score);
+	gr.insert();
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-06-06 20:54:03</sys_created_on>
+        <sys_id>e088a37a4f3df7004b00cfa18110c73d</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Save new subreddit posts</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sysauto_script_e088a37a4f3df7004b00cfa18110c73d</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-06-06 22:43:50</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

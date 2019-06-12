@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="selftext" label="Selftext" language="en" table="x_165574_slackoff_subreddit_posts">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>selftext</element>
+            <help/>
+            <hint/>
+            <label>Selftext</label>
+            <language>en</language>
+            <name>x_165574_slackoff_subreddit_posts</name>
+            <plural>Selftexts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2019-06-06 20:35:55</sys_created_on>
+            <sys_id>f668237a4f3df7004b00cfa18110c768</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Selftext</sys_name>
+            <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+            <sys_update_name>sys_documentation_x_165574_slackoff_subreddit_posts_selftext_en</sys_update_name>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2019-06-06 20:35:55</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
