@@ -35,10 +35,10 @@
 
 	var sentence = current.text.substr(6).trim().toUpperCase();
 	if (sentence == '') {
-		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: gimme something to clap!', false, '', current.thread_ts);
+		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: gimme something to clap!', false, '', current.thread_ts, current.server);
 		return;
 	}
-	var send_lmgtfy = new SlackFall().send_chat(current.channel, sentence.split(' ').join(' :clap: '), false, '', current.thread_ts);
+	var send_lmgtfy = new SlackFall().send_chat(current.channel, sentence.split(' ').join(' :clap: '), false, '', current.thread_ts, current.server);
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -47,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>075e44954fb12300c8b501b18110c789</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Clap Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -55,7 +55,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_075e44954fb12300c8b501b18110c789</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-14 16:53:12</sys_updated_on>
+        <sys_updated_on>2019-09-05 21:00:55</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

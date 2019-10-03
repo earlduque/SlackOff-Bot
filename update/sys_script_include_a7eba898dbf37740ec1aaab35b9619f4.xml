@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_165574_slackoff.YahooFF</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>YahooFF</name>
+        <script><![CDATA[var YahooFF = Class.create();
+YahooFF.prototype = {
+	initialize: function() {
+	},
+
+	overview: function (channel, thread_ts, server){
+		try { 
+			var r = new sn_ws.RESTMessageV2('x_165574_slackoff.Yahoo_Fantasy', 'GET League');
+			// 			r.setAuthenticationProfile('oauth2','ccfe1850dbf37740ec1aaab35b9619d1');
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var league = JSON.parse(responseBody);
+			var httpStatus = response.getStatusCode();
+			if (httpStatus == 200){
+				var message = [];
+				for (var i in league.fantasy_content.league[0]){
+					message.push('`' + i + '`' + ': ' + league.fantasy_content.league[0][i]);
+				}
+				var send_chat = new SlackFall().send_chat(channel,message.join('\n'),false,'',thread_ts,server);
+			}
+		}
+		catch(ex) {
+			var message = ex.message;
+			var send_chat = new SlackFall().send_chat(channel,'error ('+httpStatus+'): ' + message,false,'',thread_ts,server);
+		}
+		// 		var send_chat = new SlackFall().send_chat(channel,'sup',false,'',thread_ts,server);
+	},
+
+	standings: function (channel, thread_ts, server){
+		try { 
+			var r = new sn_ws.RESTMessageV2('x_165574_slackoff.Yahoo_Fantasy', 'GET League Standings');
+			// 			r.setAuthenticationProfile('oauth2','ccfe1850dbf37740ec1aaab35b9619d1');
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var league = JSON.parse(responseBody);
+			var httpStatus = response.getStatusCode();
+			if (httpStatus == 200){
+				var message = [];
+				message.push('*Rankings as of ' + new GlideDateTime().getLocalDate() + '*');
+				for (var i in league.fantasy_content.league[1].standings[0].teams){
+					if (i == 'count') continue;
+					var rank = parseInt(i)+1;
+					message.push('`' + rank + ')' + league.fantasy_content.league[1].standings[0].teams[i.toString()].team[0][2].name + ' ('+  
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[0][19].managers[0].manager.nickname +')`' + ' Record: ' +
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[2].team_standings.outcome_totals.wins + '-' + 
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[2].team_standings.outcome_totals.losses + ' (Div: '+ 
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[2].team_standings.divisional_outcome_totals.wins + '-' +
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[2].team_standings.divisional_outcome_totals.losses + ') | Pts For: ' +
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[2].team_standings.points_for + ' | Pts Against: ' + 
+								 league.fantasy_content.league[1].standings[0].teams[i.toString()].team[2].team_standings.points_against);
+				}
+				message.push('_Runs weekly on Tuesdays at 8:00 AM_');
+				var send_chat = new SlackFall().send_chat(channel,message.join('\n'),false,'',thread_ts,server);
+			}
+		}
+		catch(ex) {
+			var message = ex.message;
+			var send_chat = new SlackFall().send_chat(channel,'error ('+httpStatus+'): ' + message,false,'',thread_ts,server);
+		}
+	},
+
+	type: 'YahooFF'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-09-05 22:33:11</sys_created_on>
+        <sys_id>a7eba898dbf37740ec1aaab35b9619f4</sys_id>
+        <sys_mod_count>56</sys_mod_count>
+        <sys_name>YahooFF</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_include_a7eba898dbf37740ec1aaab35b9619f4</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-09-09 18:13:36</sys_updated_on>
+    </sys_script_include>
+</record_update>

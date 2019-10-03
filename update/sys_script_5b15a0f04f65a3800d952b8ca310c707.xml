@@ -49,11 +49,11 @@
 
 	var term = current.text.substr(where).trim();
 	if (term == '') {
-		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !docs *something*', false, '', current.thread_ts);
+		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !docs *something*', false, '', current.thread_ts, current.server);
 		return;
 	}
-	if (which == 'lmgtfy') var send_lmgtfy = new SlackFall().send_chat(current.channel, 'http://lmgtfy.com/?q=' + escape(term), false, '', current.thread_ts);
-	else if (which == 'google') var send_google = new SlackFall().send_chat(current.channel, 'https://www.google.com/search?q=' + escape(term), false, '', current.thread_ts);
+	if (which == 'lmgtfy') var send_lmgtfy = new SlackFall().send_chat(current.channel, 'http://lmgtfy.com/?q=' + escape(term), false, '', current.thread_ts, current.server);
+	else if (which == 'google') var send_google = new SlackFall().send_chat(current.channel, 'https://www.google.com/search?q=' + escape(term), false, '', current.thread_ts, current.server);
 
 
 
@@ -64,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5b15a0f04f65a3800d952b8ca310c707</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>LMGTFY Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_5b15a0f04f65a3800d952b8ca310c707</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-08 17:12:56</sys_updated_on>
+        <sys_updated_on>2019-09-05 21:02:23</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

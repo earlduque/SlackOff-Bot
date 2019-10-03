@@ -85,12 +85,12 @@
 
 	var term = current.text.substr(where).trim();
 	if (term == '') {
-		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !flip or !invert *something*', false, '', current.thread_ts);
+		var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !flip or !invert *something*', false, '', current.thread_ts, current.server);
 		return;
 	}
 	var end = flipString(term.toLowerCase());
 	// 	gs.info(end);
-	var send_flip = new SlackFall().send_chat(current.channel, end, false, '', current.thread_ts);
+	var send_flip = new SlackFall().send_chat(current.channel, end, false, '', current.thread_ts, current.server);
 
 
 	function flipString(aString) {
@@ -113,7 +113,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4252e5481392a7001f2f53173244b03c</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Flip Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -121,7 +121,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_4252e5481392a7001f2f53173244b03c</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-12-05 22:36:59</sys_updated_on>
+        <sys_updated_on>2019-09-05 20:59:48</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

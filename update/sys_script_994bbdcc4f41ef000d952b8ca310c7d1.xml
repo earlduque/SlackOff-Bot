@@ -34,13 +34,14 @@
 	if (regex.test(current.text)){
 		var report_on = current.text.substr(7).trim();
 		if (report_on == '') {
-			var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !usage *something*', false, '', current.thread_ts);
+			var send_confusion = new SlackFall().send_chat(current.channel, ':upside_down_face: !usage *something*', false, '', current.thread_ts, current.server);
 			return;
 		}
 		var gr = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
 		gr.addEncodedQuery('textLIKE'+report_on+'^sys_created_onONLast 7 days@javascript:gs.beginningOfLast7Days()@javascript:gs.endOfLast7Days()');
+		gr.addQuery('server',current.server);
 		gr.query();
-		var send_chat = new SlackFall().send_chat(current.channel, 'The message `' + report_on + '` has appeared ' + gr.getRowCount() + ' times in the channels I\'ve been watching in the last seven days.', false, '', current.thread_ts);
+		var send_chat = new SlackFall().send_chat(current.channel, 'The message `' + report_on + '` has appeared ' + gr.getRowCount() + ' times in the channels I\'ve been watching in the last seven days.', false, '', current.thread_ts, current.server);
 	}
 
 
@@ -51,7 +52,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>994bbdcc4f41ef000d952b8ca310c7d1</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name>Report Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -59,7 +60,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_994bbdcc4f41ef000d952b8ca310c7d1</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-10-05 04:43:39</sys_updated_on>
+        <sys_updated_on>2019-09-05 21:03:07</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

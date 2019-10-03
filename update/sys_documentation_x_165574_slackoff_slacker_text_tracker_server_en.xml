@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="server" label="Server" language="en" table="x_165574_slackoff_slacker_text_tracker">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>server</element>
+            <help/>
+            <hint/>
+            <label>Server</label>
+            <language>en</language>
+            <name>x_165574_slackoff_slacker_text_tracker</name>
+            <plural>Servers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>5b5214d4dbb37740ec1aaab35b961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Server</sys_name>
+            <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+            <sys_update_name>sys_documentation_x_165574_slackoff_slacker_text_tracker_server_en</sys_update_name>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

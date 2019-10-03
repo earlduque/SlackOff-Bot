@@ -109,7 +109,7 @@
         <pivot_expanded>true</pivot_expanded>
         <report_drilldown/>
         <report_source/>
-        <roles/>
+        <roles>snc_internal</roles>
         <row>channel</row>
         <sc_groupby_item_id/>
         <sc_groupby_variable_id/>
@@ -137,14 +137,14 @@
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-10-03 17:51:37</sys_created_on>
         <sys_id>2dbb88bf4f34af000d952b8ca310c70e</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Slacker Job Recruiter Calls</sys_name>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_report_2dbb88bf4f34af000d952b8ca310c70e</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-10-12 18:07:12</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-08-30 08:27:33</sys_updated_on>
         <table>x_165574_slackoff_slacker_text_tracker</table>
         <title>Slacker Job Recruiter Calls</title>
         <title_horizontal_alignment>center</title_horizontal_alignment>

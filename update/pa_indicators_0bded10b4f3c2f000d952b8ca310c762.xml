@@ -51,7 +51,7 @@ Channel = G9LAJG7G8</description>
         <role_override>true</role_override>
         <roles/>
         <score_periods>-1</score_periods>
-        <scores_modified_at>2019-06-12 04:00:07</scores_modified_at>
+        <scores_modified_at>2019-10-03 04:00:10</scores_modified_at>
         <script/>
         <scripted>false</scripted>
         <show_delta>true</show_delta>
@@ -64,7 +64,7 @@ Channel = G9LAJG7G8</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0bded10b4f3c2f000d952b8ca310c762</sys_id>
-        <sys_mod_count>209</sys_mod_count>
+        <sys_mod_count>322</sys_mod_count>
         <sys_name>Slacker Text Indicator</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -72,7 +72,7 @@ Channel = G9LAJG7G8</description>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>pa_indicators_0bded10b4f3c2f000d952b8ca310c762</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-06-12 04:00:07</sys_updated_on>
+        <sys_updated_on>2019-10-03 04:00:10</sys_updated_on>
         <type>1</type>
         <unit/>
         <users/>

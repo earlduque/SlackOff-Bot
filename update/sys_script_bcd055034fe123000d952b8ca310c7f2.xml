@@ -57,6 +57,26 @@
 		'`Say 30F or 30C` and it will convert the temperature to the other unit',
 		'`!help` ¯\\_(ツ)_/¯'
 	];
+	var message2 = [
+		'`!bang @person` Supportive text for an overworked employee.',
+		'`!clap some sentence` Caps lock and clap backs.',
+		'`!emoji string` translate a message to emojis',
+		'`!flip string` Or !invert, flips the string upside down.',
+		'`!google string` Provides a link to a google search for the provided string.',
+		'`!iss` Let\'s you know where the International Space Station is right now.',
+		'`!joke` Tells you a joke, obvi.',
+		'`!lmgtfy string` A more sassy version of !google.',
+		'`!report string` Reports on how often the provided string has appeared in the last 7 days on this workspace.',
+		'`!roll 3d6` Rolls three six-sided dice (or any other combination you give).',
+		'`!trout @person` or `!slap @person` IRC-like slap to whoever you @.',
+		'`!zalgo string` or !curse will eff yo text up',
+		'`!evilinsult` to say something fucked up',
+		'`!help` ¯\\_(ツ)_/¯'
+	];
+	var send_this;
+	if (current.server == 'TMQRBMY3V') send_this = message2.join('\n');
+	else send_this = message.join('\n');
+	
 	var today = new GlideDate();
 	today.setDisplayValue(today.getDisplayValue());
 	var k19 = new GlideDate();
@@ -64,7 +84,7 @@
 
 	if (today < k19) message.push('`!countdown` Will let you know how many days there are til K19!');
 
-	var send_chat = new SlackFall().send_chat(current.channel, message.join('\n'), false, '', current.ts);
+	var send_chat = new SlackFall().send_chat(current.channel, send_this, false, '', current.ts, current.server);
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
@@ -72,7 +92,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bcd055034fe123000d952b8ca310c7f2</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Help Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -80,7 +100,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_bcd055034fe123000d952b8ca310c7f2</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-04-08 16:24:13</sys_updated_on>
+        <sys_updated_on>2019-09-05 21:06:36</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
