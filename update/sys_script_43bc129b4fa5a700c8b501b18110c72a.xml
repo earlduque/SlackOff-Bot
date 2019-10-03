@@ -64,7 +64,7 @@
 // 	var send_chat = new SlackFall().send_chat(current.channel, 'The International Space Station is currently above latitude: ' + get_coords.iss_position.latitude + ', longitute: ' + get_coords.iss_position.longitude + '\nThose coordinates place the ISS over ' + location, false, '', current.thread_ts);
 	
 // 	send_attachment: function(channel, message, image, thread, pretext)
-	var send_chat = new SlackFall().send_attachment(current.channel, 'The International Space Station is currently above latitude: ' + iss_lat + ', longitude: ' + iss_long + '\nThose coordinates place the ISS over ' + location, get_image, current.thread_ts, true);
+	var send_chat = new SlackFall().send_attachment(current.channel, 'The International Space Station is currently above latitude: ' + iss_lat + ', longitude: ' + iss_long + '\nThose coordinates place the ISS over ' + location, get_image, current.thread_ts, true, current.server);
 
 
 })(current, previous);]]></script>
@@ -74,7 +74,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>43bc129b4fa5a700c8b501b18110c72a</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>ISS processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -82,7 +82,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_43bc129b4fa5a700c8b501b18110c72a</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-09 18:26:20</sys_updated_on>
+        <sys_updated_on>2019-09-05 21:01:23</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

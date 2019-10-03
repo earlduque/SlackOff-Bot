@@ -1,114 +1,128 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="" section_id="985e9d874f3c2f000d952b8ca310c7a8" sys_domain="global" table="x_165574_slackoff_slacker_text_tracker" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>channel</element>
+            <element>server</element>
             <position>0</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>a928e97f4f1533003d60b1d18110c770</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>575214d4dbb37740ec1aaab35b9619b5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>channel</element>
+            <position>1</position>
+            <sys_created_by>admin-eduque</sys_created_by>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>135214d4dbb37740ec1aaab35b9619b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
+            <sys_updated_by>admin-eduque</sys_updated_by>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>ts</element>
-            <position>1</position>
+            <position>2</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>6128e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>975214d4dbb37740ec1aaab35b9619b6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>2</position>
+            <position>3</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>e128e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>1f5214d4dbb37740ec1aaab35b9619b6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>user</element>
-            <position>3</position>
+            <position>4</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>6528e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>935214d4dbb37740ec1aaab35b9619b7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>thread_ts</element>
-            <position>4</position>
+            <position>5</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>e528e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>2b5214d4dbb37740ec1aaab35b9619b7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>tweet_ts</element>
-            <position>5</position>
+            <position>6</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>6928e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>af5214d4dbb37740ec1aaab35b9619b7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>e928e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>275214d4dbb37740ec1aaab35b9619b8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>text</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>admin-eduque</sys_created_by>
-            <sys_created_on>2019-05-15 17:18:03</sys_created_on>
-            <sys_id>6d28e97f4f1533003d60b1d18110c771</sys_id>
+            <sys_created_on>2019-09-05 20:41:29</sys_created_on>
+            <sys_id>ab5214d4dbb37740ec1aaab35b9619b8</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_165574_slackoff_slacker_text_tracker" sys_domain="global" view="Default view">985e9d874f3c2f000d952b8ca310c7a8</sys_ui_section>
             <sys_updated_by>admin-eduque</sys_updated_by>
-            <sys_updated_on>2019-05-15 17:18:03</sys_updated_on>
+            <sys_updated_on>2019-09-05 20:41:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

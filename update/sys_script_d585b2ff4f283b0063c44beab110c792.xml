@@ -2561,11 +2561,11 @@
 		];
 		var random = Math.floor(Math.random() * jokes.length);
 
-		var send_chat = new SlackFall().send_chat(current.channel, jokes[random].joke, false, '', current.thread_ts);
+		var send_chat = new SlackFall().send_chat(current.channel, jokes[random].joke, false, '', current.thread_ts, current.server);
 		if (jokes[random].punchline){
 			var new_thread = JSON.parse(send_chat.getBody());
 			//gs.sleep(3000);
-			var send_chat2 = new SlackFall().send_chat(current.channel, jokes[random].punchline , false, '', new_thread.message.ts);
+			var send_chat2 = new SlackFall().send_chat(current.channel, jokes[random].punchline , false, '', new_thread.message.ts, current.server);
 		}
 
 	}
@@ -2578,7 +2578,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d585b2ff4f283b0063c44beab110c792</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Joke Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -2586,7 +2586,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_d585b2ff4f283b0063c44beab110c792</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-04-09 16:07:53</sys_updated_on>
+        <sys_updated_on>2019-09-05 20:57:24</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

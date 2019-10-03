@@ -29,7 +29,7 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var regex = /^\!youtube/gmi;
+	var regex = /(!youtube)/gmi;
 
 	if (regex.test(current.text)){
 		var term = current.text.substr(9).trim();
@@ -50,7 +50,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>602477444f85ef000d952b8ca310c768</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Youtube Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -58,7 +58,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_602477444f85ef000d952b8ca310c768</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-10-05 06:07:14</sys_updated_on>
+        <sys_updated_on>2019-06-13 20:51:25</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

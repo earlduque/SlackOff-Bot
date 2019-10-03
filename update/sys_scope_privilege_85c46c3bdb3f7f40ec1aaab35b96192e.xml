@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>admin-eduque</sys_created_by>
+        <sys_created_on>2019-09-16 19:00:37</sys_created_on>
+        <sys_id>85c46c3bdb3f7f40ec1aaab35b96192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Avatar</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_scope_privilege_85c46c3bdb3f7f40ec1aaab35b96192e</sys_update_name>
+        <sys_updated_by>admin-eduque</sys_updated_by>
+        <sys_updated_on>2019-09-16 19:00:37</sys_updated_on>
+        <target_name>Avatar</target_name>
+        <target_scope display_value="Avatars">2ba36b784ff1f3003d60b1d18110c7d9</target_scope>
+        <target_type>sys_script_include</target_type>
+    </sys_scope_privilege>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>execute</operation>
+        <source_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>guest</sys_created_by>
+        <sys_created_on>2019-09-05 22:50:00</sys_created_on>
+        <sys_id>86cf6c94dbb3b7409c042095ca961982</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ScriptableRESTMessageClient.executeAsync</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_scope_privilege_86cf6c94dbb3b7409c042095ca961982</sys_update_name>
+        <sys_updated_by>guest</sys_updated_by>
+        <sys_updated_on>2019-09-05 22:50:00</sys_updated_on>
+        <target_name>ScriptableRESTMessageClient.executeAsync</target_name>
+        <target_scope display_value="Global">global</target_scope>
+        <target_type>scriptable</target_type>
+    </sys_scope_privilege>
+</record_update>
