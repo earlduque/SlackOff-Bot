@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Slacker Test Scripts" max_length="40" name="x_165574_slackoff_slacker_test_scripts" type="collection">
+    <element label="Slacker Test Scripts" max_length="40" name="x_165574_slackoff_slacker_test_scripts" sizeclass="50" type="collection">
         <element default="1" label="Chance" max_length="15" name="chance" type="decimal"/>
         <element label="Order" max_length="40" name="order" type="integer"/>
         <element display="true" label="Step" max_length="2000" name="step" type="string"/>

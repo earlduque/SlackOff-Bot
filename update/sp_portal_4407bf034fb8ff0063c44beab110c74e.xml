@@ -9,6 +9,7 @@ $color-lighter: #E6E8EA;&#13;
 $color-lightest: #FFFFFF;&#13;
 $color-darkest : #343D47;</css_variables>
         <default>false</default>
+        <hide_portal_name>false</hide_portal_name>
         <homepage/>
         <icon/>
         <kb_knowledge_base/>
@@ -37,6 +38,7 @@ $color-darkest : #343D47;</css_variables>
         <sys_updated_on>2019-04-18 23:16:12</sys_updated_on>
         <theme/>
         <title>SN Devs</title>
+        <ts_index_group/>
         <url_suffix>sndevs</url_suffix>
     </sp_portal>
     <sys_translated_text action="delete_multiple" query="documentkey=4407bf034fb8ff0063c44beab110c74e"/>

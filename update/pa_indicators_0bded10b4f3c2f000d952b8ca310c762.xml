@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_indicators">
     <pa_indicators action="INSERT_OR_UPDATE">
         <aggregate>1</aggregate>
+        <allow_multi_element_aggregation>false</allow_multi_element_aggregation>
         <benchmarking>false</benchmarking>
         <collect_breakdown_matrix>false</collect_breakdown_matrix>
         <collect_records>true</collect_records>
@@ -33,7 +34,7 @@ Channel = G9LAJG7G8</description>
         <frequency>10</frequency>
         <groups/>
         <has_managed_indicators>false</has_managed_indicators>
-        <id>113</id>
+        <id>134</id>
         <key>false</key>
         <label/>
         <linked_indicator/>
@@ -51,7 +52,7 @@ Channel = G9LAJG7G8</description>
         <role_override>true</role_override>
         <roles/>
         <score_periods>-1</score_periods>
-        <scores_modified_at>2019-06-12 04:00:07</scores_modified_at>
+        <scores_modified_at>2020-12-17 05:00:06</scores_modified_at>
         <script/>
         <scripted>false</scripted>
         <show_delta>true</show_delta>

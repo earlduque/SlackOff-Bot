@@ -6,8 +6,10 @@
         <dynamic_title_structure/>
         <id>send_slacker_chat</id>
         <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
         <public>false</public>
         <roles/>
+        <seo_script/>
         <short_description/>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
@@ -22,6 +24,7 @@
         <sys_updated_by>admin-eduque</sys_updated_by>
         <sys_updated_on>2019-03-19 15:14:24</sys_updated_on>
         <title>send slacker chat - Test Page</title>
+        <use_seo_script>false</use_seo_script>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=fe39afd1139c7f401f2f53173244b02f"/>
 </record_update>

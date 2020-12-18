@@ -5,8 +5,17 @@
         <connection_url>attachment://sys_data_source:e41b638e4fbcab000d952b8ca310c769/x_165574_slackoff_slackoff_job (1).xlsx</connection_url>
         <connection_url_parameters/>
         <csv_delimiter/>
+        <data_in_single_column>false</data_in_single_column>
+        <data_loader><![CDATA[(function loadData(import_set_table) {
+
+	// Add your code here to insert data to import_set_table
+
+})(import_set_table);]]></data_loader>
+        <data_stream_action/>
+        <data_stream_action_inputs/>
         <database_name/>
         <database_port/>
+        <discard_arrays>false</discard_arrays>
         <expand_node_children>false</expand_node_children>
         <file_path>x_165574_slackoff_slackoff_job (1).xlsx</file_path>
         <file_retrieval_method>Attachment</file_retrieval_method>
@@ -22,15 +31,21 @@
         <jpath_root_node/>
         <last_run_database_field/>
         <last_run_datetime/>
+        <last_success_import_time/>
         <ldap_target/>
+        <ldapprobe_result_set_rows>200</ldapprobe_result_set_rows>
+        <limit/>
         <maximum_rows>10000</maximum_rows>
         <mid_server/>
         <name>x_165574_slackoff_slackoff_job (1).xlsx </name>
+        <offset>0</offset>
         <oracle_port>1521</oracle_port>
         <oracle_sid>orcl</oracle_sid>
+        <parsing_script><![CDATA[// The input value can be accessed through the variables named "line", "lineNumber" and "result"// The function uses result variable to return parse result back. (function(line,lineNumber,result) {	// add code here})(line,lineNumber,result);]]></parsing_script>
         <properties/>
         <query>All Rows from Table</query>
         <query_timeout>0</query_timeout>
+        <request_action/>
         <scp_authentication>Username and Password</scp_authentication>
         <scp_password/>
         <scp_port/>
@@ -39,6 +54,7 @@
         <sheet_number>0</sheet_number>
         <sql_statement/>
         <ssh_keyfile_path/>
+        <support_pagination>false</support_pagination>
         <sys_class_name>sys_data_source</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-28 23:38:07</sys_created_on>
@@ -58,4 +74,5 @@
         <xpath_root_node/>
         <zipped>false</zipped>
     </sys_data_source>
+    <sys_variable_value action="delete_multiple" query="document_key=e41b638e4fbcab000d952b8ca310c769"/>
 </record_update>

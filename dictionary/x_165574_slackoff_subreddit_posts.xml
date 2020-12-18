@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Subreddit Posts" max_length="40" name="x_165574_slackoff_subreddit_posts" type="collection">
+    <element label="Subreddit Posts" max_length="40" name="x_165574_slackoff_subreddit_posts" sizeclass="827" type="collection">
         <element label="Author" max_length="40" name="author" type="string"/>
         <element label="Created_utc" max_length="40" name="created_utc" type="glide_date_time"/>
         <element attributes="edge_encryption_enabled=true" label="Created_utc_string" max_length="40" name="created_utc_string" type="string"/>

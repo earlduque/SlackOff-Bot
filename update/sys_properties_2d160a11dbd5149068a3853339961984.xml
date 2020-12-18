@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>false</ignore_cache>
+        <is_private>true</is_private>
+        <name>x_165574_slackoff.maps.token</name>
+        <read_roles/>
+        <suffix>maps.token</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>earl.duque</sys_created_by>
+        <sys_created_on>2020-06-08 17:26:38</sys_created_on>
+        <sys_id>2d160a11dbd5149068a3853339961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_165574_slackoff.maps.token</sys_name>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_properties_2d160a11dbd5149068a3853339961984</sys_update_name>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2020-06-08 17:26:38</sys_updated_on>
+        <type>string</type>
+        <value>AIzaSyBMXZso9TjR_mWU69Yx4pM1grZdAnV_Ad0</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=2d160a11dbd5149068a3853339961984"/>
+</record_update>

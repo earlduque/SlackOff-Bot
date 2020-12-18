@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="SlackOff Job" max_length="40" name="x_165574_slackoff_slackoff_job" type="collection">
+    <element label="SlackOff Job" max_length="40" name="x_165574_slackoff_slackoff_job" sizeclass="109" type="collection">
         <element display="true" label="Output" max_length="1000" name="output" type="string"/>
         <element choice="1" label="Type" max_length="40" name="type" type="choice">
             <choice>

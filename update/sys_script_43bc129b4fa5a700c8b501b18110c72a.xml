@@ -41,6 +41,7 @@
 	
 	
 	var get_location = new MapsSlack().get_location(iss_lat, iss_long);
+	gs.info('slacker get_location: ' + JSON.stringify(get_location));
 	var location = '';
 	if (get_location.status == 'ZERO_RESULTS') location = 'the ocean.';
 	else {
@@ -53,7 +54,9 @@
 			if (get_location.results[0].address_components[i].types[0] == 'administrative_area_level_2') area2 = get_location.results[0].address_components[i].long_name;
 			else if (get_location.results[0].address_components[i].types[0] == 'country') area2 = get_location.results[0].address_components[i].long_name;
 		}
-		location = area1 + ', ' + area2 + '.';
+		if (!area1 && !area2) location = 'the ocean';
+		else if (area1) location = area1 + ', ' + area2 + '.';
+		else location = area2 + '.';
 	}
 	
 	var get_image = new MapsSlack().get_image(iss_lat, iss_long);
@@ -74,15 +77,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>43bc129b4fa5a700c8b501b18110c72a</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>ISS processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_43bc129b4fa5a700c8b501b18110c72a</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-09 18:26:20</sys_updated_on>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2020-06-08 18:49:30</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

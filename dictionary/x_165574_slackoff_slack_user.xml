@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Slack User" max_length="40" name="x_165574_slackoff_slack_user" type="collection">
+    <element label="Slack User" max_length="40" name="x_165574_slackoff_slack_user" sizeclass="2901" type="collection">
         <element display="true" label="Name" max_length="40" name="name" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Idenity Payload" max_length="4000" name="payload" type="string"/>
         <element label="Score" max_length="40" name="score" type="integer"/>

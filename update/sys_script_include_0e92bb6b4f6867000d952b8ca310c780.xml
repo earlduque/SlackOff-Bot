@@ -38,7 +38,7 @@ SlackFall.prototype = {
 		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 		var bodyString = '';
-		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('x_165574_slackoff.slackbot.token'));
 		bodyString += '&channel=' + gs.urlEncode(channel);
 
 		if (eph == true) {
@@ -62,11 +62,13 @@ SlackFall.prototype = {
 		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 		var bodyString = '';
-		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('x_165574_slackoff.slackbot.supertoken'));
 		bodyString += '&channel=' + gs.urlEncode(channel);
 		rm.setEndpoint('https://slack.com/api/chat.delete');
 		bodyString += '&ts=' + gs.urlEncode(ts);
+		bodyString += '&as_user=true';
 		rm.setRequestBody(bodyString);
+		gs.info('slacker: ' + bodyString);
 		return rm.execute();
 	},
 
@@ -120,7 +122,7 @@ SlackFall.prototype = {
 		rm.setLogLevel('all');
 		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		var bodyString = '';
-		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('x_165574_slackoff.slackbot.token'));
 		bodyString += '&user=' + gs.urlEncode(slack_id);
 		rm.setEndpoint('https://slack.com/api/users.info'+'?'+bodyString);
 		//rm.setRequestBody(bodyString);
@@ -146,7 +148,7 @@ SlackFall.prototype = {
 		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 		var bodyString = '';
-		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('x_165574_slackoff.slackbot.token'));
 		bodyString += '&channel=' + gs.urlEncode(channel);
 		bodyString += '&name=' + gs.urlEncode(reaction);
 		bodyString += '&timestamp='+gs.urlEncode(timestamp);
@@ -164,7 +166,7 @@ SlackFall.prototype = {
 		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
 		var bodyString = '';
-		bodyString += 'token=' + gs.urlEncode(gs.getProperty('slackbot.token'));
+		bodyString += 'token=' + gs.urlEncode(gs.getProperty('x_165574_slackoff.slackbot.token'));
 		bodyString += '&channel=' + gs.urlEncode(channel);
 
 		if (thread){
@@ -178,6 +180,23 @@ SlackFall.prototype = {
 		rm.setRequestBody(bodyString);
 		return rm.execute();		
 	},
+	
+	delete_chat: function(channel, ts){
+		//https://slack.com/api/chat.delete
+		var rm = new sn_ws.RESTMessageV2();
+		rm.setHttpMethod('POST');
+		rm.setLogLevel('all');
+		rm.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+		var bodyString = '';
+		bodyString += 'token=' + gs.urlEncode('x_165574_slackoff.slackbot.supertoken');
+		bodyString += '&channel=' + gs.urlEncode(channel);
+		bodyString += '&ts=' + gs.urlEncode(ts);
+
+		rm.setEndpoint('https://slack.com/api/chat.delete');
+		rm.setRequestBody(bodyString);
+		return rm.execute();
+	},
 
 	type: 'SlackFall'
 };]]></script>
@@ -185,13 +204,13 @@ SlackFall.prototype = {
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-21 06:01:23</sys_created_on>
         <sys_id>0e92bb6b4f6867000d952b8ca310c780</sys_id>
-        <sys_mod_count>63</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>SlackFall</sys_name>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_include_0e92bb6b4f6867000d952b8ca310c780</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-11-09 00:08:11</sys_updated_on>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2020-02-01 22:49:24</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -30,7 +30,7 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 	var random = Math.floor(Math.random() * 100000);
 	var regex = /(parrot wave)|(parrotwave)|(wave parrot)|(waveparrot)|(parrot party)|(parrotparty)/gmi;
-	if (random == 1 || regex.test(current.text)) { // CAQ2W3EE4 GD51HTR46
+	if (random == 1 || regex.test(current.text) || current.thread_ts == '1591314666.124000') { // CAQ2W3EE4 GD51HTR46
 		var send_reaction1 = new SlackFall().send_reaction(current.channel,'parrotwave1',current.ts);
 		var send_reaction2 = new SlackFall().send_reaction(current.channel,'parrotwave2',current.ts);
 		var send_reaction3 = new SlackFall().send_reaction(current.channel,'parrotwave3',current.ts);
@@ -47,15 +47,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0f3c265e4f0527400d952b8ca310c761</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>Rare Parrot Wave Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_0f3c265e4f0527400d952b8ca310c761</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-05-08 23:06:35</sys_updated_on>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2020-06-05 00:25:33</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

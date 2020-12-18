@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slackoff_payloads</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Welcome Reaction Added</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var payload = JSON.parse(current.payload);
+	if (payload.event.type != 'reaction_added' || payload.event.reaction != 'welcome') return;
+	
+	//see if this has already been done today
+	var limit = new GlideRecord('x_165574_slackoff_slackoff_payloads');
+	limit.addEncodedQuery('payloadLIKE"reaction": "welcome"^payloadLIKE"item_user": "'+payload.event.item_user+'"^sys_created_onONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()');
+	limit.query();
+	if (limit.getRowCount() > 1 ) return;
+	
+	var message = ['Hello! <@'+payload.event.user+'> asked that I give you these helpful tips as a welcome to the community.',''];
+	
+	message.push('*How do I ask a good question?*');
+	message.push('• Use Threads! #general gets busy so make sure to keep conversation about your question in the original thread.');
+	message.push('');
+	message.push('Write a title that summarizes the specific problem');
+	message.push('• Pretend you\'re talking to a busy colleague');
+	message.push('• Spelling, grammar, and punctuation are important!');
+	message.push('• Bad: GlideRecord isn\'t working');
+	message.push('• Good: Why does str == "value" evaluate to false when str is set to "value" in my script?');
+	message.push('');
+	message.push('• Introduce the problem before you post any code');
+	message.push('• Help others reproduce the problem. Don\'t just copy in your entire script!');
+	message.push('• Do not post images of code, data, error messages (just copy the text)');
+	message.push('• Proof-read before posting!');
+	message.push('• Post the question and respond to feedback');
+	message.push('');
+	message.push('*Give points to people who are helpful!*');
+	message.push('If someone successfully helped you (or ever just help you got closer to the answer) tag them with a ++ in the thread. eg. <@' + payload.event.user + '> ++ will grant that user some community points to show how helpful they were');
+	message.push('');
+	message.push('Looking for more helpful tips? These tips are mostly from https://stackoverflow.com/help/how-to-ask');
+	
+	var helper = new SlackFall().send_chat(payload.event.item_user, message.join('\n'), false);
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>earl.duque</sys_created_by>
+        <sys_created_on>2020-01-21 07:13:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1c848860db6a4890fde65223dc9619cf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Welcome Reaction Added</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_1c848860db6a4890fde65223dc9619cf</sys_update_name>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2020-01-29 18:40:56</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=1c848860db6a4890fde65223dc9619cf"/>
+</record_update>

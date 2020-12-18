@@ -2,7 +2,7 @@
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="Slacker">72cfd5f74f1533003d60b1d18110c797</category>
         <order>900</order>
-        <property display_value="twitter.token.access.secret" name="twitter.token.access.secret">072a3d7b4f5533003d60b1d18110c7b5</property>
+        <property display_value="">072a3d7b4f5533003d60b1d18110c7b5</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2019-05-15 18:47:32</sys_created_on>

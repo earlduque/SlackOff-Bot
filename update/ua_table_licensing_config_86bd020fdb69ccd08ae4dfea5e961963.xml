@@ -4,22 +4,22 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_165574_slackoff_slack_user</name>
+        <name>x_165574_slackoff_slacker_text_tracker</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
         <owner_condition/>
         <sys_class_name>ua_table_licensing_config</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2018-09-20 22:21:24</sys_created_on>
-        <sys_id>fb3011bb4fd133003d60b1d18110c75e</sys_id>
+        <sys_created_on>2018-10-01 15:48:11</sys_created_on>
+        <sys_id>86bd020fdb69ccd08ae4dfea5e961963</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_165574_slackoff_slack_user</sys_name>
+        <sys_name>x_165574_slackoff_slacker_text_tracker</sys_name>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>ua_table_licensing_config_fb3011bb4fd133003d60b1d18110c75e</sys_update_name>
+        <sys_update_name>ua_table_licensing_config_86bd020fdb69ccd08ae4dfea5e961963</sys_update_name>
         <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2018-09-20 22:21:24</sys_updated_on>
+        <sys_updated_on>2018-10-01 15:48:11</sys_updated_on>
     </ua_table_licensing_config>
 </record_update>

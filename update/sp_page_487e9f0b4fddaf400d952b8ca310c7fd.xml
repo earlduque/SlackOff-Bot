@@ -6,8 +6,10 @@
         <dynamic_title_structure/>
         <id>servicenow_madlibs</id>
         <internal>false</internal>
+        <omit_watcher>false</omit_watcher>
         <public>true</public>
         <roles/>
+        <seo_script/>
         <short_description/>
         <sys_class_name>sp_page</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
@@ -22,6 +24,7 @@
         <sys_updated_by>admin-eduque</sys_updated_by>
         <sys_updated_on>2018-10-26 21:49:07</sys_updated_on>
         <title>ServiceNow Madlibs</title>
+        <use_seo_script>false</use_seo_script>
     </sp_page>
     <sys_translated_text action="delete_multiple" query="documentkey=487e9f0b4fddaf400d952b8ca310c7fd"/>
 </record_update>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_app_install">
     <sys_push_notif_app_install action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <last_registered_on>2019-01-02 22:02:30</last_registered_on>
         <sys_class_name>sys_push_notif_app_install</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-12-15 03:46:58</sys_created_on>
         <sys_id>a476c98313966f001f2f53173244b032</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>41574db689b360a9822d255d289e610856328216067a910f941e6b85f6c94e68</sys_name>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
-        <sys_push_application_id display_value="ServiceNow Mobile Application">ab704041ff1102009738ffffffffff33</sys_push_application_id>
+        <sys_push_application_id display_value="ServiceNow Classic Mobile Application">ab704041ff1102009738ffffffffff33</sys_push_application_id>
         <sys_push_platform_id display_value="Apple">20e71f30ff0002009738ffffffffff6b</sys_push_platform_id>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_push_notif_app_install_a476c98313966f001f2f53173244b032</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-01-02 22:02:30</sys_updated_on>
-        <sys_user_id display_value="Earl Duque">10b0d0d34f597b004b00cfa18110c71f</sys_user_id>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2020-11-03 20:49:39</sys_updated_on>
+        <sys_user_id display_value="">10b0d0d34f597b004b00cfa18110c71f</sys_user_id>
         <token>41574db689b360a9822d255d289e610856328216067a910f941e6b85f6c94e68</token>
     </sys_push_notif_app_install>
 </record_update>

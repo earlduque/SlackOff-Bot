@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">48a72956bc002300aadb875973a34baa</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>earl.duque</sys_created_by>
+        <sys_created_on>2019-12-10 18:33:36</sys_created_on>
+        <sys_id>1ebd020fdb69ccd08ae4dfea5e961996</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2019-12-10 18:33:36</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

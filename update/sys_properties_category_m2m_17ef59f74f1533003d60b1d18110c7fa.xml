@@ -2,7 +2,7 @@
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="Slacker">72cfd5f74f1533003d60b1d18110c797</category>
         <order>200</order>
-        <property display_value="slackbot.reg.token" name="slackbot.reg.token">03a3522313c1b3409a2b58222244b06a</property>
+        <property display_value="">03a3522313c1b3409a2b58222244b06a</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2019-05-15 16:42:07</sys_created_on>

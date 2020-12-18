@@ -31,22 +31,24 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var regextest = /\b(-?\d{1,}\.?\d{0,}\s?c(elcius)?(?!>|\|)(\W|\n|\t|\r|$))|(-?\d{1,}\.?\d{0,}\sdegrees\sc(elcius)?(?!>|\|)(\W|\n|\t|\r|$))/gmi;
+	var regextest = /(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\s?c(elcius)?(?!>|\|)(\W|\n|\t|\r|$))|(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\sdegrees\sc(elcius)?(?!>|\|)(\W|\n|\t|\r|$))/gmi;
 	var match = regextest.exec(current.text);
 	if (match != null){
 		var numbertest = /-?\d{1,}\.?\d{0,}/;
 		var numbermatch = numbertest.exec(match[0]);
 		var ctof = (parseFloat(numbermatch[0]) * 9/5) + 32;
-		var send_chat = new SlackFall().send_chat(current.channel, parseFloat(numbermatch[0]).toFixed(2) + 'C is ' + ctof.toFixed(2) + ' degrees in freedom units (Fahrenheit).', false, '', current.thread_ts);
+		var originalnumber = parseFloat(numbermatch[0]).toFixed(2).toString().slice(-3) == '.00' ? parseFloat(numbermatch[0]).toFixed(2).toString().slice(0, -3) : parseFloat(numbermatch[0]).toFixed(2);
+		var send_chat = new SlackFall().send_chat(current.channel, originalnumber + 'C is ' + ctof.toFixed(2) + ' degrees in freedom units (Fahrenheit).', false, '', current.thread_ts);
 	}
 	
-	var regextest2 = /\b(-?\d{1,}\.?\d{0,}\s?f(ahrenheit)?(?!>|\|)(\W|\n|\t|\r|$))|(-?\d{1,}\.?\d{0,}\sdegrees\sf(ahrenheit)?(?!>|\|)(\W|\n|\t|\r|$))/gmi;
+	var regextest2 = /(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\s?f(ahrenheit)?(?!>|\|)(\W|\n|\t|\r|$))|(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\sdegrees\sf(ahrenheit)?(?!>|\|)(\W|\n|\t|\r|$))/gmi;
 	var match2 = regextest2.exec(current.text);
 	if (match2 != null){
 		var numbertest2 = /-?\d{1,}\.?\d{0,}/;
 		var numbermatch2 = numbertest2.exec(match2[0]);
 		var ftoc = (parseFloat(numbermatch2[0]) - 32) * 5/9;
-		var send_chat2 = new SlackFall().send_chat(current.channel, parseFloat(numbermatch2[0]).toFixed(2) + 'F is ' + ftoc.toFixed(2) + ' degrees in sane units (Celcius).', false, '', current.thread_ts);
+		var originalnumber2 = parseFloat(numbermatch2[0]).toFixed(2).toString().slice(-3) == '.00' ? parseFloat(numbermatch2[0]).toFixed(2).toString().slice(0, -3) : parseFloat(numbermatch2[0]).toFixed(2);
+		var send_chat2 = new SlackFall().send_chat(current.channel, originalnumber2 + 'F is ' + ftoc.toFixed(2) + ' degrees in sane units (Celcius).', false, '', current.thread_ts);
 	}
 
 })(current, previous);]]></script>
@@ -56,15 +58,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ae59438413136f801f2f53173244b0b7</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Degrees Converter</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_ae59438413136f801f2f53173244b0b7</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-02-26 22:08:21</sys_updated_on>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2019-12-19 18:24:30</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

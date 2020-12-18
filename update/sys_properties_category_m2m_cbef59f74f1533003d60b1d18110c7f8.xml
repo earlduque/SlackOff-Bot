@@ -2,7 +2,7 @@
     <sys_properties_category_m2m action="INSERT_OR_UPDATE">
         <category display_value="Slacker">72cfd5f74f1533003d60b1d18110c797</category>
         <order>500</order>
-        <property display_value="maps.token" name="maps.token">9fb1ae250f19f7007c0f3b5be1050e1e</property>
+        <property display_value="">9fb1ae250f19f7007c0f3b5be1050e1e</property>
         <sys_class_name>sys_properties_category_m2m</sys_class_name>
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2019-05-15 16:42:07</sys_created_on>

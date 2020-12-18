@@ -41,7 +41,7 @@
 		'`!giphy string` Regular old giphy search but works in threads.',
 		'`!google string` Provides a link to a google search for the provided string.',
 		'`!insult` *Deactivated and moved to SlackBot instead*. Says an SN-related insult.',
-		'`!iss` Let\'s you know where the International Space Station is right now.',
+		//'`!iss` Let\'s you know where the International Space Station is right now.',
 		'`!job` Creates a random LinkedIn message that an SN Dev is likely to receive from a recruiter.',
 		'`!joke` Tells you a joke, obvi.',
 		'`!lmgtfy string` A more sassy version of !google.',
@@ -52,17 +52,18 @@
 		'`!test` Creates a randomly generated SN-related testing script.',
 		'`!tips` A summary of tips from the SN Devs pro-tips website',
 		'`!trout @person` or `!slap @person` IRC-like slap to whoever you @.',
-		'`!youtube string` Links the first found video on youtube according to your search string',
+		//'`!youtube string` Links the first found video on youtube according to your search string',
 		'`!zalgo string` or !curse will eff yo text up',
 		'`Say 30F or 30C` and it will convert the temperature to the other unit',
 		'`!help` ¯\\_(ツ)_/¯'
 	];
-	var today = new GlideDate();
-	today.setDisplayValue(today.getDisplayValue());
-	var k19 = new GlideDate();
-	k19.setDisplayValue('2019-05-05');
-
-	if (today < k19) message.push('`!countdown` Will let you know how many days there are til K19!');
+	if (current.channel == 'G9LAJG7G8' || current.channel == 'GD51HTR46') {
+		message.push('');
+		message.push('The following are #poof only commands:');
+		message.push('`!whois @username` Gathers slack information on the user');
+		message.push('`!send !channel !message` forces this bot to send that message to that channel');
+		message.push('`!ajb` all the ajb spam lol');
+	}
 
 	var send_chat = new SlackFall().send_chat(current.channel, message.join('\n'), false, '', current.ts);
 })(current, previous);]]></script>
@@ -72,15 +73,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bcd055034fe123000d952b8ca310c7f2</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_name>Help Processor</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_bcd055034fe123000d952b8ca310c7f2</sys_update_name>
-        <sys_updated_by>admin-eduque</sys_updated_by>
-        <sys_updated_on>2019-04-08 16:24:13</sys_updated_on>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2020-01-17 00:22:41</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
