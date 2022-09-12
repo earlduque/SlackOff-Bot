@@ -29,31 +29,31 @@
         <rest_service_text/>
         <rest_variables/>
         <role_conditions/>
-        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-	var search = gs.urlEncode(current.text.replace(/!xkcd/,'').trim());
+    var search = gs.urlEncode(current.text.replace(/!xkcd/, '').trim());
 
-	var rm = new sn_ws.RESTMessageV2();
-	rm.setHttpMethod('GET');
-	rm.setEndpoint('https://www.explainxkcd.com/wiki/index.php?search=' + search + '&title=Special%3ASearch&go=Go');
-	rm.setRequestHeader('User-Agent', 'servicenow');
-	var response = rm.execute();
-	var body = response.getBody();
-	var result = body.match(/(?:<a href="\/wiki\/index.php\/)[0-9]+/gm)[0].replace(/<a href="\/wiki\/index.php\//g,''); 
-	
-	
-	if (parseInt(result)){
-		
-		var rm2 = new sn_ws.RESTMessageV2();
-		rm2.setHttpMethod('GET');
-		rm2.setEndpoint('https://xkcd.com/' + result + '/info.0.json');
-		rm2.setRequestHeader('User-Agent', 'servicenow');
-		var response2 = rm2.execute();
-		var body2 = JSON.parse(response2.getBody());
-		var send_chat = new SlackFall().send_chat(current.channel, body2.safe_title + '\n' + body2.img + '\nAlt: ' + body2.alt, false, '', current.thread_ts);
-	} else {
-		var send_chat2 = new SlackFall().send_chat(current.channel, 'No relevant XKCD found for `' + search +'`', false, '', current.thread_ts);
-	}
+    var rm = new sn_ws.RESTMessageV2();
+    rm.setHttpMethod('GET');
+    rm.setEndpoint('https://www.explainxkcd.com/wiki/index.php?search=' + search + '&title=Special%3ASearch&go=Go&fulltext=1');
+    rm.setRequestHeader('User-Agent', 'servicenow');
+    var response = rm.execute();
+    var body = response.getBody();
+    var result = body.match(/(?:<a href="\/wiki\/index.php\/)[0-9]+/gm)[0].replace(/<a href="\/wiki\/index.php\//g, '');
+
+
+    if (parseInt(result)) {
+
+        var rm2 = new sn_ws.RESTMessageV2();
+        rm2.setHttpMethod('GET');
+        rm2.setEndpoint('https://xkcd.com/' + result + '/info.0.json');
+        rm2.setRequestHeader('User-Agent', 'servicenow');
+        var response2 = rm2.execute();
+        var body2 = JSON.parse(response2.getBody());
+        var send_chat = new SlackFall().send_chat(current.channel, body2.safe_title + '\n' + body2.img + '\nAlt: ' + body2.alt, false, '', current.thread_ts);
+    } else {
+        var send_chat2 = new SlackFall().send_chat(current.channel, 'No relevant XKCD found for `' + search + '`', false, '', current.thread_ts);
+    }
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -62,15 +62,12 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eb905fd0db47d41051d3f9627596196e</sys_id>
-        <sys_mod_count>25</sys_mod_count>
         <sys_name>XKCD</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_eb905fd0db47d41051d3f9627596196e</sys_update_name>
-        <sys_updated_by>earl.duque</sys_updated_by>
-        <sys_updated_on>2020-08-31 21:12:16</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
