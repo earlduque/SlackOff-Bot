@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slackoff_payloads</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Heartbomb starter</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var payload = JSON.parse(current.payload);
+	if (payload.event.type == 'reaction_added' && payload.event.reaction == 'pride_heart'){
+		var send_reaction2 = new SlackFall().send_reaction(payload.event.item.channel,'heart',payload.event.item.ts);
+		var send_reaction3 = new SlackFall().send_reaction(payload.event.item.channel,'orange_heart',payload.event.item.ts);
+		var send_reaction4 = new SlackFall().send_reaction(payload.event.item.channel,'yellow_heart',payload.event.item.ts);
+		var send_reaction5 = new SlackFall().send_reaction(payload.event.item.channel,'green_heart',payload.event.item.ts);
+		var send_reaction6 = new SlackFall().send_reaction(payload.event.item.channel,'blue_heart',payload.event.item.ts);
+		var send_reaction7 = new SlackFall().send_reaction(payload.event.item.channel,'purple_heart',payload.event.item.ts);
+		var send_reaction8 = new SlackFall().send_reaction(payload.event.item.channel,'black_heart',payload.event.item.ts);
+		var send_reaction9 = new SlackFall().send_reaction(payload.event.item.channel,'brown_heart',payload.event.item.ts);
+		var send_reaction10 = new SlackFall().send_reaction(payload.event.item.channel,'white_heart',payload.event.item.ts);
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>mgopw</sys_created_by>
+        <sys_created_on>2022-01-28 01:35:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>02dc9f79871d8d102e9463150cbb3589</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Heartbomb starter</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_02dc9f79871d8d102e9463150cbb3589</sys_update_name>
+        <sys_updated_by>mgopw</sys_updated_by>
+        <sys_updated_on>2022-01-28 01:40:14</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=02dc9f79871d8d102e9463150cbb3589"/>
+</record_update>
