@@ -52,6 +52,10 @@
 	message.push('• Introduce the problem before you post any code');
 	message.push('• Help others reproduce the problem. Don\'t just copy in your entire script!');
 	message.push('• Do not post images of code, data, error messages (just copy the text)');
+	message.push('• When posting code wrap it in 1x and 3x back-tick [`] syntax, or use the code editor.');
+	message.push('  • |`your text` = Red highlighted single-line|');
+	message.push('  • |```your text``` = Grey highlighted multi-line|');
+	message.push('  • Or use the </> code button on the text editor in slack.');
 	message.push('• Proof-read before posting!');
 	message.push('• Post the question and respond to feedback');
 	message.push('');
@@ -69,7 +73,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1c848860db6a4890fde65223dc9619cf</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Welcome Reaction Added</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -77,7 +81,7 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_1c848860db6a4890fde65223dc9619cf</sys_update_name>
         <sys_updated_by>earl.duque</sys_updated_by>
-        <sys_updated_on>2020-01-29 18:40:56</sys_updated_on>
+        <sys_updated_on>2022-06-29 16:46:28</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>

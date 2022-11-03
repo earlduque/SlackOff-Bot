@@ -1,7 +1,3 @@
-# Development has been moved
-
-***This app has been deprecated and all development has been moved to https://github.com/ServiceNowDevProgram/SlackerBot***
-
 # Generated files
 This repository contains generated files and a checksum.
 

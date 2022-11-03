@@ -6,19 +6,19 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>false</action_update>
-        <active>false</active>
+        <active>true</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <collection>x_165574_slackoff_slackoff_payloads</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Correction Processor</name>
+        <name>Please Ask Question Trigge</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,37 +29,37 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var regex = /^<@UCXC9BTMX> (?:job|recruitment|recruiter|recruit)/gim;
-	var send_as_eph = true;
-	if (current.thread_ts) send_as_eph = false;
-	
-	if (regex.test(current.text)){
-		var send_new_job = new SlackFall().send_chat(current.channel, 'Please use `!job` or `!recruit` instead.', send_as_eph, current.user.user_id, current.thread_ts);
-	}
-	
-	var regex2 = /^<@UCXC9BTMX> (?:report|usage)/gim;
-	if (regex2.test(current.text)){
-		var send_new_report = new SlackFall().send_chat(current.channel, 'Please use `!usage` or `!report` instead.', send_as_eph, current.user.user_id, current.thread_ts);
+	var payload = JSON.parse(current.payload);
+	if (payload.event.type != 'reaction_added' || (payload.event.reaction != 'quebec' && payload.event.reaction != 'trebek')) return;
+	var text = new GlideRecord('x_165574_slackoff_slacker_text_tracker');
+	text.addQuery('channel', payload.event.item.channel);
+	text.addQuery('ts', payload.event.item.ts);
+	text.query();
+	if (text.next()){
+		var ts = '';
+		if (text.getValue('thread_ts') ) ts = text.getValue('thread_ts');
+		else ts = text.getValue('ts');
+		var helper = new SlackFall().send_chat(payload.event.item.channel, 'http://www.quickmeme.com/img/b0/b0bf18d80b3fc08e45b6d3421377591d1077a3c983f75b10fa6c94934002eb09.jpg?' + new GlideDateTime().getNumericValue(), false, '', ts);	
 	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
-        <sys_created_by>admin-eduque</sys_created_by>
-        <sys_created_on>2018-10-05 04:50:59</sys_created_on>
+        <sys_created_by>earl.duque</sys_created_by>
+        <sys_created_on>2021-01-07 19:02:18</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>ec5be3404f85ef000d952b8ca310c7aa</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>Correction Processor</sys_name>
+        <sys_id>c0b6db35db69245051d3f96275961925</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Please Ask Question Trigge</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy/>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
-        <sys_update_name>sys_script_ec5be3404f85ef000d952b8ca310c7aa</sys_update_name>
+        <sys_update_name>sys_script_c0b6db35db69245051d3f96275961925</sys_update_name>
         <sys_updated_by>earl.duque</sys_updated_by>
-        <sys_updated_on>2022-09-28 06:52:46</sys_updated_on>
+        <sys_updated_on>2021-01-07 19:38:32</sys_updated_on>
         <template/>
         <when>async</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=ec5be3404f85ef000d952b8ca310c7aa"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c0b6db35db69245051d3f96275961925"/>
 </record_update>

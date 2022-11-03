@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_165574_slackoff.SlackFall</api_name>
         <caller_access/>
@@ -204,13 +204,13 @@ SlackFall.prototype = {
         <sys_created_by>admin-eduque</sys_created_by>
         <sys_created_on>2018-09-21 06:01:23</sys_created_on>
         <sys_id>0e92bb6b4f6867000d952b8ca310c780</sys_id>
-        <sys_mod_count>78</sys_mod_count>
+        <sys_mod_count>79</sys_mod_count>
         <sys_name>SlackFall</sys_name>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_include_0e92bb6b4f6867000d952b8ca310c780</sys_update_name>
         <sys_updated_by>earl.duque</sys_updated_by>
-        <sys_updated_on>2020-02-01 22:49:24</sys_updated_on>
+        <sys_updated_on>2021-11-30 04:02:37</sys_updated_on>
     </sys_script_include>
 </record_update>

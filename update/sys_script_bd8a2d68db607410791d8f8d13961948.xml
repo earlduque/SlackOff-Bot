@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_165574_slackoff_slacker_text_tracker</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Pride Processor</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var regex = /(happy pride)|(!pride)|(pride month)/gmi;
+	if (regex.test(current.text)) { // CAQ2W3EE4 GD51HTR46
+		var send_reaction1 = new SlackFall().send_reaction(current.channel,'pride_heart',current.ts);
+		var send_reaction2 = new SlackFall().send_reaction(current.channel,'bi_pride',current.ts);
+		var send_reaction3 = new SlackFall().send_reaction(current.channel,'pan_pride',current.ts);
+		var send_reaction4 = new SlackFall().send_reaction(current.channel,'asexuality_pride',current.ts);
+		var send_reaction5 = new SlackFall().send_reaction(current.channel,'demigirl_pride',current.ts);
+		var send_reaction6 = new SlackFall().send_reaction(current.channel,'trans_pride',current.ts);
+		var send_reaction7 = new SlackFall().send_reaction(current.channel,'nonbinary_pride',current.ts);
+		var send_reaction8 = new SlackFall().send_reaction(current.channel,'agender_pride',current.ts);
+		var send_reaction9 = new SlackFall().send_reaction(current.channel,'genderfluid_pride',current.ts);
+		var send_reaction10 = new SlackFall().send_reaction(current.channel,'genderqueer_pride',current.ts);
+		var send_reaction11 = new SlackFall().send_reaction(current.channel,'intersex_pride',current.ts);
+		//if (random == 1) var send_chat = new SlackFall().send_chat('slackoff-dev-p', 'The rare parrot wave appeared! <#'+current.channel+'> https://sndevs.slack.com/archives/'+current.channel+'/'+current.ts, false);
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>earl.duque</sys_created_by>
+        <sys_created_on>2021-06-01 17:05:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bd8a2d68db607410791d8f8d13961948</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pride Processor</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
+        <sys_update_name>sys_script_bd8a2d68db607410791d8f8d13961948</sys_update_name>
+        <sys_updated_by>earl.duque</sys_updated_by>
+        <sys_updated_on>2021-06-01 17:05:42</sys_updated_on>
+        <template/>
+        <when>async</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=bd8a2d68db607410791d8f8d13961948"/>
+</record_update>

@@ -31,7 +31,7 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 
-	var regextest = /(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\s?c(elcius)?(?!>|\|)(\W|\n|\t|\r|$))|(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\sdegrees\sc(elcius)?(?!>|\|)(\W|\n|\t|\r|$))/gmi;
+	var regextest = /(?:^|\s)(-?\d{1,3}\.?\d{0,2})°?\s?(?:degrees)?\s?c(?:elsius|elcius)?\b/gmi;
 	var match = regextest.exec(current.text);
 	if (match != null){
 		var numbertest = /-?\d{1,}\.?\d{0,}/;
@@ -41,7 +41,7 @@
 		var send_chat = new SlackFall().send_chat(current.channel, originalnumber + 'C is ' + ctof.toFixed(2) + ' degrees in freedom units (Fahrenheit).', false, '', current.thread_ts);
 	}
 	
-	var regextest2 = /(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\s?f(ahrenheit)?(?!>|\|)(\W|\n|\t|\r|$))|(\w|\n|\t|\r|-)(\d{1,}\.?\d{0,}\sdegrees\sf(ahrenheit)?(?!>|\|)(\W|\n|\t|\r|$))/gmi;
+	var regextest2 = /(?:^|\s)(-?\d{1,3}\.?\d{0,2})°?\s?(?:degrees)?\s?f(?:ahrenheit)?\b/gmi;
 	var match2 = regextest2.exec(current.text);
 	if (match2 != null){
 		var numbertest2 = /-?\d{1,}\.?\d{0,}/;
@@ -58,7 +58,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ae59438413136f801f2f53173244b0b7</sys_id>
-        <sys_mod_count>43</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_name>Degrees Converter</sys_name>
         <sys_overrides/>
         <sys_package display_value="Slacker" source="x_165574_slackoff">33504e2b4f2467000d952b8ca310c7d1</sys_package>
@@ -66,9 +66,9 @@
         <sys_scope display_value="Slacker">33504e2b4f2467000d952b8ca310c7d1</sys_scope>
         <sys_update_name>sys_script_ae59438413136f801f2f53173244b0b7</sys_update_name>
         <sys_updated_by>earl.duque</sys_updated_by>
-        <sys_updated_on>2019-12-19 18:24:30</sys_updated_on>
+        <sys_updated_on>2022-08-24 18:51:25</sys_updated_on>
         <template/>
-        <when>async</when>
+        <when>async_always</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=ae59438413136f801f2f53173244b0b7"/>
 </record_update>
